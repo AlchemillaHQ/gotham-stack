@@ -1,0 +1,16 @@
+{{define "dashboard"}}
+<html lang="en">
+{{template "head" .}}
+<body>
+<div class="flex h-screen">
+    <div class="m-auto flex flex-col items-center">
+        <div class="text-2xl mb-4" id="counter" hx-trigger="load" hx-get="/counter/get" hx-swap="outerHTML">0</div>
+        <div class="flex">
+            <button class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded mr-2" hx-post="/counter/increment" hx-target="#counter" hx-swap="outerHTML">+</button>
+            <button class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" hx-post="/counter/decrement" hx-target="#counter" hx-swap="outerHTML">-</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+{{end}}
