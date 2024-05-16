@@ -1,6 +1,6 @@
 # Gotham Stack Template
 
-This is a simple template for bootstrapping a new Go web application project. It ues:
+This is a simple template which contains a todo app for bootstrapping a new Go web application project. It ues:
 
 * [Go](https://golang.org) as the programming language.
 * [HTML Templates](https://golang.org/pkg/html/template/) as the template engine.
