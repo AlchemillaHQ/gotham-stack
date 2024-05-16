@@ -18,6 +18,7 @@ type Config struct {
 	LogLevel      string  `json:"log_level"`
 	SessionSecret string  `json:"session_secret"`
 	Admins        []Admin `json:"admins"`
+	DataPath      string  `json:"data_path"`
 }
 
 var ParsedConfig *Config
@@ -39,5 +40,26 @@ func ParseConfig(path string) *Config {
 		panic(err)
 	}
 
+	err = SetupDataPath()
+
+	if err != nil {
+		panic(err)
+	}
+
 	return ParsedConfig
+}
+
+func SetupDataPath() error {
+	if ParsedConfig.DataPath == "" {
+		ParsedConfig.DataPath = "./data"
+	}
+
+	if _, err := os.Stat(ParsedConfig.DataPath); os.IsNotExist(err) {
+		err := os.Mkdir(ParsedConfig.DataPath, 0755)
+		if err != nil {
+			return err
+		}
+	}
+
+	return nil
 }

@@ -16,11 +16,11 @@ func TestVerifyCredentials(t *testing.T) {
 		Email:    "test@example.com",
 		Password: hashedPassword,
 	}
-	if err := db.Create(&user).Error; err != nil {
+	if err := testDb.Create(&user).Error; err != nil {
 		t.Fatalf("Failed to create test user: %v", err)
 	}
 
-	authService := NewAuthService(db)
+	authService := NewAuthService(testDb)
 
 	testCases := []struct {
 		name          string
@@ -42,5 +42,5 @@ func TestVerifyCredentials(t *testing.T) {
 		})
 	}
 
-	db.Where("email = ?", user.Email).Delete(&models.User{})
+	testDb.Where("email = ?", user.Email).Delete(&models.User{})
 }

@@ -12,9 +12,10 @@ import (
 	"gorm.io/gorm"
 	gormLogger "gorm.io/gorm/logger"
 	"log"
+	"path"
 )
 
-func SetupDatabase(env string, dbURL string) *gorm.DB {
+func SetupDatabase(env string, dbURL string, dataPath string) *gorm.DB {
 	var db *gorm.DB
 	var err error
 
@@ -25,14 +26,14 @@ func SetupDatabase(env string, dbURL string) *gorm.DB {
 	if env == "production" || env == "prod" {
 		db, err = gorm.Open(postgres.Open(dbURL), ormConfig)
 	} else {
-		db, err = gorm.Open(sqlite.Open("test.db"), ormConfig)
+		db, err = gorm.Open(sqlite.Open(path.Join(dataPath, "gotham-stack.db")), ormConfig)
 	}
 
 	if err != nil {
 		logger.Error("failed to connect to database", zap.Error(err))
 	}
 
-	err = db.AutoMigrate(&models.User{}, &models.Count{})
+	err = db.AutoMigrate(&models.User{}, &models.Task{})
 
 	if err != nil {
 		logger.Error("failed to migrate database", zap.Error(err))

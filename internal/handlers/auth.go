@@ -30,12 +30,13 @@ func handleLogin(w http.ResponseWriter, r *http.Request, templ *template.Templat
 	case "POST":
 		email := r.FormValue("email")
 		password := r.FormValue("password")
+		language := r.FormValue("language")
 		_, ok := authService.VerifyCredentials(email, password)
 		if !ok {
 			http.Redirect(w, r, "/auth/login?error=invalid-credentials", http.StatusFound)
 			return
 		}
-		if err := middleware.SetSession(w, r, email, 1); err != nil {
+		if err := middleware.SetSession(w, r, email, 1, language); err != nil {
 			http.Error(w, "Internal Server Error", http.StatusInternalServerError)
 		} else {
 			http.Redirect(w, r, "/", http.StatusFound)

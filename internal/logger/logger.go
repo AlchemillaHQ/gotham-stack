@@ -1,20 +1,35 @@
 package logger
 
 import (
+	"fmt"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
+	"os"
+	"path/filepath"
+	"time"
 )
 
 var Logger *zap.Logger
 
-func InitializeLogger(env string, logLevel string) {
-	var config zap.Config
+func InitializeLogger(env string, logLevel string, dataPath string) {
+	logsPath := filepath.Join(dataPath, "logs")
+	if _, err := os.Stat(logsPath); os.IsNotExist(err) {
+		if err = os.MkdirAll(logsPath, 0755); err != nil {
+			panic(fmt.Errorf("failed to create log directory: %v", err))
+		}
+	}
 
+	var config zap.Config
 	if env == "production" || env == "prod" {
 		config = zap.NewProductionConfig()
 	} else {
 		config = zap.NewDevelopmentConfig()
 	}
+
+	logFileName := filepath.Join(logsPath, time.Now().Format("2006-01-02T15-04-05")+".log")
+
+	config.OutputPaths = []string{"stdout", logFileName}
+	config.ErrorOutputPaths = []string{"stderr", logFileName}
 
 	switch logLevel {
 	case "debug":
@@ -26,18 +41,14 @@ func InitializeLogger(env string, logLevel string) {
 	case "error":
 		config.Level = zap.NewAtomicLevelAt(zapcore.ErrorLevel)
 	default:
-		config.Level = zap.NewAtomicLevelAt(zapcore.InfoLevel) // Default to InfoLevel
+		config.Level = zap.NewAtomicLevelAt(zapcore.InfoLevel)
+		Logger.Warn("Invalid log level, defaulting to info.")
 	}
 
 	var err error
-
-	Logger, err = config.Build(zap.AddCallerSkip(1))
+	Logger, err = config.Build(zap.AddCallerSkip(1), zap.AddStacktrace(zapcore.ErrorLevel))
 	if err != nil {
-		panic(err)
-	}
-
-	if logLevel != "debug" && logLevel != "info" && logLevel != "warn" && logLevel != "error" {
-		Logger.Warn("Invalid log level, defaulting to info.")
+		panic(fmt.Errorf("failed to initialize logger: %v", err))
 	}
 }
 

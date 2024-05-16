@@ -1,11 +1,12 @@
 {
   "name": "gotham-stack",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A simple Golang/HTMX web application template",
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-js": "webpack --mode production",
+    "build-js:watch": "webpack --mode development --watch",
     "build-css": "npx tailwindcss -i ./public/css/input.css -o ./public/css/styles.css",
     "build-css:watch": "npx tailwindcss -i ./public/css/input.css -o ./public/css/styles.css --watch"
   },

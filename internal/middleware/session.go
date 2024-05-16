@@ -32,7 +32,7 @@ func EnsureAuthenticated(next http.Handler) http.Handler {
 	})
 }
 
-func SetSession(w http.ResponseWriter, r *http.Request, email string, userID int) error {
+func SetSession(w http.ResponseWriter, r *http.Request, email string, userID int, language string) error {
 	session, err := Store.Get(r, "session")
 	if err != nil {
 		return err
@@ -40,6 +40,7 @@ func SetSession(w http.ResponseWriter, r *http.Request, email string, userID int
 	session.Values["authenticated"] = true
 	session.Values["email"] = email
 	session.Values["userID"] = userID
+	session.Values["language"] = language
 	return session.Save(r, w)
 }
 
@@ -50,5 +51,18 @@ func ClearSession(w http.ResponseWriter, r *http.Request) error {
 	}
 	session.Values["authenticated"] = false
 	session.Values["email"] = ""
+	session.Values["userID"] = 0
+	session.Values["language"] = "en"
 	return session.Save(r, w)
+}
+
+func GetSessionLanguage(r *http.Request) string {
+	session, err := Store.Get(r, "session")
+	if err != nil {
+		return "en"
+	}
+	if language, ok := session.Values["language"].(string); ok {
+		return language
+	}
+	return "en"
 }

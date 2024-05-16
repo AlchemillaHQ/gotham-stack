@@ -7,6 +7,11 @@ import (
 )
 
 func IndexHandler(w http.ResponseWriter, r *http.Request, templ *template.Template) {
-	data := struct{ Title string }{Title: "Home"}
-	internal.RenderTemplate(w, "dashboard", data, templ)
+	data := struct {
+		Title string
+	}{
+		Title: "Home",
+	}
+
+	internal.RenderTemplate(w, "dashboard", GetPageData(data, r), templ)
 }

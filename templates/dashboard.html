@@ -2,15 +2,76 @@
 <html lang="en">
 {{template "head" .}}
 <body>
-<div class="flex h-screen">
-    <div class="m-auto flex flex-col items-center">
-        <div class="text-2xl mb-4" id="counter" hx-trigger="load" hx-get="/counter/get" hx-swap="outerHTML">0</div>
-        <div class="flex">
-            <button class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded mr-2" hx-post="/counter/increment" hx-target="#counter" hx-swap="outerHTML">+</button>
-            <button class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" hx-post="/counter/decrement" hx-target="#counter" hx-swap="outerHTML">-</button>
+<div class="flex h-screen bg-gray-100 dark:bg-gray-800">
+    <div class="absolute top-0 right-0 m-4 space-x-2">
+        <button id="theme-toggle" class="bg-gray-200 dark:bg-gray-600 py-1 px-3 rounded-full text-sm leading-6 font-medium text-gray-800 dark:text-white">
+            Dark Mode
+        </button>
+        <a href="/auth/logout" class="bg-gray-200 dark:bg-gray-600 py-1 px-3 rounded-full text-sm leading-6 font-medium text-gray-800 dark:text-white">
+            Logout
+        </a>
+    </div>
+    <div class="m-auto w-full max-w-xs">
+        <div class="bg-white dark:bg-gray-700 shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <ul id="todo-list" class="list-disc list-inside mb-4 text-gray-900 dark:text-gray-200">
+                <!--<li class="flex justify-between items-center p-2 bg-gray-100 rounded mt-2 shadow"><span class="text-gray-800">test</span><button class="text-red-500 hover:text-red-700" hx-delete="/task/25" hx-target="#todo-list" hx-swap="innerHTML">Delete</button><div></div></li>-->
+            </ul>
+            <div class="mb-4">
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-gray-300 leading-tight focus:outline-none focus:shadow-outline" id="task" name="task" type="text" placeholder="Add new task" autocomplete="off">
+            </div>
+            <div class="mb-1 flex gap-2">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" hx-post="/task/" hx-target="#todo-list" hx-swap="beforeend" hx-include="[id='task']" type="button" hx-on:click="document.getElementById('task').value=''">
+                    {{translate "dashboard" "add_task" .Lang}}
+                </button>
+                <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" hx-delete="/task/all" hx-target="#todo-list" hx-swap="innerHTML" type="button">
+                    {{translate "dashboard" "clear_all" .Lang}}
+                </button>
+            </div>
         </div>
     </div>
 </div>
+
+
+<script src="/static/js/common.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        function updateToggleButton() {
+            const themeToggleText = document.documentElement.classList.contains('dark') ? '🌑' : '☀️';
+            document.getElementById('theme-toggle').textContent = themeToggleText;
+        }
+
+        function toggleTheme() {
+            const isDarkMode = document.documentElement.classList.contains('dark');
+            if (isDarkMode) {
+                localStorage.setItem('theme', 'light');
+                document.documentElement.classList.remove('dark');
+                document.getElementById('theme-toggle').textContent = '☀️';
+            } else {
+                localStorage.setItem('theme', 'dark');
+                document.documentElement.classList.add('dark');
+                document.getElementById('theme-toggle').textContent = '🌑';
+            }
+        }
+
+        let savedTheme = localStorage.getItem('theme');
+        if (!savedTheme) {
+            savedTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            localStorage.setItem('theme', savedTheme);
+        }
+
+        if (savedTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        updateToggleButton();
+
+        document.getElementById('theme-toggle').addEventListener('click', function() {
+            toggleTheme();
+        });
+    });
+</script>
 </body>
 </html>
 {{end}}

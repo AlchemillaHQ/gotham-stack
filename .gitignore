@@ -4,3 +4,4 @@ config.json
 main
 test.db
 .idea/
+dist/

@@ -1,15 +1,19 @@
 package main
 
 import (
+	"embed"
 	"fmt"
 	"github.com/AlchemillaHQ/gotham-stack/db"
 	"github.com/AlchemillaHQ/gotham-stack/internal/config"
 	"github.com/AlchemillaHQ/gotham-stack/internal/handlers"
+	"github.com/AlchemillaHQ/gotham-stack/internal/i18n"
 	"github.com/AlchemillaHQ/gotham-stack/internal/logger"
 	"github.com/AlchemillaHQ/gotham-stack/internal/middleware"
 	"github.com/AlchemillaHQ/gotham-stack/internal/services"
 	"go.uber.org/zap"
 	"html/template"
+	"io/fs"
+	"log"
 	"net/http"
 	"os"
 	"os/signal"
@@ -18,15 +22,20 @@ import (
 	"github.com/AlchemillaHQ/gotham-stack/cmd"
 )
 
+//go:embed templates/*
+var templatesFS embed.FS
+
+//go:embed public/*
+var public embed.FS
+var publicFS, _ = fs.Sub(public, "public")
+
 func main() {
 	cmd.AsciiArt()
 	cfgPath := cmd.ParseFlags()
 	cfg := config.ParseConfig(cfgPath)
 
-	fmt.Println(cfg.Environment)
-
-	logger.InitializeLogger(cfg.Environment, cfg.LogLevel)
-	d := db.SetupDatabase(cfg.Environment, cfg.DatabaseURL)
+	logger.InitializeLogger(cfg.Environment, cfg.LogLevel, cfg.DataPath)
+	d := db.SetupDatabase(cfg.Environment, cfg.DatabaseURL, cfg.DataPath)
 	db.SetupBasicData(d, cfg.Admins)
 	middleware.InitializeSessionStore(cfg.SessionSecret)
 
@@ -34,24 +43,25 @@ func main() {
 
 	mux := http.NewServeMux()
 
-	fsStatic := http.FileServer(http.Dir("./public"))
-	templ, err := template.New("").ParseGlob("./templates/*.html")
+	templ := template.New("").Funcs(template.FuncMap{
+		"translate": func(page, key, lang string) string {
+			return i18n.GetTranslation(page, key, lang)
+		},
+	})
 
-	_, err = templ.ParseGlob("./templates/partials/*.html")
-	_, err = templ.ParseGlob("./templates/auth/*.html")
-
+	templ, err := templ.ParseFS(templatesFS, "templates/*.html", "templates/partials/*.html", "templates/auth/*.html")
 	if err != nil {
-		logger.Fatal("Failed to parse templates", zap.Error(err))
+		log.Fatal("Failed to parse templates", zap.Error(err))
 	}
 
 	mux.Handle("GET /{$}", middleware.EnsureAuthenticated(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) { handlers.IndexHandler(w, r, templ) })))
-	mux.Handle("GET /static/", http.StripPrefix("/static/", fsStatic))
+	mux.Handle("GET /static/", http.StripPrefix("/static/", http.FileServer(http.FS(publicFS))))
 	mux.Handle("/auth/{type}", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		handlers.AuthHandler(w, r, templ, serviceRegistry.AuthService)
 	}))
 
-	mux.Handle("/counter/{type}", middleware.EnsureAuthenticated(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		handlers.CounterHandler(w, r, serviceRegistry.CounterService)
+	mux.Handle("/task/", middleware.EnsureAuthenticated(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		handlers.TaskHandler(w, r, serviceRegistry.TaskService)
 	})))
 
 	go func() {
