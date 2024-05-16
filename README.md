@@ -32,3 +32,19 @@ cp config.example.json config.json
 ```bash
 go run main.go
 ```
+
+## Testing & Building
+
+For both testing and building we use a Makefile. To run the tests:
+
+```bash
+make test
+```
+
+To build the application:
+
+```bash
+make build
+```
+
+It should create binary files for some common platforms in the dist/ directory.
