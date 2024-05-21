@@ -12,7 +12,7 @@ function readURL() {
 
     if (error) {
         showToast({
-            icon: 'error',
+            type: 'error',
             text: error
         })
     }
@@ -23,7 +23,7 @@ function readURL() {
 
     if (success) {
         showToast({
-            icon: 'success',
+            type: 'success',
             text: success,
         })
     }

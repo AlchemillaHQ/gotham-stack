@@ -1,29 +1,47 @@
-function showToast(options) {
-    const defaultOptions = {
-        toast: true,
-        position: 'bottom',
-        showConfirmButton: false,
-        timer: 3000,
-        timerProgressBar: true
-    };
-
-    Swal.fire({
-        ...defaultOptions,
-        ...options,
-    });
+async function showToast(options) {
+    switch (options.type) {
+        case 'error':
+            window.notyf.open({
+                type: 'error',
+                message: options.text,
+                duration: options.duration || 2500,
+            });
+            break;
+        case 'success':
+            window.notyf.open({
+                type: 'success',
+                message: options.text,
+                duration: options.duration || 2500,
+            });
+            break;
+        case 'info':
+            window.notyf.open({
+                type: 'info',
+                message: options.text,
+                duration: options.duration || 2500,
+            })
+            break;
+        default:
+            window.notyf.open({
+                type: 'info',
+                message: options.text,
+                duration: options.duration || 2500,
+            })
+            break;
+    }
 }
 
 document.body.addEventListener('htmx:responseError', function (event) {
     const reason = event.detail.xhr.response;
     showToast({
-        icon: 'error',
+        type: 'error',
         text: reason,
     });
 });
 
 document.body.addEventListener("showMessage", function(evt){
     showToast({
-        icon: evt.detail.level,
+        type: evt.detail.level,
         text: evt.detail.message,
     });
 })

@@ -1,10 +1,10 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/@sweetalert2/themes/dark/dark.css":
-/*!**********************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/@sweetalert2/themes/dark/dark.css ***!
-  \**********************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/notyf/notyf.min.css":
+/*!***********************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/notyf/notyf.min.css ***!
+  \***********************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -12,1115 +12,366 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
 /* harmony import */ var _css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
 // Imports
 
 
 var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `/*
-* @sweetalert2/themes v5.0.16
-* Released under the MIT License.
-*/
-
-.swal2-popup.swal2-toast {
-  box-sizing: border-box;
-  grid-column: 1/4 !important;
-  grid-row: 1/4 !important;
-  grid-template-columns: min-content auto min-content;
-  padding: 1em;
-  overflow-y: hidden;
-  background: #19191a;
-  box-shadow: 0 0 1px hsla(0, 0%, 0%, 0.075), 0 1px 2px hsla(0, 0%, 0%, 0.075), 1px 2px 4px hsla(0, 0%, 0%, 0.075), 1px 3px 8px hsla(0, 0%, 0%, 0.075), 2px 4px 16px hsla(0, 0%, 0%, 0.075);
-  pointer-events: all;
+___CSS_LOADER_EXPORT___.push([module.id, `@-webkit-keyframes notyf-fadeinup {
+  0% {
+    opacity: 0;
+    transform: translateY(25%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-.swal2-popup.swal2-toast > * {
-  grid-column: 2;
+@keyframes notyf-fadeinup {
+  0% {
+    opacity: 0;
+    transform: translateY(25%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-.swal2-popup.swal2-toast .swal2-title {
-  margin: 0.5em 1em;
-  padding: 0;
-  font-size: 1em;
-  text-align: initial;
+@-webkit-keyframes notyf-fadeinleft {
+  0% {
+    opacity: 0;
+    transform: translateX(25%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
-.swal2-popup.swal2-toast .swal2-loading {
-  justify-content: center;
+@keyframes notyf-fadeinleft {
+  0% {
+    opacity: 0;
+    transform: translateX(25%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
-.swal2-popup.swal2-toast .swal2-input {
-  height: 2em;
-  margin: 0.5em;
-  font-size: 1em;
+@-webkit-keyframes notyf-fadeoutright {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(25%);
+  }
 }
-.swal2-popup.swal2-toast .swal2-validation-message {
-  font-size: 1em;
+@keyframes notyf-fadeoutright {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(25%);
+  }
 }
-.swal2-popup.swal2-toast .swal2-footer {
-  margin: 0.5em 0 0;
-  padding: 0.5em 0 0;
-  font-size: 0.8em;
+@-webkit-keyframes notyf-fadeoutdown {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(25%);
+  }
 }
-.swal2-popup.swal2-toast .swal2-close {
-  grid-column: 3/3;
-  grid-row: 1/99;
-  align-self: center;
-  width: 0.8em;
-  height: 0.8em;
-  margin: 0;
-  font-size: 2em;
+@keyframes notyf-fadeoutdown {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(25%);
+  }
 }
-.swal2-popup.swal2-toast .swal2-html-container {
-  margin: 0.5em 1em;
-  padding: 0;
-  overflow: initial;
-  font-size: 1em;
-  text-align: initial;
+@-webkit-keyframes ripple {
+  0% {
+    transform: scale(0) translateY(-45%) translateX(13%);
+  }
+  to {
+    transform: scale(1) translateY(-45%) translateX(13%);
+  }
 }
-.swal2-popup.swal2-toast .swal2-html-container:empty {
-  padding: 0;
+@keyframes ripple {
+  0% {
+    transform: scale(0) translateY(-45%) translateX(13%);
+  }
+  to {
+    transform: scale(1) translateY(-45%) translateX(13%);
+  }
 }
-.swal2-popup.swal2-toast .swal2-loader {
-  grid-column: 1;
-  grid-row: 1/99;
-  align-self: center;
-  width: 2em;
-  height: 2em;
-  margin: 0.25em;
-}
-.swal2-popup.swal2-toast .swal2-icon {
-  grid-column: 1;
-  grid-row: 1/99;
-  align-self: center;
-  width: 2em;
-  min-width: 2em;
-  height: 2em;
-  margin: 0 0.5em 0 0;
-}
-.swal2-popup.swal2-toast .swal2-icon .swal2-icon-content {
-  display: flex;
-  align-items: center;
-  font-size: 1.8em;
-  font-weight: bold;
-}
-.swal2-popup.swal2-toast .swal2-icon.swal2-success .swal2-success-ring {
-  width: 2em;
-  height: 2em;
-}
-.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line] {
-  top: 0.875em;
-  width: 1.375em;
-}
-.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class\$=left] {
-  left: 0.3125em;
-}
-.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class\$=right] {
-  right: 0.3125em;
-}
-.swal2-popup.swal2-toast .swal2-actions {
-  justify-content: flex-start;
-  height: auto;
-  margin: 0;
-  margin-top: 0.5em;
-  padding: 0 0.5em;
-}
-.swal2-popup.swal2-toast .swal2-styled {
-  margin: 0.25em 0.5em;
-  padding: 0.4em 0.6em;
-  font-size: 1em;
-}
-.swal2-popup.swal2-toast .swal2-success {
-  border-color: #a5dc86;
-}
-.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line] {
-  position: absolute;
-  width: 1.6em;
-  height: 3em;
-  border-radius: 50%;
-}
-.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class\$=left] {
-  top: -0.8em;
-  left: -0.5em;
-  transform: rotate(-45deg);
-  transform-origin: 2em 2em;
-  border-radius: 4em 0 0 4em;
-}
-.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class\$=right] {
-  top: -0.25em;
-  left: 0.9375em;
-  transform-origin: 0 1.5em;
-  border-radius: 0 4em 4em 0;
-}
-.swal2-popup.swal2-toast .swal2-success .swal2-success-ring {
-  width: 2em;
-  height: 2em;
-}
-.swal2-popup.swal2-toast .swal2-success .swal2-success-fix {
-  top: 0;
-  left: 0.4375em;
-  width: 0.4375em;
-  height: 2.6875em;
-}
-.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line] {
-  height: 0.3125em;
-}
-.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class\$=tip] {
-  top: 1.125em;
-  left: 0.1875em;
-  width: 0.75em;
-}
-.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class\$=long] {
-  top: 0.9375em;
-  right: 0.1875em;
-  width: 1.375em;
-}
-.swal2-popup.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-tip {
-  animation: swal2-toast-animate-success-line-tip 0.75s;
-}
-.swal2-popup.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-long {
-  animation: swal2-toast-animate-success-line-long 0.75s;
-}
-.swal2-popup.swal2-toast.swal2-show {
-  animation: swal2-toast-show 0.5s;
-}
-.swal2-popup.swal2-toast.swal2-hide {
-  animation: swal2-toast-hide 0.1s forwards;
-}
-
-div:where(.swal2-container) {
-  display: grid;
+.notyf {
   position: fixed;
-  z-index: 1060;
-  inset: 0;
-  box-sizing: border-box;
-  grid-template-areas: "top-start     top            top-end" "center-start  center         center-end" "bottom-start  bottom-center  bottom-end";
-  grid-template-rows: minmax(min-content, auto) minmax(min-content, auto) minmax(min-content, auto);
-  height: 100%;
-  padding: 0.625em;
-  overflow-x: hidden;
-  transition: background-color 0.1s;
-  -webkit-overflow-scrolling: touch;
-}
-div:where(.swal2-container).swal2-backdrop-show, div:where(.swal2-container).swal2-noanimation {
-  background: rgba(25, 25, 26, 0.75);
-}
-div:where(.swal2-container).swal2-backdrop-hide {
-  background: transparent !important;
-}
-div:where(.swal2-container).swal2-top-start, div:where(.swal2-container).swal2-center-start, div:where(.swal2-container).swal2-bottom-start {
-  grid-template-columns: minmax(0, 1fr) auto auto;
-}
-div:where(.swal2-container).swal2-top, div:where(.swal2-container).swal2-center, div:where(.swal2-container).swal2-bottom {
-  grid-template-columns: auto minmax(0, 1fr) auto;
-}
-div:where(.swal2-container).swal2-top-end, div:where(.swal2-container).swal2-center-end, div:where(.swal2-container).swal2-bottom-end {
-  grid-template-columns: auto auto minmax(0, 1fr);
-}
-div:where(.swal2-container).swal2-top-start > .swal2-popup {
-  align-self: start;
-}
-div:where(.swal2-container).swal2-top > .swal2-popup {
-  grid-column: 2;
-  place-self: start center;
-}
-div:where(.swal2-container).swal2-top-end > .swal2-popup, div:where(.swal2-container).swal2-top-right > .swal2-popup {
-  grid-column: 3;
-  place-self: start end;
-}
-div:where(.swal2-container).swal2-center-start > .swal2-popup, div:where(.swal2-container).swal2-center-left > .swal2-popup {
-  grid-row: 2;
-  align-self: center;
-}
-div:where(.swal2-container).swal2-center > .swal2-popup {
-  grid-column: 2;
-  grid-row: 2;
-  place-self: center center;
-}
-div:where(.swal2-container).swal2-center-end > .swal2-popup, div:where(.swal2-container).swal2-center-right > .swal2-popup {
-  grid-column: 3;
-  grid-row: 2;
-  place-self: center end;
-}
-div:where(.swal2-container).swal2-bottom-start > .swal2-popup, div:where(.swal2-container).swal2-bottom-left > .swal2-popup {
-  grid-column: 1;
-  grid-row: 3;
-  align-self: end;
-}
-div:where(.swal2-container).swal2-bottom > .swal2-popup {
-  grid-column: 2;
-  grid-row: 3;
-  place-self: end center;
-}
-div:where(.swal2-container).swal2-bottom-end > .swal2-popup, div:where(.swal2-container).swal2-bottom-right > .swal2-popup {
-  grid-column: 3;
-  grid-row: 3;
-  place-self: end end;
-}
-div:where(.swal2-container).swal2-grow-row > .swal2-popup, div:where(.swal2-container).swal2-grow-fullscreen > .swal2-popup {
-  grid-column: 1/4;
-  width: 100%;
-}
-div:where(.swal2-container).swal2-grow-column > .swal2-popup, div:where(.swal2-container).swal2-grow-fullscreen > .swal2-popup {
-  grid-row: 1/4;
-  align-self: stretch;
-}
-div:where(.swal2-container).swal2-no-transition {
-  transition: none !important;
-}
-div:where(.swal2-container) div:where(.swal2-popup) {
-  display: none;
-  position: relative;
-  box-sizing: border-box;
-  grid-template-columns: minmax(0, 100%);
-  width: 32em;
-  max-width: 100%;
-  padding: 0 0 1.25em;
-  border: none;
-  border-radius: 5px;
-  background: #19191a;
-  color: #545454;
-  font-family: inherit;
-  font-size: 1rem;
-}
-div:where(.swal2-container) div:where(.swal2-popup):focus {
-  outline: none;
-}
-div:where(.swal2-container) div:where(.swal2-popup).swal2-loading {
-  overflow-y: hidden;
-}
-div:where(.swal2-container) h2:where(.swal2-title) {
-  position: relative;
-  max-width: 100%;
-  margin: 0;
-  padding: 0.8em 1em 0;
-  color: #e1e1e1;
-  font-size: 1.875em;
-  font-weight: 600;
-  text-align: center;
-  text-transform: none;
-  word-wrap: break-word;
-}
-div:where(.swal2-container) div:where(.swal2-actions) {
-  display: flex;
-  z-index: 1;
-  box-sizing: border-box;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  width: auto;
-  margin: 1.25em auto 0;
-  padding: 0;
-}
-div:where(.swal2-container) div:where(.swal2-actions):not(.swal2-loading) .swal2-styled[disabled] {
-  opacity: 0.4;
-}
-div:where(.swal2-container) div:where(.swal2-actions):not(.swal2-loading) .swal2-styled:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
-}
-div:where(.swal2-container) div:where(.swal2-actions):not(.swal2-loading) .swal2-styled:active {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
-}
-div:where(.swal2-container) div:where(.swal2-loader) {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  width: 2.2em;
-  height: 2.2em;
-  margin: 0 1.875em;
-  animation: swal2-rotate-loading 1.5s linear 0s infinite normal;
-  border-width: 0.25em;
-  border-style: solid;
-  border-radius: 100%;
-  border-color: #2778c4 transparent #2778c4 transparent;
-}
-div:where(.swal2-container) button:where(.swal2-styled) {
-  margin: 0.3125em;
-  padding: 0.625em 1.1em;
-  transition: box-shadow 0.1s;
-  box-shadow: 0 0 0 3px transparent;
-  font-weight: 500;
-}
-div:where(.swal2-container) button:where(.swal2-styled):not([disabled]) {
-  cursor: pointer;
-}
-div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
-  border: 0;
-  border-radius: 0.25em;
-  background: initial;
-  background-color: #7066e0;
-  color: #fff;
-  font-size: 1em;
-}
-div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm:focus {
-  box-shadow: 0 0 0 3px rgba(112, 102, 224, 0.5);
-}
-div:where(.swal2-container) button:where(.swal2-styled).swal2-deny {
-  border: 0;
-  border-radius: 0.25em;
-  background: initial;
-  background-color: #dc3741;
-  color: #fff;
-  font-size: 1em;
-}
-div:where(.swal2-container) button:where(.swal2-styled).swal2-deny:focus {
-  box-shadow: 0 0 0 3px rgba(220, 55, 65, 0.5);
-}
-div:where(.swal2-container) button:where(.swal2-styled).swal2-cancel {
-  border: 0;
-  border-radius: 0.25em;
-  background: initial;
-  background-color: #6e7881;
-  color: #fff;
-  font-size: 1em;
-}
-div:where(.swal2-container) button:where(.swal2-styled).swal2-cancel:focus {
-  box-shadow: 0 0 0 3px rgba(110, 120, 129, 0.5);
-}
-div:where(.swal2-container) button:where(.swal2-styled).swal2-default-outline:focus {
-  box-shadow: 0 0 0 1px #19191a, 0 0 0 3px rgba(138, 176, 213, 0.5);
-}
-div:where(.swal2-container) button:where(.swal2-styled):focus {
-  outline: none;
-}
-div:where(.swal2-container) button:where(.swal2-styled)::-moz-focus-inner {
-  border: 0;
-}
-div:where(.swal2-container) div:where(.swal2-footer) {
-  margin: 1em 0 0;
-  padding: 1em 1em 0;
-  border-top: 1px solid #555;
-  color: #bbbbbb;
-  font-size: 1em;
-  text-align: center;
-}
-div:where(.swal2-container) .swal2-timer-progress-bar-container {
-  position: absolute;
-  right: 0;
-  bottom: 0;
+  top: 0;
   left: 0;
-  grid-column: auto !important;
-  overflow: hidden;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
-div:where(.swal2-container) div:where(.swal2-timer-progress-bar) {
-  width: 100%;
-  height: 0.25em;
-  background: rgba(225, 225, 225, 0.6);
-}
-div:where(.swal2-container) img:where(.swal2-image) {
-  max-width: 100%;
-  margin: 2em auto 1em;
-}
-div:where(.swal2-container) button:where(.swal2-close) {
-  z-index: 2;
-  align-items: center;
-  justify-content: center;
-  width: 1.2em;
-  height: 1.2em;
-  margin-top: 0;
-  margin-right: 0;
-  margin-bottom: -1.2em;
-  padding: 0;
-  overflow: hidden;
-  transition: color 0.1s, box-shadow 0.1s;
-  border: none;
-  border-radius: 5px;
-  background: transparent;
-  color: #ccc;
-  font-family: monospace;
-  font-size: 2.5em;
-  cursor: pointer;
-  justify-self: end;
-}
-div:where(.swal2-container) button:where(.swal2-close):hover {
-  transform: none;
-  background: transparent;
-  color: #f27474;
-}
-div:where(.swal2-container) button:where(.swal2-close):focus {
-  outline: none;
-  box-shadow: inset 0 0 0 3px rgba(100, 150, 200, 0.5);
-}
-div:where(.swal2-container) button:where(.swal2-close)::-moz-focus-inner {
-  border: 0;
-}
-div:where(.swal2-container) .swal2-html-container {
-  z-index: 1;
-  justify-content: center;
-  margin: 1em 1.6em 0.3em;
-  padding: 0;
-  overflow: auto;
-  color: #e1e1e1;
-  font-size: 1.125em;
-  font-weight: normal;
-  line-height: normal;
-  text-align: center;
-  word-wrap: break-word;
-  word-break: break-word;
-}
-div:where(.swal2-container) input:where(.swal2-input),
-div:where(.swal2-container) input:where(.swal2-file),
-div:where(.swal2-container) textarea:where(.swal2-textarea),
-div:where(.swal2-container) select:where(.swal2-select),
-div:where(.swal2-container) div:where(.swal2-radio),
-div:where(.swal2-container) label:where(.swal2-checkbox) {
-  margin: 1em 2em 3px;
-}
-div:where(.swal2-container) input:where(.swal2-input),
-div:where(.swal2-container) input:where(.swal2-file),
-div:where(.swal2-container) textarea:where(.swal2-textarea) {
-  box-sizing: border-box;
-  width: auto;
-  transition: border-color 0.1s, box-shadow 0.1s;
-  border: 1px solid #d9d9d9;
-  border-radius: 0.1875em;
-  background: #323234;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06), 0 0 0 3px transparent;
-  color: #e1e1e1;
-  font-size: 1.125em;
-}
-div:where(.swal2-container) input:where(.swal2-input).swal2-inputerror,
-div:where(.swal2-container) input:where(.swal2-file).swal2-inputerror,
-div:where(.swal2-container) textarea:where(.swal2-textarea).swal2-inputerror {
-  border-color: #f27474 !important;
-  box-shadow: 0 0 2px #f27474 !important;
-}
-div:where(.swal2-container) input:where(.swal2-input):focus,
-div:where(.swal2-container) input:where(.swal2-file):focus,
-div:where(.swal2-container) textarea:where(.swal2-textarea):focus {
-  border: 1px solid #b4dbed;
-  outline: none;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06), 0 0 0 3px rgba(100, 150, 200, 0.5);
-}
-div:where(.swal2-container) input:where(.swal2-input)::placeholder,
-div:where(.swal2-container) input:where(.swal2-file)::placeholder,
-div:where(.swal2-container) textarea:where(.swal2-textarea)::placeholder {
-  color: #ccc;
-}
-div:where(.swal2-container) .swal2-range {
-  margin: 1em 2em 3px;
-  background: #19191a;
-}
-div:where(.swal2-container) .swal2-range input {
-  width: 80%;
-}
-div:where(.swal2-container) .swal2-range output {
-  width: 20%;
-  color: #e1e1e1;
-  font-weight: 600;
-  text-align: center;
-}
-div:where(.swal2-container) .swal2-range input,
-div:where(.swal2-container) .swal2-range output {
-  height: 2.625em;
-  padding: 0;
-  font-size: 1.125em;
-  line-height: 2.625em;
-}
-div:where(.swal2-container) .swal2-input {
-  height: 2.625em;
-  padding: 0 0.75em;
-}
-div:where(.swal2-container) .swal2-file {
-  width: 75%;
-  margin-right: auto;
-  margin-left: auto;
-  background: #323234;
-  font-size: 1.125em;
-}
-div:where(.swal2-container) .swal2-textarea {
-  height: 6.75em;
-  padding: 0.75em;
-}
-div:where(.swal2-container) .swal2-select {
-  min-width: 50%;
-  max-width: 100%;
-  padding: 0.375em 0.625em;
-  background: #323234;
-  color: #e1e1e1;
-  font-size: 1.125em;
-}
-div:where(.swal2-container) .swal2-radio,
-div:where(.swal2-container) .swal2-checkbox {
-  align-items: center;
-  justify-content: center;
-  background: #19191a;
-  color: #e1e1e1;
-}
-div:where(.swal2-container) .swal2-radio label,
-div:where(.swal2-container) .swal2-checkbox label {
-  margin: 0 0.6em;
-  font-size: 1.125em;
-}
-div:where(.swal2-container) .swal2-radio input,
-div:where(.swal2-container) .swal2-checkbox input {
-  flex-shrink: 0;
-  margin: 0 0.4em;
-}
-div:where(.swal2-container) label:where(.swal2-input-label) {
-  display: flex;
-  justify-content: center;
-  margin: 1em auto 0;
-}
-div:where(.swal2-container) div:where(.swal2-validation-message) {
-  align-items: center;
-  justify-content: center;
-  margin: 1em 0 0;
-  padding: 0.625em;
-  overflow: hidden;
-  background: #323234;
-  color: #e1e1e1;
-  font-size: 1em;
-  font-weight: 300;
-}
-div:where(.swal2-container) div:where(.swal2-validation-message)::before {
-  content: "!";
-  display: inline-block;
-  width: 1.5em;
-  min-width: 1.5em;
-  height: 1.5em;
-  margin: 0 0.625em;
-  border-radius: 50%;
-  background-color: #f27474;
-  color: #fff;
-  font-weight: 600;
-  line-height: 1.5em;
-  text-align: center;
-}
-div:where(.swal2-container) .swal2-progress-steps {
-  flex-wrap: wrap;
-  align-items: center;
-  max-width: 100%;
-  margin: 1.25em auto;
-  padding: 0;
-  background: transparent;
-  font-weight: 600;
-}
-div:where(.swal2-container) .swal2-progress-steps li {
-  display: inline-block;
-  position: relative;
-}
-div:where(.swal2-container) .swal2-progress-steps .swal2-progress-step {
-  z-index: 20;
-  flex-shrink: 0;
-  width: 2em;
-  height: 2em;
-  border-radius: 2em;
-  background: #2778c4;
-  color: #fff;
-  line-height: 2em;
-  text-align: center;
-}
-div:where(.swal2-container) .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step {
-  background: #2778c4;
-}
-div:where(.swal2-container) .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step ~ .swal2-progress-step {
-  background: #58585b;
-  color: #fff;
-}
-div:where(.swal2-container) .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step ~ .swal2-progress-step-line {
-  background: #58585b;
-}
-div:where(.swal2-container) .swal2-progress-steps .swal2-progress-step-line {
-  z-index: 10;
-  flex-shrink: 0;
-  width: 2.5em;
-  height: 0.4em;
-  margin: 0 -1px;
-  background: #2778c4;
-}
-
-div:where(.swal2-icon) {
-  position: relative;
-  box-sizing: content-box;
-  justify-content: center;
-  width: 5em;
-  height: 5em;
-  margin: 2.5em auto 0.6em;
-  border: 0.25em solid transparent;
-  border-radius: 50%;
-  border-color: #000;
-  font-family: inherit;
-  line-height: 5em;
-  cursor: default;
-  user-select: none;
-}
-div:where(.swal2-icon) .swal2-icon-content {
-  display: flex;
-  align-items: center;
-  font-size: 3.75em;
-}
-div:where(.swal2-icon).swal2-error {
-  border-color: #f27474;
-  color: #f27474;
-}
-div:where(.swal2-icon).swal2-error .swal2-x-mark {
-  position: relative;
-  flex-grow: 1;
-}
-div:where(.swal2-icon).swal2-error [class^=swal2-x-mark-line] {
-  display: block;
-  position: absolute;
-  top: 2.3125em;
-  width: 2.9375em;
-  height: 0.3125em;
-  border-radius: 0.125em;
-  background-color: #f27474;
-}
-div:where(.swal2-icon).swal2-error [class^=swal2-x-mark-line][class\$=left] {
-  left: 1.0625em;
-  transform: rotate(45deg);
-}
-div:where(.swal2-icon).swal2-error [class^=swal2-x-mark-line][class\$=right] {
-  right: 1em;
-  transform: rotate(-45deg);
-}
-div:where(.swal2-icon).swal2-error.swal2-icon-show {
-  animation: swal2-animate-error-icon 0.5s;
-}
-div:where(.swal2-icon).swal2-error.swal2-icon-show .swal2-x-mark {
-  animation: swal2-animate-error-x-mark 0.5s;
-}
-div:where(.swal2-icon).swal2-warning {
-  border-color: #facea8;
-  color: #f8bb86;
-}
-div:where(.swal2-icon).swal2-warning.swal2-icon-show {
-  animation: swal2-animate-error-icon 0.5s;
-}
-div:where(.swal2-icon).swal2-warning.swal2-icon-show .swal2-icon-content {
-  animation: swal2-animate-i-mark 0.5s;
-}
-div:where(.swal2-icon).swal2-info {
-  border-color: #9de0f6;
-  color: #3fc3ee;
-}
-div:where(.swal2-icon).swal2-info.swal2-icon-show {
-  animation: swal2-animate-error-icon 0.5s;
-}
-div:where(.swal2-icon).swal2-info.swal2-icon-show .swal2-icon-content {
-  animation: swal2-animate-i-mark 0.8s;
-}
-div:where(.swal2-icon).swal2-question {
-  border-color: #c9dae1;
-  color: #87adbd;
-}
-div:where(.swal2-icon).swal2-question.swal2-icon-show {
-  animation: swal2-animate-error-icon 0.5s;
-}
-div:where(.swal2-icon).swal2-question.swal2-icon-show .swal2-icon-content {
-  animation: swal2-animate-question-mark 0.8s;
-}
-div:where(.swal2-icon).swal2-success {
-  border-color: #a5dc86;
-  color: #a5dc86;
-}
-div:where(.swal2-icon).swal2-success [class^=swal2-success-circular-line] {
-  position: absolute;
-  width: 3.75em;
-  height: 7.5em;
-  border-radius: 50%;
-}
-div:where(.swal2-icon).swal2-success [class^=swal2-success-circular-line][class\$=left] {
-  top: -0.4375em;
-  left: -2.0635em;
-  transform: rotate(-45deg);
-  transform-origin: 3.75em 3.75em;
-  border-radius: 7.5em 0 0 7.5em;
-}
-div:where(.swal2-icon).swal2-success [class^=swal2-success-circular-line][class\$=right] {
-  top: -0.6875em;
-  left: 1.875em;
-  transform: rotate(-45deg);
-  transform-origin: 0 3.75em;
-  border-radius: 0 7.5em 7.5em 0;
-}
-div:where(.swal2-icon).swal2-success .swal2-success-ring {
-  position: absolute;
-  z-index: 2;
-  top: -0.25em;
-  left: -0.25em;
-  box-sizing: content-box;
-  width: 100%;
   height: 100%;
-  border: 0.25em solid rgba(165, 220, 134, 0.3);
+  width: 100%;
+  color: #fff;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  pointer-events: none;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.notyf__icon--error, .notyf__icon--success {
+  height: 21px;
+  width: 21px;
+  background: #fff;
   border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  position: relative;
 }
-div:where(.swal2-icon).swal2-success .swal2-success-fix {
-  position: absolute;
-  z-index: 1;
-  top: 0.5em;
-  left: 1.625em;
-  width: 0.4375em;
-  height: 5.625em;
-  transform: rotate(-45deg);
-}
-div:where(.swal2-icon).swal2-success [class^=swal2-success-line] {
+
+.notyf__icon--error:after, .notyf__icon--error:before {
+  content: "";
+  background: currentColor;
   display: block;
   position: absolute;
-  z-index: 2;
-  height: 0.3125em;
-  border-radius: 0.125em;
-  background-color: #a5dc86;
+  width: 3px;
+  border-radius: 3px;
+  left: 9px;
+  height: 12px;
+  top: 5px;
 }
-div:where(.swal2-icon).swal2-success [class^=swal2-success-line][class\$=tip] {
-  top: 2.875em;
-  left: 0.8125em;
-  width: 1.5625em;
-  transform: rotate(45deg);
-}
-div:where(.swal2-icon).swal2-success [class^=swal2-success-line][class\$=long] {
-  top: 2.375em;
-  right: 0.5em;
-  width: 2.9375em;
+
+.notyf__icon--error:after {
   transform: rotate(-45deg);
 }
-div:where(.swal2-icon).swal2-success.swal2-icon-show .swal2-success-line-tip {
-  animation: swal2-animate-success-line-tip 0.75s;
-}
-div:where(.swal2-icon).swal2-success.swal2-icon-show .swal2-success-line-long {
-  animation: swal2-animate-success-line-long 0.75s;
-}
-div:where(.swal2-icon).swal2-success.swal2-icon-show .swal2-success-circular-line-right {
-  animation: swal2-rotate-success-circular-line 4.25s ease-in;
+
+.notyf__icon--error:before {
+  transform: rotate(45deg);
 }
 
-[class^=swal2] {
-  -webkit-tap-highlight-color: transparent;
-}
-
-.swal2-show {
-  animation: swal2-show 0.3s;
-}
-
-.swal2-hide {
-  animation: swal2-hide 0.15s forwards;
-}
-
-.swal2-noanimation {
-  transition: none;
-}
-
-.swal2-scrollbar-measure {
+.notyf__icon--success:after, .notyf__icon--success:before {
+  content: "";
+  background: currentColor;
+  display: block;
   position: absolute;
-  top: -9999px;
-  width: 50px;
-  height: 50px;
-  overflow: scroll;
+  width: 3px;
+  border-radius: 3px;
 }
 
-.swal2-rtl .swal2-close {
-  margin-right: initial;
-  margin-left: 0;
-}
-.swal2-rtl .swal2-timer-progress-bar {
-  right: 0;
-  left: auto;
+.notyf__icon--success:after {
+  height: 6px;
+  transform: rotate(-45deg);
+  top: 9px;
+  left: 6px;
 }
 
-@keyframes swal2-toast-show {
-  0% {
-    transform: translateY(-0.625em) rotateZ(2deg);
-  }
-  33% {
-    transform: translateY(0) rotateZ(-2deg);
-  }
-  66% {
-    transform: translateY(0.3125em) rotateZ(2deg);
-  }
-  100% {
-    transform: translateY(0) rotateZ(0deg);
-  }
+.notyf__icon--success:before {
+  height: 11px;
+  transform: rotate(45deg);
+  top: 5px;
+  left: 10px;
 }
-@keyframes swal2-toast-hide {
-  100% {
-    transform: rotateZ(1deg);
-    opacity: 0;
-  }
-}
-@keyframes swal2-toast-animate-success-line-tip {
-  0% {
-    top: 0.5625em;
-    left: 0.0625em;
-    width: 0;
-  }
-  54% {
-    top: 0.125em;
-    left: 0.125em;
-    width: 0;
-  }
-  70% {
-    top: 0.625em;
-    left: -0.25em;
-    width: 1.625em;
-  }
-  84% {
-    top: 1.0625em;
-    left: 0.75em;
-    width: 0.5em;
-  }
-  100% {
-    top: 1.125em;
-    left: 0.1875em;
-    width: 0.75em;
-  }
-}
-@keyframes swal2-toast-animate-success-line-long {
-  0% {
-    top: 1.625em;
-    right: 1.375em;
-    width: 0;
-  }
-  65% {
-    top: 1.25em;
-    right: 0.9375em;
-    width: 0;
-  }
-  84% {
-    top: 0.9375em;
-    right: 0;
-    width: 1.125em;
-  }
-  100% {
-    top: 0.9375em;
-    right: 0.1875em;
-    width: 1.375em;
-  }
-}
-@keyframes swal2-show {
-  0% {
-    transform: scale(0.7);
-  }
-  45% {
-    transform: scale(1.05);
-  }
-  80% {
-    transform: scale(0.95);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@keyframes swal2-hide {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(0.5);
-    opacity: 0;
-  }
-}
-@keyframes swal2-animate-success-line-tip {
-  0% {
-    top: 1.1875em;
-    left: 0.0625em;
-    width: 0;
-  }
-  54% {
-    top: 1.0625em;
-    left: 0.125em;
-    width: 0;
-  }
-  70% {
-    top: 2.1875em;
-    left: -0.375em;
-    width: 3.125em;
-  }
-  84% {
-    top: 3em;
-    left: 1.3125em;
-    width: 1.0625em;
-  }
-  100% {
-    top: 2.8125em;
-    left: 0.8125em;
-    width: 1.5625em;
-  }
-}
-@keyframes swal2-animate-success-line-long {
-  0% {
-    top: 3.375em;
-    right: 2.875em;
-    width: 0;
-  }
-  65% {
-    top: 3.375em;
-    right: 2.875em;
-    width: 0;
-  }
-  84% {
-    top: 2.1875em;
-    right: 0;
-    width: 3.4375em;
-  }
-  100% {
-    top: 2.375em;
-    right: 0.5em;
-    width: 2.9375em;
-  }
-}
-@keyframes swal2-rotate-success-circular-line {
-  0% {
-    transform: rotate(-45deg);
-  }
-  5% {
-    transform: rotate(-45deg);
-  }
-  12% {
-    transform: rotate(-405deg);
-  }
-  100% {
-    transform: rotate(-405deg);
-  }
-}
-@keyframes swal2-animate-error-x-mark {
-  0% {
-    margin-top: 1.625em;
-    transform: scale(0.4);
-    opacity: 0;
-  }
-  50% {
-    margin-top: 1.625em;
-    transform: scale(0.4);
-    opacity: 0;
-  }
-  80% {
-    margin-top: -0.375em;
-    transform: scale(1.15);
-  }
-  100% {
-    margin-top: 0;
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-@keyframes swal2-animate-error-icon {
-  0% {
-    transform: rotateX(100deg);
-    opacity: 0;
-  }
-  100% {
-    transform: rotateX(0deg);
-    opacity: 1;
-  }
-}
-@keyframes swal2-rotate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes swal2-animate-question-mark {
-  0% {
-    transform: rotateY(-360deg);
-  }
-  100% {
-    transform: rotateY(0);
-  }
-}
-@keyframes swal2-animate-i-mark {
-  0% {
-    transform: rotateZ(45deg);
-    opacity: 0;
-  }
-  25% {
-    transform: rotateZ(-25deg);
-    opacity: 0.4;
-  }
-  50% {
-    transform: rotateZ(15deg);
-    opacity: 0.8;
-  }
-  75% {
-    transform: rotateZ(-5deg);
-    opacity: 1;
-  }
-  100% {
-    transform: rotateX(0);
-    opacity: 1;
-  }
-}
-body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {
+
+.notyf__toast {
+  display: block;
   overflow: hidden;
-}
-body.swal2-height-auto {
-  height: auto !important;
-}
-body.swal2-no-backdrop .swal2-container {
-  background-color: transparent !important;
-  pointer-events: none;
-}
-body.swal2-no-backdrop .swal2-container .swal2-popup {
-  pointer-events: all;
-}
-body.swal2-no-backdrop .swal2-container .swal2-modal {
-  box-shadow: 0 0 10px rgba(25, 25, 26, 0.75);
-}
-@media print {
-  body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {
-    overflow-y: scroll !important;
-  }
-  body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) > [aria-hidden=true] {
-    display: none;
-  }
-  body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) .swal2-container {
-    position: static !important;
-  }
-}
-body.swal2-toast-shown .swal2-container {
+  pointer-events: auto;
+  -webkit-animation: notyf-fadeinup 0.3s ease-in forwards;
+  animation: notyf-fadeinup 0.3s ease-in forwards;
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.25);
+  position: relative;
+  padding: 0 15px;
+  border-radius: 2px;
+  max-width: 300px;
+  transform: translateY(25%);
   box-sizing: border-box;
-  width: 360px;
-  max-width: 100%;
-  background-color: transparent;
-  pointer-events: none;
+  flex-shrink: 0;
 }
-body.swal2-toast-shown .swal2-container.swal2-top {
-  inset: 0 auto auto 50%;
-  transform: translateX(-50%);
+
+.notyf__toast--disappear {
+  transform: translateY(0);
+  -webkit-animation: notyf-fadeoutdown 0.3s forwards;
+  animation: notyf-fadeoutdown 0.3s forwards;
+  -webkit-animation-delay: 0.25s;
+  animation-delay: 0.25s;
 }
-body.swal2-toast-shown .swal2-container.swal2-top-end, body.swal2-toast-shown .swal2-container.swal2-top-right {
-  inset: 0 0 auto auto;
+
+.notyf__toast--disappear .notyf__icon, .notyf__toast--disappear .notyf__message {
+  -webkit-animation: notyf-fadeoutdown 0.3s forwards;
+  animation: notyf-fadeoutdown 0.3s forwards;
+  opacity: 1;
+  transform: translateY(0);
 }
-body.swal2-toast-shown .swal2-container.swal2-top-start, body.swal2-toast-shown .swal2-container.swal2-top-left {
-  inset: 0 auto auto 0;
+
+.notyf__toast--disappear .notyf__dismiss {
+  -webkit-animation: notyf-fadeoutright 0.3s forwards;
+  animation: notyf-fadeoutright 0.3s forwards;
+  opacity: 1;
+  transform: translateX(0);
 }
-body.swal2-toast-shown .swal2-container.swal2-center-start, body.swal2-toast-shown .swal2-container.swal2-center-left {
-  inset: 50% auto auto 0;
-  transform: translateY(-50%);
+
+.notyf__toast--disappear .notyf__message {
+  -webkit-animation-delay: 0.05s;
+  animation-delay: 0.05s;
 }
-body.swal2-toast-shown .swal2-container.swal2-center {
-  inset: 50% auto auto 50%;
-  transform: translate(-50%, -50%);
+
+.notyf__toast--upper {
+  margin-bottom: 20px;
 }
-body.swal2-toast-shown .swal2-container.swal2-center-end, body.swal2-toast-shown .swal2-container.swal2-center-right {
-  inset: 50% 0 auto auto;
-  transform: translateY(-50%);
+
+.notyf__toast--lower {
+  margin-top: 20px;
 }
-body.swal2-toast-shown .swal2-container.swal2-bottom-start, body.swal2-toast-shown .swal2-container.swal2-bottom-left {
-  inset: auto auto 0 0;
+
+.notyf__toast--dismissible .notyf__wrapper {
+  padding-right: 30px;
 }
-body.swal2-toast-shown .swal2-container.swal2-bottom {
-  inset: auto auto 0 50%;
-  transform: translateX(-50%);
+
+.notyf__ripple {
+  height: 400px;
+  width: 400px;
+  position: absolute;
+  transform-origin: bottom right;
+  right: 0;
+  top: 0;
+  border-radius: 50%;
+  transform: scale(0) translateY(-51%) translateX(13%);
+  z-index: 5;
+  -webkit-animation: ripple 0.4s ease-out forwards;
+  animation: ripple 0.4s ease-out forwards;
 }
-body.swal2-toast-shown .swal2-container.swal2-bottom-end, body.swal2-toast-shown .swal2-container.swal2-bottom-right {
-  inset: auto 0 0 auto;
+
+.notyf__wrapper {
+  display: flex;
+  align-items: center;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  padding-right: 15px;
+  border-radius: 3px;
+  position: relative;
+  z-index: 10;
 }
-`, "",{"version":3,"sources":["webpack://./node_modules/@sweetalert2/themes/dark/dark.css"],"names":[],"mappings":"AAAA;;;CAGC;;AAED;EACE,sBAAsB;EACtB,2BAA2B;EAC3B,wBAAwB;EACxB,mDAAmD;EACnD,YAAY;EACZ,kBAAkB;EAClB,mBAAmB;EACnB,yLAAyL;EACzL,mBAAmB;AACrB;AACA;EACE,cAAc;AAChB;AACA;EACE,iBAAiB;EACjB,UAAU;EACV,cAAc;EACd,mBAAmB;AACrB;AACA;EACE,uBAAuB;AACzB;AACA;EACE,WAAW;EACX,aAAa;EACb,cAAc;AAChB;AACA;EACE,cAAc;AAChB;AACA;EACE,iBAAiB;EACjB,kBAAkB;EAClB,gBAAgB;AAClB;AACA;EACE,gBAAgB;EAChB,cAAc;EACd,kBAAkB;EAClB,YAAY;EACZ,aAAa;EACb,SAAS;EACT,cAAc;AAChB;AACA;EACE,iBAAiB;EACjB,UAAU;EACV,iBAAiB;EACjB,cAAc;EACd,mBAAmB;AACrB;AACA;EACE,UAAU;AACZ;AACA;EACE,cAAc;EACd,cAAc;EACd,kBAAkB;EAClB,UAAU;EACV,WAAW;EACX,cAAc;AAChB;AACA;EACE,cAAc;EACd,cAAc;EACd,kBAAkB;EAClB,UAAU;EACV,cAAc;EACd,WAAW;EACX,mBAAmB;AACrB;AACA;EACE,aAAa;EACb,mBAAmB;EACnB,gBAAgB;EAChB,iBAAiB;AACnB;AACA;EACE,UAAU;EACV,WAAW;AACb;AACA;EACE,YAAY;EACZ,cAAc;AAChB;AACA;EACE,cAAc;AAChB;AACA;EACE,eAAe;AACjB;AACA;EACE,2BAA2B;EAC3B,YAAY;EACZ,SAAS;EACT,iBAAiB;EACjB,gBAAgB;AAClB;AACA;EACE,oBAAoB;EACpB,oBAAoB;EACpB,cAAc;AAChB;AACA;EACE,qBAAqB;AACvB;AACA;EACE,kBAAkB;EAClB,YAAY;EACZ,WAAW;EACX,kBAAkB;AACpB;AACA;EACE,WAAW;EACX,YAAY;EACZ,yBAAyB;EACzB,yBAAyB;EACzB,0BAA0B;AAC5B;AACA;EACE,YAAY;EACZ,cAAc;EACd,yBAAyB;EACzB,0BAA0B;AAC5B;AACA;EACE,UAAU;EACV,WAAW;AACb;AACA;EACE,MAAM;EACN,cAAc;EACd,eAAe;EACf,gBAAgB;AAClB;AACA;EACE,gBAAgB;AAClB;AACA;EACE,YAAY;EACZ,cAAc;EACd,aAAa;AACf;AACA;EACE,aAAa;EACb,eAAe;EACf,cAAc;AAChB;AACA;EACE,qDAAqD;AACvD;AACA;EACE,sDAAsD;AACxD;AACA;EACE,gCAAgC;AAClC;AACA;EACE,yCAAyC;AAC3C;;AAEA;EACE,aAAa;EACb,eAAe;EACf,aAAa;EACb,QAAQ;EACR,sBAAsB;EACtB,+IAA+I;EAC/I,iGAAiG;EACjG,YAAY;EACZ,gBAAgB;EAChB,kBAAkB;EAClB,iCAAiC;EACjC,iCAAiC;AACnC;AACA;EACE,kCAAkC;AACpC;AACA;EACE,kCAAkC;AACpC;AACA;EACE,+CAA+C;AACjD;AACA;EACE,+CAA+C;AACjD;AACA;EACE,+CAA+C;AACjD;AACA;EACE,iBAAiB;AACnB;AACA;EACE,cAAc;EACd,wBAAwB;AAC1B;AACA;EACE,cAAc;EACd,qBAAqB;AACvB;AACA;EACE,WAAW;EACX,kBAAkB;AACpB;AACA;EACE,cAAc;EACd,WAAW;EACX,yBAAyB;AAC3B;AACA;EACE,cAAc;EACd,WAAW;EACX,sBAAsB;AACxB;AACA;EACE,cAAc;EACd,WAAW;EACX,eAAe;AACjB;AACA;EACE,cAAc;EACd,WAAW;EACX,sBAAsB;AACxB;AACA;EACE,cAAc;EACd,WAAW;EACX,mBAAmB;AACrB;AACA;EACE,gBAAgB;EAChB,WAAW;AACb;AACA;EACE,aAAa;EACb,mBAAmB;AACrB;AACA;EACE,2BAA2B;AAC7B;AACA;EACE,aAAa;EACb,kBAAkB;EAClB,sBAAsB;EACtB,sCAAsC;EACtC,WAAW;EACX,eAAe;EACf,mBAAmB;EACnB,YAAY;EACZ,kBAAkB;EAClB,mBAAmB;EACnB,cAAc;EACd,oBAAoB;EACpB,eAAe;AACjB;AACA;EACE,aAAa;AACf;AACA;EACE,kBAAkB;AACpB;AACA;EACE,kBAAkB;EAClB,eAAe;EACf,SAAS;EACT,oBAAoB;EACpB,cAAc;EACd,kBAAkB;EAClB,gBAAgB;EAChB,kBAAkB;EAClB,oBAAoB;EACpB,qBAAqB;AACvB;AACA;EACE,aAAa;EACb,UAAU;EACV,sBAAsB;EACtB,eAAe;EACf,mBAAmB;EACnB,uBAAuB;EACvB,WAAW;EACX,qBAAqB;EACrB,UAAU;AACZ;AACA;EACE,YAAY;AACd;AACA;EACE,yEAAyE;AAC3E;AACA;EACE,yEAAyE;AAC3E;AACA;EACE,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,YAAY;EACZ,aAAa;EACb,iBAAiB;EACjB,8DAA8D;EAC9D,oBAAoB;EACpB,mBAAmB;EACnB,mBAAmB;EACnB,qDAAqD;AACvD;AACA;EACE,gBAAgB;EAChB,sBAAsB;EACtB,2BAA2B;EAC3B,iCAAiC;EACjC,gBAAgB;AAClB;AACA;EACE,eAAe;AACjB;AACA;EACE,SAAS;EACT,qBAAqB;EACrB,mBAAmB;EACnB,yBAAyB;EACzB,WAAW;EACX,cAAc;AAChB;AACA;EACE,8CAA8C;AAChD;AACA;EACE,SAAS;EACT,qBAAqB;EACrB,mBAAmB;EACnB,yBAAyB;EACzB,WAAW;EACX,cAAc;AAChB;AACA;EACE,4CAA4C;AAC9C;AACA;EACE,SAAS;EACT,qBAAqB;EACrB,mBAAmB;EACnB,yBAAyB;EACzB,WAAW;EACX,cAAc;AAChB;AACA;EACE,8CAA8C;AAChD;AACA;EACE,iEAAiE;AACnE;AACA;EACE,aAAa;AACf;AACA;EACE,SAAS;AACX;AACA;EACE,eAAe;EACf,kBAAkB;EAClB,0BAA0B;EAC1B,cAAc;EACd,cAAc;EACd,kBAAkB;AACpB;AACA;EACE,kBAAkB;EAClB,QAAQ;EACR,SAAS;EACT,OAAO;EACP,4BAA4B;EAC5B,gBAAgB;EAChB,+BAA+B;EAC/B,8BAA8B;AAChC;AACA;EACE,WAAW;EACX,cAAc;EACd,oCAAoC;AACtC;AACA;EACE,eAAe;EACf,oBAAoB;AACtB;AACA;EACE,UAAU;EACV,mBAAmB;EACnB,uBAAuB;EACvB,YAAY;EACZ,aAAa;EACb,aAAa;EACb,eAAe;EACf,qBAAqB;EACrB,UAAU;EACV,gBAAgB;EAChB,uCAAuC;EACvC,YAAY;EACZ,kBAAkB;EAClB,uBAAuB;EACvB,WAAW;EACX,sBAAsB;EACtB,gBAAgB;EAChB,eAAe;EACf,iBAAiB;AACnB;AACA;EACE,eAAe;EACf,uBAAuB;EACvB,cAAc;AAChB;AACA;EACE,aAAa;EACb,oDAAoD;AACtD;AACA;EACE,SAAS;AACX;AACA;EACE,UAAU;EACV,uBAAuB;EACvB,uBAAuB;EACvB,UAAU;EACV,cAAc;EACd,cAAc;EACd,kBAAkB;EAClB,mBAAmB;EACnB,mBAAmB;EACnB,kBAAkB;EAClB,qBAAqB;EACrB,sBAAsB;AACxB;AACA;;;;;;EAME,mBAAmB;AACrB;AACA;;;EAGE,sBAAsB;EACtB,WAAW;EACX,8CAA8C;EAC9C,yBAAyB;EACzB,uBAAuB;EACvB,mBAAmB;EACnB,sEAAsE;EACtE,cAAc;EACd,kBAAkB;AACpB;AACA;;;EAGE,gCAAgC;EAChC,sCAAsC;AACxC;AACA;;;EAGE,yBAAyB;EACzB,aAAa;EACb,mFAAmF;AACrF;AACA;;;EAGE,WAAW;AACb;AACA;EACE,mBAAmB;EACnB,mBAAmB;AACrB;AACA;EACE,UAAU;AACZ;AACA;EACE,UAAU;EACV,cAAc;EACd,gBAAgB;EAChB,kBAAkB;AACpB;AACA;;EAEE,eAAe;EACf,UAAU;EACV,kBAAkB;EAClB,oBAAoB;AACtB;AACA;EACE,eAAe;EACf,iBAAiB;AACnB;AACA;EACE,UAAU;EACV,kBAAkB;EAClB,iBAAiB;EACjB,mBAAmB;EACnB,kBAAkB;AACpB;AACA;EACE,cAAc;EACd,eAAe;AACjB;AACA;EACE,cAAc;EACd,eAAe;EACf,wBAAwB;EACxB,mBAAmB;EACnB,cAAc;EACd,kBAAkB;AACpB;AACA;;EAEE,mBAAmB;EACnB,uBAAuB;EACvB,mBAAmB;EACnB,cAAc;AAChB;AACA;;EAEE,eAAe;EACf,kBAAkB;AACpB;AACA;;EAEE,cAAc;EACd,eAAe;AACjB;AACA;EACE,aAAa;EACb,uBAAuB;EACvB,kBAAkB;AACpB;AACA;EACE,mBAAmB;EACnB,uBAAuB;EACvB,eAAe;EACf,gBAAgB;EAChB,gBAAgB;EAChB,mBAAmB;EACnB,cAAc;EACd,cAAc;EACd,gBAAgB;AAClB;AACA;EACE,YAAY;EACZ,qBAAqB;EACrB,YAAY;EACZ,gBAAgB;EAChB,aAAa;EACb,iBAAiB;EACjB,kBAAkB;EAClB,yBAAyB;EACzB,WAAW;EACX,gBAAgB;EAChB,kBAAkB;EAClB,kBAAkB;AACpB;AACA;EACE,eAAe;EACf,mBAAmB;EACnB,eAAe;EACf,mBAAmB;EACnB,UAAU;EACV,uBAAuB;EACvB,gBAAgB;AAClB;AACA;EACE,qBAAqB;EACrB,kBAAkB;AACpB;AACA;EACE,WAAW;EACX,cAAc;EACd,UAAU;EACV,WAAW;EACX,kBAAkB;EAClB,mBAAmB;EACnB,WAAW;EACX,gBAAgB;EAChB,kBAAkB;AACpB;AACA;EACE,mBAAmB;AACrB;AACA;EACE,mBAAmB;EACnB,WAAW;AACb;AACA;EACE,mBAAmB;AACrB;AACA;EACE,WAAW;EACX,cAAc;EACd,YAAY;EACZ,aAAa;EACb,cAAc;EACd,mBAAmB;AACrB;;AAEA;EACE,kBAAkB;EAClB,uBAAuB;EACvB,uBAAuB;EACvB,UAAU;EACV,WAAW;EACX,wBAAwB;EACxB,gCAAgC;EAChC,kBAAkB;EAClB,kBAAkB;EAClB,oBAAoB;EACpB,gBAAgB;EAChB,eAAe;EACf,iBAAiB;AACnB;AACA;EACE,aAAa;EACb,mBAAmB;EACnB,iBAAiB;AACnB;AACA;EACE,qBAAqB;EACrB,cAAc;AAChB;AACA;EACE,kBAAkB;EAClB,YAAY;AACd;AACA;EACE,cAAc;EACd,kBAAkB;EAClB,aAAa;EACb,eAAe;EACf,gBAAgB;EAChB,sBAAsB;EACtB,yBAAyB;AAC3B;AACA;EACE,cAAc;EACd,wBAAwB;AAC1B;AACA;EACE,UAAU;EACV,yBAAyB;AAC3B;AACA;EACE,wCAAwC;AAC1C;AACA;EACE,0CAA0C;AAC5C;AACA;EACE,qBAAqB;EACrB,cAAc;AAChB;AACA;EACE,wCAAwC;AAC1C;AACA;EACE,oCAAoC;AACtC;AACA;EACE,qBAAqB;EACrB,cAAc;AAChB;AACA;EACE,wCAAwC;AAC1C;AACA;EACE,oCAAoC;AACtC;AACA;EACE,qBAAqB;EACrB,cAAc;AAChB;AACA;EACE,wCAAwC;AAC1C;AACA;EACE,2CAA2C;AAC7C;AACA;EACE,qBAAqB;EACrB,cAAc;AAChB;AACA;EACE,kBAAkB;EAClB,aAAa;EACb,aAAa;EACb,kBAAkB;AACpB;AACA;EACE,cAAc;EACd,eAAe;EACf,yBAAyB;EACzB,+BAA+B;EAC/B,8BAA8B;AAChC;AACA;EACE,cAAc;EACd,aAAa;EACb,yBAAyB;EACzB,0BAA0B;EAC1B,8BAA8B;AAChC;AACA;EACE,kBAAkB;EAClB,UAAU;EACV,YAAY;EACZ,aAAa;EACb,uBAAuB;EACvB,WAAW;EACX,YAAY;EACZ,6CAA6C;EAC7C,kBAAkB;AACpB;AACA;EACE,kBAAkB;EAClB,UAAU;EACV,UAAU;EACV,aAAa;EACb,eAAe;EACf,eAAe;EACf,yBAAyB;AAC3B;AACA;EACE,cAAc;EACd,kBAAkB;EAClB,UAAU;EACV,gBAAgB;EAChB,sBAAsB;EACtB,yBAAyB;AAC3B;AACA;EACE,YAAY;EACZ,cAAc;EACd,eAAe;EACf,wBAAwB;AAC1B;AACA;EACE,YAAY;EACZ,YAAY;EACZ,eAAe;EACf,yBAAyB;AAC3B;AACA;EACE,+CAA+C;AACjD;AACA;EACE,gDAAgD;AAClD;AACA;EACE,2DAA2D;AAC7D;;AAEA;EACE,wCAAwC;AAC1C;;AAEA;EACE,0BAA0B;AAC5B;;AAEA;EACE,oCAAoC;AACtC;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,kBAAkB;EAClB,YAAY;EACZ,WAAW;EACX,YAAY;EACZ,gBAAgB;AAClB;;AAEA;EACE,qBAAqB;EACrB,cAAc;AAChB;AACA;EACE,QAAQ;EACR,UAAU;AACZ;;AAEA;EACE;IACE,6CAA6C;EAC/C;EACA;IACE,uCAAuC;EACzC;EACA;IACE,6CAA6C;EAC/C;EACA;IACE,sCAAsC;EACxC;AACF;AACA;EACE;IACE,wBAAwB;IACxB,UAAU;EACZ;AACF;AACA;EACE;IACE,aAAa;IACb,cAAc;IACd,QAAQ;EACV;EACA;IACE,YAAY;IACZ,aAAa;IACb,QAAQ;EACV;EACA;IACE,YAAY;IACZ,aAAa;IACb,cAAc;EAChB;EACA;IACE,aAAa;IACb,YAAY;IACZ,YAAY;EACd;EACA;IACE,YAAY;IACZ,cAAc;IACd,aAAa;EACf;AACF;AACA;EACE;IACE,YAAY;IACZ,cAAc;IACd,QAAQ;EACV;EACA;IACE,WAAW;IACX,eAAe;IACf,QAAQ;EACV;EACA;IACE,aAAa;IACb,QAAQ;IACR,cAAc;EAChB;EACA;IACE,aAAa;IACb,eAAe;IACf,cAAc;EAChB;AACF;AACA;EACE;IACE,qBAAqB;EACvB;EACA;IACE,sBAAsB;EACxB;EACA;IACE,sBAAsB;EACxB;EACA;IACE,mBAAmB;EACrB;AACF;AACA;EACE;IACE,mBAAmB;IACnB,UAAU;EACZ;EACA;IACE,qBAAqB;IACrB,UAAU;EACZ;AACF;AACA;EACE;IACE,aAAa;IACb,cAAc;IACd,QAAQ;EACV;EACA;IACE,aAAa;IACb,aAAa;IACb,QAAQ;EACV;EACA;IACE,aAAa;IACb,cAAc;IACd,cAAc;EAChB;EACA;IACE,QAAQ;IACR,cAAc;IACd,eAAe;EACjB;EACA;IACE,aAAa;IACb,cAAc;IACd,eAAe;EACjB;AACF;AACA;EACE;IACE,YAAY;IACZ,cAAc;IACd,QAAQ;EACV;EACA;IACE,YAAY;IACZ,cAAc;IACd,QAAQ;EACV;EACA;IACE,aAAa;IACb,QAAQ;IACR,eAAe;EACjB;EACA;IACE,YAAY;IACZ,YAAY;IACZ,eAAe;EACjB;AACF;AACA;EACE;IACE,yBAAyB;EAC3B;EACA;IACE,yBAAyB;EAC3B;EACA;IACE,0BAA0B;EAC5B;EACA;IACE,0BAA0B;EAC5B;AACF;AACA;EACE;IACE,mBAAmB;IACnB,qBAAqB;IACrB,UAAU;EACZ;EACA;IACE,mBAAmB;IACnB,qBAAqB;IACrB,UAAU;EACZ;EACA;IACE,oBAAoB;IACpB,sBAAsB;EACxB;EACA;IACE,aAAa;IACb,mBAAmB;IACnB,UAAU;EACZ;AACF;AACA;EACE;IACE,0BAA0B;IAC1B,UAAU;EACZ;EACA;IACE,wBAAwB;IACxB,UAAU;EACZ;AACF;AACA;EACE;IACE,uBAAuB;EACzB;EACA;IACE,yBAAyB;EAC3B;AACF;AACA;EACE;IACE,2BAA2B;EAC7B;EACA;IACE,qBAAqB;EACvB;AACF;AACA;EACE;IACE,yBAAyB;IACzB,UAAU;EACZ;EACA;IACE,0BAA0B;IAC1B,YAAY;EACd;EACA;IACE,yBAAyB;IACzB,YAAY;EACd;EACA;IACE,yBAAyB;IACzB,UAAU;EACZ;EACA;IACE,qBAAqB;IACrB,UAAU;EACZ;AACF;AACA;EACE,gBAAgB;AAClB;AACA;EACE,uBAAuB;AACzB;AACA;EACE,wCAAwC;EACxC,oBAAoB;AACtB;AACA;EACE,mBAAmB;AACrB;AACA;EACE,2CAA2C;AAC7C;AACA;EACE;IACE,6BAA6B;EAC/B;EACA;IACE,aAAa;EACf;EACA;IACE,2BAA2B;EAC7B;AACF;AACA;EACE,sBAAsB;EACtB,YAAY;EACZ,eAAe;EACf,6BAA6B;EAC7B,oBAAoB;AACtB;AACA;EACE,sBAAsB;EACtB,2BAA2B;AAC7B;AACA;EACE,oBAAoB;AACtB;AACA;EACE,oBAAoB;AACtB;AACA;EACE,sBAAsB;EACtB,2BAA2B;AAC7B;AACA;EACE,wBAAwB;EACxB,gCAAgC;AAClC;AACA;EACE,sBAAsB;EACtB,2BAA2B;AAC7B;AACA;EACE,oBAAoB;AACtB;AACA;EACE,sBAAsB;EACtB,2BAA2B;AAC7B;AACA;EACE,oBAAoB;AACtB","sourcesContent":["/*\n* @sweetalert2/themes v5.0.16\n* Released under the MIT License.\n*/\n\n.swal2-popup.swal2-toast {\n  box-sizing: border-box;\n  grid-column: 1/4 !important;\n  grid-row: 1/4 !important;\n  grid-template-columns: min-content auto min-content;\n  padding: 1em;\n  overflow-y: hidden;\n  background: #19191a;\n  box-shadow: 0 0 1px hsla(0, 0%, 0%, 0.075), 0 1px 2px hsla(0, 0%, 0%, 0.075), 1px 2px 4px hsla(0, 0%, 0%, 0.075), 1px 3px 8px hsla(0, 0%, 0%, 0.075), 2px 4px 16px hsla(0, 0%, 0%, 0.075);\n  pointer-events: all;\n}\n.swal2-popup.swal2-toast > * {\n  grid-column: 2;\n}\n.swal2-popup.swal2-toast .swal2-title {\n  margin: 0.5em 1em;\n  padding: 0;\n  font-size: 1em;\n  text-align: initial;\n}\n.swal2-popup.swal2-toast .swal2-loading {\n  justify-content: center;\n}\n.swal2-popup.swal2-toast .swal2-input {\n  height: 2em;\n  margin: 0.5em;\n  font-size: 1em;\n}\n.swal2-popup.swal2-toast .swal2-validation-message {\n  font-size: 1em;\n}\n.swal2-popup.swal2-toast .swal2-footer {\n  margin: 0.5em 0 0;\n  padding: 0.5em 0 0;\n  font-size: 0.8em;\n}\n.swal2-popup.swal2-toast .swal2-close {\n  grid-column: 3/3;\n  grid-row: 1/99;\n  align-self: center;\n  width: 0.8em;\n  height: 0.8em;\n  margin: 0;\n  font-size: 2em;\n}\n.swal2-popup.swal2-toast .swal2-html-container {\n  margin: 0.5em 1em;\n  padding: 0;\n  overflow: initial;\n  font-size: 1em;\n  text-align: initial;\n}\n.swal2-popup.swal2-toast .swal2-html-container:empty {\n  padding: 0;\n}\n.swal2-popup.swal2-toast .swal2-loader {\n  grid-column: 1;\n  grid-row: 1/99;\n  align-self: center;\n  width: 2em;\n  height: 2em;\n  margin: 0.25em;\n}\n.swal2-popup.swal2-toast .swal2-icon {\n  grid-column: 1;\n  grid-row: 1/99;\n  align-self: center;\n  width: 2em;\n  min-width: 2em;\n  height: 2em;\n  margin: 0 0.5em 0 0;\n}\n.swal2-popup.swal2-toast .swal2-icon .swal2-icon-content {\n  display: flex;\n  align-items: center;\n  font-size: 1.8em;\n  font-weight: bold;\n}\n.swal2-popup.swal2-toast .swal2-icon.swal2-success .swal2-success-ring {\n  width: 2em;\n  height: 2em;\n}\n.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line] {\n  top: 0.875em;\n  width: 1.375em;\n}\n.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left] {\n  left: 0.3125em;\n}\n.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right] {\n  right: 0.3125em;\n}\n.swal2-popup.swal2-toast .swal2-actions {\n  justify-content: flex-start;\n  height: auto;\n  margin: 0;\n  margin-top: 0.5em;\n  padding: 0 0.5em;\n}\n.swal2-popup.swal2-toast .swal2-styled {\n  margin: 0.25em 0.5em;\n  padding: 0.4em 0.6em;\n  font-size: 1em;\n}\n.swal2-popup.swal2-toast .swal2-success {\n  border-color: #a5dc86;\n}\n.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line] {\n  position: absolute;\n  width: 1.6em;\n  height: 3em;\n  border-radius: 50%;\n}\n.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=left] {\n  top: -0.8em;\n  left: -0.5em;\n  transform: rotate(-45deg);\n  transform-origin: 2em 2em;\n  border-radius: 4em 0 0 4em;\n}\n.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=right] {\n  top: -0.25em;\n  left: 0.9375em;\n  transform-origin: 0 1.5em;\n  border-radius: 0 4em 4em 0;\n}\n.swal2-popup.swal2-toast .swal2-success .swal2-success-ring {\n  width: 2em;\n  height: 2em;\n}\n.swal2-popup.swal2-toast .swal2-success .swal2-success-fix {\n  top: 0;\n  left: 0.4375em;\n  width: 0.4375em;\n  height: 2.6875em;\n}\n.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line] {\n  height: 0.3125em;\n}\n.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=tip] {\n  top: 1.125em;\n  left: 0.1875em;\n  width: 0.75em;\n}\n.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=long] {\n  top: 0.9375em;\n  right: 0.1875em;\n  width: 1.375em;\n}\n.swal2-popup.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-tip {\n  animation: swal2-toast-animate-success-line-tip 0.75s;\n}\n.swal2-popup.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-long {\n  animation: swal2-toast-animate-success-line-long 0.75s;\n}\n.swal2-popup.swal2-toast.swal2-show {\n  animation: swal2-toast-show 0.5s;\n}\n.swal2-popup.swal2-toast.swal2-hide {\n  animation: swal2-toast-hide 0.1s forwards;\n}\n\ndiv:where(.swal2-container) {\n  display: grid;\n  position: fixed;\n  z-index: 1060;\n  inset: 0;\n  box-sizing: border-box;\n  grid-template-areas: \"top-start     top            top-end\" \"center-start  center         center-end\" \"bottom-start  bottom-center  bottom-end\";\n  grid-template-rows: minmax(min-content, auto) minmax(min-content, auto) minmax(min-content, auto);\n  height: 100%;\n  padding: 0.625em;\n  overflow-x: hidden;\n  transition: background-color 0.1s;\n  -webkit-overflow-scrolling: touch;\n}\ndiv:where(.swal2-container).swal2-backdrop-show, div:where(.swal2-container).swal2-noanimation {\n  background: rgba(25, 25, 26, 0.75);\n}\ndiv:where(.swal2-container).swal2-backdrop-hide {\n  background: transparent !important;\n}\ndiv:where(.swal2-container).swal2-top-start, div:where(.swal2-container).swal2-center-start, div:where(.swal2-container).swal2-bottom-start {\n  grid-template-columns: minmax(0, 1fr) auto auto;\n}\ndiv:where(.swal2-container).swal2-top, div:where(.swal2-container).swal2-center, div:where(.swal2-container).swal2-bottom {\n  grid-template-columns: auto minmax(0, 1fr) auto;\n}\ndiv:where(.swal2-container).swal2-top-end, div:where(.swal2-container).swal2-center-end, div:where(.swal2-container).swal2-bottom-end {\n  grid-template-columns: auto auto minmax(0, 1fr);\n}\ndiv:where(.swal2-container).swal2-top-start > .swal2-popup {\n  align-self: start;\n}\ndiv:where(.swal2-container).swal2-top > .swal2-popup {\n  grid-column: 2;\n  place-self: start center;\n}\ndiv:where(.swal2-container).swal2-top-end > .swal2-popup, div:where(.swal2-container).swal2-top-right > .swal2-popup {\n  grid-column: 3;\n  place-self: start end;\n}\ndiv:where(.swal2-container).swal2-center-start > .swal2-popup, div:where(.swal2-container).swal2-center-left > .swal2-popup {\n  grid-row: 2;\n  align-self: center;\n}\ndiv:where(.swal2-container).swal2-center > .swal2-popup {\n  grid-column: 2;\n  grid-row: 2;\n  place-self: center center;\n}\ndiv:where(.swal2-container).swal2-center-end > .swal2-popup, div:where(.swal2-container).swal2-center-right > .swal2-popup {\n  grid-column: 3;\n  grid-row: 2;\n  place-self: center end;\n}\ndiv:where(.swal2-container).swal2-bottom-start > .swal2-popup, div:where(.swal2-container).swal2-bottom-left > .swal2-popup {\n  grid-column: 1;\n  grid-row: 3;\n  align-self: end;\n}\ndiv:where(.swal2-container).swal2-bottom > .swal2-popup {\n  grid-column: 2;\n  grid-row: 3;\n  place-self: end center;\n}\ndiv:where(.swal2-container).swal2-bottom-end > .swal2-popup, div:where(.swal2-container).swal2-bottom-right > .swal2-popup {\n  grid-column: 3;\n  grid-row: 3;\n  place-self: end end;\n}\ndiv:where(.swal2-container).swal2-grow-row > .swal2-popup, div:where(.swal2-container).swal2-grow-fullscreen > .swal2-popup {\n  grid-column: 1/4;\n  width: 100%;\n}\ndiv:where(.swal2-container).swal2-grow-column > .swal2-popup, div:where(.swal2-container).swal2-grow-fullscreen > .swal2-popup {\n  grid-row: 1/4;\n  align-self: stretch;\n}\ndiv:where(.swal2-container).swal2-no-transition {\n  transition: none !important;\n}\ndiv:where(.swal2-container) div:where(.swal2-popup) {\n  display: none;\n  position: relative;\n  box-sizing: border-box;\n  grid-template-columns: minmax(0, 100%);\n  width: 32em;\n  max-width: 100%;\n  padding: 0 0 1.25em;\n  border: none;\n  border-radius: 5px;\n  background: #19191a;\n  color: #545454;\n  font-family: inherit;\n  font-size: 1rem;\n}\ndiv:where(.swal2-container) div:where(.swal2-popup):focus {\n  outline: none;\n}\ndiv:where(.swal2-container) div:where(.swal2-popup).swal2-loading {\n  overflow-y: hidden;\n}\ndiv:where(.swal2-container) h2:where(.swal2-title) {\n  position: relative;\n  max-width: 100%;\n  margin: 0;\n  padding: 0.8em 1em 0;\n  color: #e1e1e1;\n  font-size: 1.875em;\n  font-weight: 600;\n  text-align: center;\n  text-transform: none;\n  word-wrap: break-word;\n}\ndiv:where(.swal2-container) div:where(.swal2-actions) {\n  display: flex;\n  z-index: 1;\n  box-sizing: border-box;\n  flex-wrap: wrap;\n  align-items: center;\n  justify-content: center;\n  width: auto;\n  margin: 1.25em auto 0;\n  padding: 0;\n}\ndiv:where(.swal2-container) div:where(.swal2-actions):not(.swal2-loading) .swal2-styled[disabled] {\n  opacity: 0.4;\n}\ndiv:where(.swal2-container) div:where(.swal2-actions):not(.swal2-loading) .swal2-styled:hover {\n  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));\n}\ndiv:where(.swal2-container) div:where(.swal2-actions):not(.swal2-loading) .swal2-styled:active {\n  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));\n}\ndiv:where(.swal2-container) div:where(.swal2-loader) {\n  display: none;\n  align-items: center;\n  justify-content: center;\n  width: 2.2em;\n  height: 2.2em;\n  margin: 0 1.875em;\n  animation: swal2-rotate-loading 1.5s linear 0s infinite normal;\n  border-width: 0.25em;\n  border-style: solid;\n  border-radius: 100%;\n  border-color: #2778c4 transparent #2778c4 transparent;\n}\ndiv:where(.swal2-container) button:where(.swal2-styled) {\n  margin: 0.3125em;\n  padding: 0.625em 1.1em;\n  transition: box-shadow 0.1s;\n  box-shadow: 0 0 0 3px transparent;\n  font-weight: 500;\n}\ndiv:where(.swal2-container) button:where(.swal2-styled):not([disabled]) {\n  cursor: pointer;\n}\ndiv:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {\n  border: 0;\n  border-radius: 0.25em;\n  background: initial;\n  background-color: #7066e0;\n  color: #fff;\n  font-size: 1em;\n}\ndiv:where(.swal2-container) button:where(.swal2-styled).swal2-confirm:focus {\n  box-shadow: 0 0 0 3px rgba(112, 102, 224, 0.5);\n}\ndiv:where(.swal2-container) button:where(.swal2-styled).swal2-deny {\n  border: 0;\n  border-radius: 0.25em;\n  background: initial;\n  background-color: #dc3741;\n  color: #fff;\n  font-size: 1em;\n}\ndiv:where(.swal2-container) button:where(.swal2-styled).swal2-deny:focus {\n  box-shadow: 0 0 0 3px rgba(220, 55, 65, 0.5);\n}\ndiv:where(.swal2-container) button:where(.swal2-styled).swal2-cancel {\n  border: 0;\n  border-radius: 0.25em;\n  background: initial;\n  background-color: #6e7881;\n  color: #fff;\n  font-size: 1em;\n}\ndiv:where(.swal2-container) button:where(.swal2-styled).swal2-cancel:focus {\n  box-shadow: 0 0 0 3px rgba(110, 120, 129, 0.5);\n}\ndiv:where(.swal2-container) button:where(.swal2-styled).swal2-default-outline:focus {\n  box-shadow: 0 0 0 1px #19191a, 0 0 0 3px rgba(138, 176, 213, 0.5);\n}\ndiv:where(.swal2-container) button:where(.swal2-styled):focus {\n  outline: none;\n}\ndiv:where(.swal2-container) button:where(.swal2-styled)::-moz-focus-inner {\n  border: 0;\n}\ndiv:where(.swal2-container) div:where(.swal2-footer) {\n  margin: 1em 0 0;\n  padding: 1em 1em 0;\n  border-top: 1px solid #555;\n  color: #bbbbbb;\n  font-size: 1em;\n  text-align: center;\n}\ndiv:where(.swal2-container) .swal2-timer-progress-bar-container {\n  position: absolute;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  grid-column: auto !important;\n  overflow: hidden;\n  border-bottom-right-radius: 5px;\n  border-bottom-left-radius: 5px;\n}\ndiv:where(.swal2-container) div:where(.swal2-timer-progress-bar) {\n  width: 100%;\n  height: 0.25em;\n  background: rgba(225, 225, 225, 0.6);\n}\ndiv:where(.swal2-container) img:where(.swal2-image) {\n  max-width: 100%;\n  margin: 2em auto 1em;\n}\ndiv:where(.swal2-container) button:where(.swal2-close) {\n  z-index: 2;\n  align-items: center;\n  justify-content: center;\n  width: 1.2em;\n  height: 1.2em;\n  margin-top: 0;\n  margin-right: 0;\n  margin-bottom: -1.2em;\n  padding: 0;\n  overflow: hidden;\n  transition: color 0.1s, box-shadow 0.1s;\n  border: none;\n  border-radius: 5px;\n  background: transparent;\n  color: #ccc;\n  font-family: monospace;\n  font-size: 2.5em;\n  cursor: pointer;\n  justify-self: end;\n}\ndiv:where(.swal2-container) button:where(.swal2-close):hover {\n  transform: none;\n  background: transparent;\n  color: #f27474;\n}\ndiv:where(.swal2-container) button:where(.swal2-close):focus {\n  outline: none;\n  box-shadow: inset 0 0 0 3px rgba(100, 150, 200, 0.5);\n}\ndiv:where(.swal2-container) button:where(.swal2-close)::-moz-focus-inner {\n  border: 0;\n}\ndiv:where(.swal2-container) .swal2-html-container {\n  z-index: 1;\n  justify-content: center;\n  margin: 1em 1.6em 0.3em;\n  padding: 0;\n  overflow: auto;\n  color: #e1e1e1;\n  font-size: 1.125em;\n  font-weight: normal;\n  line-height: normal;\n  text-align: center;\n  word-wrap: break-word;\n  word-break: break-word;\n}\ndiv:where(.swal2-container) input:where(.swal2-input),\ndiv:where(.swal2-container) input:where(.swal2-file),\ndiv:where(.swal2-container) textarea:where(.swal2-textarea),\ndiv:where(.swal2-container) select:where(.swal2-select),\ndiv:where(.swal2-container) div:where(.swal2-radio),\ndiv:where(.swal2-container) label:where(.swal2-checkbox) {\n  margin: 1em 2em 3px;\n}\ndiv:where(.swal2-container) input:where(.swal2-input),\ndiv:where(.swal2-container) input:where(.swal2-file),\ndiv:where(.swal2-container) textarea:where(.swal2-textarea) {\n  box-sizing: border-box;\n  width: auto;\n  transition: border-color 0.1s, box-shadow 0.1s;\n  border: 1px solid #d9d9d9;\n  border-radius: 0.1875em;\n  background: #323234;\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06), 0 0 0 3px transparent;\n  color: #e1e1e1;\n  font-size: 1.125em;\n}\ndiv:where(.swal2-container) input:where(.swal2-input).swal2-inputerror,\ndiv:where(.swal2-container) input:where(.swal2-file).swal2-inputerror,\ndiv:where(.swal2-container) textarea:where(.swal2-textarea).swal2-inputerror {\n  border-color: #f27474 !important;\n  box-shadow: 0 0 2px #f27474 !important;\n}\ndiv:where(.swal2-container) input:where(.swal2-input):focus,\ndiv:where(.swal2-container) input:where(.swal2-file):focus,\ndiv:where(.swal2-container) textarea:where(.swal2-textarea):focus {\n  border: 1px solid #b4dbed;\n  outline: none;\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06), 0 0 0 3px rgba(100, 150, 200, 0.5);\n}\ndiv:where(.swal2-container) input:where(.swal2-input)::placeholder,\ndiv:where(.swal2-container) input:where(.swal2-file)::placeholder,\ndiv:where(.swal2-container) textarea:where(.swal2-textarea)::placeholder {\n  color: #ccc;\n}\ndiv:where(.swal2-container) .swal2-range {\n  margin: 1em 2em 3px;\n  background: #19191a;\n}\ndiv:where(.swal2-container) .swal2-range input {\n  width: 80%;\n}\ndiv:where(.swal2-container) .swal2-range output {\n  width: 20%;\n  color: #e1e1e1;\n  font-weight: 600;\n  text-align: center;\n}\ndiv:where(.swal2-container) .swal2-range input,\ndiv:where(.swal2-container) .swal2-range output {\n  height: 2.625em;\n  padding: 0;\n  font-size: 1.125em;\n  line-height: 2.625em;\n}\ndiv:where(.swal2-container) .swal2-input {\n  height: 2.625em;\n  padding: 0 0.75em;\n}\ndiv:where(.swal2-container) .swal2-file {\n  width: 75%;\n  margin-right: auto;\n  margin-left: auto;\n  background: #323234;\n  font-size: 1.125em;\n}\ndiv:where(.swal2-container) .swal2-textarea {\n  height: 6.75em;\n  padding: 0.75em;\n}\ndiv:where(.swal2-container) .swal2-select {\n  min-width: 50%;\n  max-width: 100%;\n  padding: 0.375em 0.625em;\n  background: #323234;\n  color: #e1e1e1;\n  font-size: 1.125em;\n}\ndiv:where(.swal2-container) .swal2-radio,\ndiv:where(.swal2-container) .swal2-checkbox {\n  align-items: center;\n  justify-content: center;\n  background: #19191a;\n  color: #e1e1e1;\n}\ndiv:where(.swal2-container) .swal2-radio label,\ndiv:where(.swal2-container) .swal2-checkbox label {\n  margin: 0 0.6em;\n  font-size: 1.125em;\n}\ndiv:where(.swal2-container) .swal2-radio input,\ndiv:where(.swal2-container) .swal2-checkbox input {\n  flex-shrink: 0;\n  margin: 0 0.4em;\n}\ndiv:where(.swal2-container) label:where(.swal2-input-label) {\n  display: flex;\n  justify-content: center;\n  margin: 1em auto 0;\n}\ndiv:where(.swal2-container) div:where(.swal2-validation-message) {\n  align-items: center;\n  justify-content: center;\n  margin: 1em 0 0;\n  padding: 0.625em;\n  overflow: hidden;\n  background: #323234;\n  color: #e1e1e1;\n  font-size: 1em;\n  font-weight: 300;\n}\ndiv:where(.swal2-container) div:where(.swal2-validation-message)::before {\n  content: \"!\";\n  display: inline-block;\n  width: 1.5em;\n  min-width: 1.5em;\n  height: 1.5em;\n  margin: 0 0.625em;\n  border-radius: 50%;\n  background-color: #f27474;\n  color: #fff;\n  font-weight: 600;\n  line-height: 1.5em;\n  text-align: center;\n}\ndiv:where(.swal2-container) .swal2-progress-steps {\n  flex-wrap: wrap;\n  align-items: center;\n  max-width: 100%;\n  margin: 1.25em auto;\n  padding: 0;\n  background: transparent;\n  font-weight: 600;\n}\ndiv:where(.swal2-container) .swal2-progress-steps li {\n  display: inline-block;\n  position: relative;\n}\ndiv:where(.swal2-container) .swal2-progress-steps .swal2-progress-step {\n  z-index: 20;\n  flex-shrink: 0;\n  width: 2em;\n  height: 2em;\n  border-radius: 2em;\n  background: #2778c4;\n  color: #fff;\n  line-height: 2em;\n  text-align: center;\n}\ndiv:where(.swal2-container) .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step {\n  background: #2778c4;\n}\ndiv:where(.swal2-container) .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step ~ .swal2-progress-step {\n  background: #58585b;\n  color: #fff;\n}\ndiv:where(.swal2-container) .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step ~ .swal2-progress-step-line {\n  background: #58585b;\n}\ndiv:where(.swal2-container) .swal2-progress-steps .swal2-progress-step-line {\n  z-index: 10;\n  flex-shrink: 0;\n  width: 2.5em;\n  height: 0.4em;\n  margin: 0 -1px;\n  background: #2778c4;\n}\n\ndiv:where(.swal2-icon) {\n  position: relative;\n  box-sizing: content-box;\n  justify-content: center;\n  width: 5em;\n  height: 5em;\n  margin: 2.5em auto 0.6em;\n  border: 0.25em solid transparent;\n  border-radius: 50%;\n  border-color: #000;\n  font-family: inherit;\n  line-height: 5em;\n  cursor: default;\n  user-select: none;\n}\ndiv:where(.swal2-icon) .swal2-icon-content {\n  display: flex;\n  align-items: center;\n  font-size: 3.75em;\n}\ndiv:where(.swal2-icon).swal2-error {\n  border-color: #f27474;\n  color: #f27474;\n}\ndiv:where(.swal2-icon).swal2-error .swal2-x-mark {\n  position: relative;\n  flex-grow: 1;\n}\ndiv:where(.swal2-icon).swal2-error [class^=swal2-x-mark-line] {\n  display: block;\n  position: absolute;\n  top: 2.3125em;\n  width: 2.9375em;\n  height: 0.3125em;\n  border-radius: 0.125em;\n  background-color: #f27474;\n}\ndiv:where(.swal2-icon).swal2-error [class^=swal2-x-mark-line][class$=left] {\n  left: 1.0625em;\n  transform: rotate(45deg);\n}\ndiv:where(.swal2-icon).swal2-error [class^=swal2-x-mark-line][class$=right] {\n  right: 1em;\n  transform: rotate(-45deg);\n}\ndiv:where(.swal2-icon).swal2-error.swal2-icon-show {\n  animation: swal2-animate-error-icon 0.5s;\n}\ndiv:where(.swal2-icon).swal2-error.swal2-icon-show .swal2-x-mark {\n  animation: swal2-animate-error-x-mark 0.5s;\n}\ndiv:where(.swal2-icon).swal2-warning {\n  border-color: #facea8;\n  color: #f8bb86;\n}\ndiv:where(.swal2-icon).swal2-warning.swal2-icon-show {\n  animation: swal2-animate-error-icon 0.5s;\n}\ndiv:where(.swal2-icon).swal2-warning.swal2-icon-show .swal2-icon-content {\n  animation: swal2-animate-i-mark 0.5s;\n}\ndiv:where(.swal2-icon).swal2-info {\n  border-color: #9de0f6;\n  color: #3fc3ee;\n}\ndiv:where(.swal2-icon).swal2-info.swal2-icon-show {\n  animation: swal2-animate-error-icon 0.5s;\n}\ndiv:where(.swal2-icon).swal2-info.swal2-icon-show .swal2-icon-content {\n  animation: swal2-animate-i-mark 0.8s;\n}\ndiv:where(.swal2-icon).swal2-question {\n  border-color: #c9dae1;\n  color: #87adbd;\n}\ndiv:where(.swal2-icon).swal2-question.swal2-icon-show {\n  animation: swal2-animate-error-icon 0.5s;\n}\ndiv:where(.swal2-icon).swal2-question.swal2-icon-show .swal2-icon-content {\n  animation: swal2-animate-question-mark 0.8s;\n}\ndiv:where(.swal2-icon).swal2-success {\n  border-color: #a5dc86;\n  color: #a5dc86;\n}\ndiv:where(.swal2-icon).swal2-success [class^=swal2-success-circular-line] {\n  position: absolute;\n  width: 3.75em;\n  height: 7.5em;\n  border-radius: 50%;\n}\ndiv:where(.swal2-icon).swal2-success [class^=swal2-success-circular-line][class$=left] {\n  top: -0.4375em;\n  left: -2.0635em;\n  transform: rotate(-45deg);\n  transform-origin: 3.75em 3.75em;\n  border-radius: 7.5em 0 0 7.5em;\n}\ndiv:where(.swal2-icon).swal2-success [class^=swal2-success-circular-line][class$=right] {\n  top: -0.6875em;\n  left: 1.875em;\n  transform: rotate(-45deg);\n  transform-origin: 0 3.75em;\n  border-radius: 0 7.5em 7.5em 0;\n}\ndiv:where(.swal2-icon).swal2-success .swal2-success-ring {\n  position: absolute;\n  z-index: 2;\n  top: -0.25em;\n  left: -0.25em;\n  box-sizing: content-box;\n  width: 100%;\n  height: 100%;\n  border: 0.25em solid rgba(165, 220, 134, 0.3);\n  border-radius: 50%;\n}\ndiv:where(.swal2-icon).swal2-success .swal2-success-fix {\n  position: absolute;\n  z-index: 1;\n  top: 0.5em;\n  left: 1.625em;\n  width: 0.4375em;\n  height: 5.625em;\n  transform: rotate(-45deg);\n}\ndiv:where(.swal2-icon).swal2-success [class^=swal2-success-line] {\n  display: block;\n  position: absolute;\n  z-index: 2;\n  height: 0.3125em;\n  border-radius: 0.125em;\n  background-color: #a5dc86;\n}\ndiv:where(.swal2-icon).swal2-success [class^=swal2-success-line][class$=tip] {\n  top: 2.875em;\n  left: 0.8125em;\n  width: 1.5625em;\n  transform: rotate(45deg);\n}\ndiv:where(.swal2-icon).swal2-success [class^=swal2-success-line][class$=long] {\n  top: 2.375em;\n  right: 0.5em;\n  width: 2.9375em;\n  transform: rotate(-45deg);\n}\ndiv:where(.swal2-icon).swal2-success.swal2-icon-show .swal2-success-line-tip {\n  animation: swal2-animate-success-line-tip 0.75s;\n}\ndiv:where(.swal2-icon).swal2-success.swal2-icon-show .swal2-success-line-long {\n  animation: swal2-animate-success-line-long 0.75s;\n}\ndiv:where(.swal2-icon).swal2-success.swal2-icon-show .swal2-success-circular-line-right {\n  animation: swal2-rotate-success-circular-line 4.25s ease-in;\n}\n\n[class^=swal2] {\n  -webkit-tap-highlight-color: transparent;\n}\n\n.swal2-show {\n  animation: swal2-show 0.3s;\n}\n\n.swal2-hide {\n  animation: swal2-hide 0.15s forwards;\n}\n\n.swal2-noanimation {\n  transition: none;\n}\n\n.swal2-scrollbar-measure {\n  position: absolute;\n  top: -9999px;\n  width: 50px;\n  height: 50px;\n  overflow: scroll;\n}\n\n.swal2-rtl .swal2-close {\n  margin-right: initial;\n  margin-left: 0;\n}\n.swal2-rtl .swal2-timer-progress-bar {\n  right: 0;\n  left: auto;\n}\n\n@keyframes swal2-toast-show {\n  0% {\n    transform: translateY(-0.625em) rotateZ(2deg);\n  }\n  33% {\n    transform: translateY(0) rotateZ(-2deg);\n  }\n  66% {\n    transform: translateY(0.3125em) rotateZ(2deg);\n  }\n  100% {\n    transform: translateY(0) rotateZ(0deg);\n  }\n}\n@keyframes swal2-toast-hide {\n  100% {\n    transform: rotateZ(1deg);\n    opacity: 0;\n  }\n}\n@keyframes swal2-toast-animate-success-line-tip {\n  0% {\n    top: 0.5625em;\n    left: 0.0625em;\n    width: 0;\n  }\n  54% {\n    top: 0.125em;\n    left: 0.125em;\n    width: 0;\n  }\n  70% {\n    top: 0.625em;\n    left: -0.25em;\n    width: 1.625em;\n  }\n  84% {\n    top: 1.0625em;\n    left: 0.75em;\n    width: 0.5em;\n  }\n  100% {\n    top: 1.125em;\n    left: 0.1875em;\n    width: 0.75em;\n  }\n}\n@keyframes swal2-toast-animate-success-line-long {\n  0% {\n    top: 1.625em;\n    right: 1.375em;\n    width: 0;\n  }\n  65% {\n    top: 1.25em;\n    right: 0.9375em;\n    width: 0;\n  }\n  84% {\n    top: 0.9375em;\n    right: 0;\n    width: 1.125em;\n  }\n  100% {\n    top: 0.9375em;\n    right: 0.1875em;\n    width: 1.375em;\n  }\n}\n@keyframes swal2-show {\n  0% {\n    transform: scale(0.7);\n  }\n  45% {\n    transform: scale(1.05);\n  }\n  80% {\n    transform: scale(0.95);\n  }\n  100% {\n    transform: scale(1);\n  }\n}\n@keyframes swal2-hide {\n  0% {\n    transform: scale(1);\n    opacity: 1;\n  }\n  100% {\n    transform: scale(0.5);\n    opacity: 0;\n  }\n}\n@keyframes swal2-animate-success-line-tip {\n  0% {\n    top: 1.1875em;\n    left: 0.0625em;\n    width: 0;\n  }\n  54% {\n    top: 1.0625em;\n    left: 0.125em;\n    width: 0;\n  }\n  70% {\n    top: 2.1875em;\n    left: -0.375em;\n    width: 3.125em;\n  }\n  84% {\n    top: 3em;\n    left: 1.3125em;\n    width: 1.0625em;\n  }\n  100% {\n    top: 2.8125em;\n    left: 0.8125em;\n    width: 1.5625em;\n  }\n}\n@keyframes swal2-animate-success-line-long {\n  0% {\n    top: 3.375em;\n    right: 2.875em;\n    width: 0;\n  }\n  65% {\n    top: 3.375em;\n    right: 2.875em;\n    width: 0;\n  }\n  84% {\n    top: 2.1875em;\n    right: 0;\n    width: 3.4375em;\n  }\n  100% {\n    top: 2.375em;\n    right: 0.5em;\n    width: 2.9375em;\n  }\n}\n@keyframes swal2-rotate-success-circular-line {\n  0% {\n    transform: rotate(-45deg);\n  }\n  5% {\n    transform: rotate(-45deg);\n  }\n  12% {\n    transform: rotate(-405deg);\n  }\n  100% {\n    transform: rotate(-405deg);\n  }\n}\n@keyframes swal2-animate-error-x-mark {\n  0% {\n    margin-top: 1.625em;\n    transform: scale(0.4);\n    opacity: 0;\n  }\n  50% {\n    margin-top: 1.625em;\n    transform: scale(0.4);\n    opacity: 0;\n  }\n  80% {\n    margin-top: -0.375em;\n    transform: scale(1.15);\n  }\n  100% {\n    margin-top: 0;\n    transform: scale(1);\n    opacity: 1;\n  }\n}\n@keyframes swal2-animate-error-icon {\n  0% {\n    transform: rotateX(100deg);\n    opacity: 0;\n  }\n  100% {\n    transform: rotateX(0deg);\n    opacity: 1;\n  }\n}\n@keyframes swal2-rotate-loading {\n  0% {\n    transform: rotate(0deg);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n@keyframes swal2-animate-question-mark {\n  0% {\n    transform: rotateY(-360deg);\n  }\n  100% {\n    transform: rotateY(0);\n  }\n}\n@keyframes swal2-animate-i-mark {\n  0% {\n    transform: rotateZ(45deg);\n    opacity: 0;\n  }\n  25% {\n    transform: rotateZ(-25deg);\n    opacity: 0.4;\n  }\n  50% {\n    transform: rotateZ(15deg);\n    opacity: 0.8;\n  }\n  75% {\n    transform: rotateZ(-5deg);\n    opacity: 1;\n  }\n  100% {\n    transform: rotateX(0);\n    opacity: 1;\n  }\n}\nbody.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {\n  overflow: hidden;\n}\nbody.swal2-height-auto {\n  height: auto !important;\n}\nbody.swal2-no-backdrop .swal2-container {\n  background-color: transparent !important;\n  pointer-events: none;\n}\nbody.swal2-no-backdrop .swal2-container .swal2-popup {\n  pointer-events: all;\n}\nbody.swal2-no-backdrop .swal2-container .swal2-modal {\n  box-shadow: 0 0 10px rgba(25, 25, 26, 0.75);\n}\n@media print {\n  body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {\n    overflow-y: scroll !important;\n  }\n  body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) > [aria-hidden=true] {\n    display: none;\n  }\n  body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) .swal2-container {\n    position: static !important;\n  }\n}\nbody.swal2-toast-shown .swal2-container {\n  box-sizing: border-box;\n  width: 360px;\n  max-width: 100%;\n  background-color: transparent;\n  pointer-events: none;\n}\nbody.swal2-toast-shown .swal2-container.swal2-top {\n  inset: 0 auto auto 50%;\n  transform: translateX(-50%);\n}\nbody.swal2-toast-shown .swal2-container.swal2-top-end, body.swal2-toast-shown .swal2-container.swal2-top-right {\n  inset: 0 0 auto auto;\n}\nbody.swal2-toast-shown .swal2-container.swal2-top-start, body.swal2-toast-shown .swal2-container.swal2-top-left {\n  inset: 0 auto auto 0;\n}\nbody.swal2-toast-shown .swal2-container.swal2-center-start, body.swal2-toast-shown .swal2-container.swal2-center-left {\n  inset: 50% auto auto 0;\n  transform: translateY(-50%);\n}\nbody.swal2-toast-shown .swal2-container.swal2-center {\n  inset: 50% auto auto 50%;\n  transform: translate(-50%, -50%);\n}\nbody.swal2-toast-shown .swal2-container.swal2-center-end, body.swal2-toast-shown .swal2-container.swal2-center-right {\n  inset: 50% 0 auto auto;\n  transform: translateY(-50%);\n}\nbody.swal2-toast-shown .swal2-container.swal2-bottom-start, body.swal2-toast-shown .swal2-container.swal2-bottom-left {\n  inset: auto auto 0 0;\n}\nbody.swal2-toast-shown .swal2-container.swal2-bottom {\n  inset: auto auto 0 50%;\n  transform: translateX(-50%);\n}\nbody.swal2-toast-shown .swal2-container.swal2-bottom-end, body.swal2-toast-shown .swal2-container.swal2-bottom-right {\n  inset: auto 0 0 auto;\n}\n"],"sourceRoot":""}]);
+
+.notyf__icon {
+  width: 22px;
+  text-align: center;
+  font-size: 1.3em;
+  opacity: 0;
+  -webkit-animation: notyf-fadeinup 0.3s forwards;
+  animation: notyf-fadeinup 0.3s forwards;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+  margin-right: 13px;
+}
+
+.notyf__dismiss {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 26px;
+  margin-right: -15px;
+  -webkit-animation: notyf-fadeinleft 0.3s forwards;
+  animation: notyf-fadeinleft 0.3s forwards;
+  -webkit-animation-delay: 0.35s;
+  animation-delay: 0.35s;
+  opacity: 0;
+}
+
+.notyf__dismiss-btn {
+  background-color: rgba(0, 0, 0, 0.25);
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease, background-color 0.2s ease;
+  outline: none;
+  opacity: 0.35;
+  height: 100%;
+  width: 100%;
+}
+
+.notyf__dismiss-btn:after, .notyf__dismiss-btn:before {
+  content: "";
+  background: #fff;
+  height: 12px;
+  width: 2px;
+  border-radius: 3px;
+  position: absolute;
+  left: calc(50% - 1px);
+  top: calc(50% - 5px);
+}
+
+.notyf__dismiss-btn:after {
+  transform: rotate(-45deg);
+}
+
+.notyf__dismiss-btn:before {
+  transform: rotate(45deg);
+}
+
+.notyf__dismiss-btn:hover {
+  opacity: 0.7;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.notyf__dismiss-btn:active {
+  opacity: 0.8;
+}
+
+.notyf__message {
+  vertical-align: middle;
+  position: relative;
+  opacity: 0;
+  -webkit-animation: notyf-fadeinup 0.3s forwards;
+  animation: notyf-fadeinup 0.3s forwards;
+  -webkit-animation-delay: 0.25s;
+  animation-delay: 0.25s;
+  line-height: 1.5em;
+}
+
+@media only screen and (max-width: 480px) {
+  .notyf {
+    padding: 0;
+  }
+  .notyf__ripple {
+    height: 600px;
+    width: 600px;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+  }
+  .notyf__toast {
+    max-width: none;
+    border-radius: 0;
+    box-shadow: 0 -2px 7px 0 rgba(0, 0, 0, 0.13);
+    width: 100%;
+  }
+  .notyf__dismiss {
+    width: 56px;
+  }
+}`, "",{"version":3,"sources":["webpack://./node_modules/notyf/notyf.min.css"],"names":[],"mappings":"AAAA;EAAkC;IAAG,UAAA;IAAU,0BAAA;EAI7C;EAJuE;IAAG,UAAA;IAAU,wBAAA;EAQpF;AACF;AAT+G;EAA0B;IAAG,UAAA;IAAU,0BAAA;EAcpJ;EAd8K;IAAG,UAAA;IAAU,wBAAA;EAkB3L;AACF;AAnBsN;EAAoC;IAAG,UAAA;IAAU,0BAAA;EAwBrQ;EAxB+R;IAAG,UAAA;IAAU,wBAAA;EA4B5S;AACF;AA7BuU;EAA4B;IAAG,UAAA;IAAU,0BAAA;EAkC9W;EAlCwY;IAAG,UAAA;IAAU,wBAAA;EAsCrZ;AACF;AAvCgb;EAAsC;IAAG,UAAA;IAAU,wBAAA;EA4Cje;EA5Cyf;IAAG,UAAA;IAAU,0BAAA;EAgDtgB;AACF;AAjDmiB;EAA8B;IAAG,UAAA;IAAU,wBAAA;EAsD5kB;EAtDomB;IAAG,UAAA;IAAU,0BAAA;EA0DjnB;AACF;AA3D8oB;EAAqC;IAAG,UAAA;IAAU,wBAAA;EAgE9rB;EAhEstB;IAAG,UAAA;IAAU,0BAAA;EAoEnuB;AACF;AArEgwB;EAA6B;IAAG,UAAA;IAAU,wBAAA;EA0ExyB;EA1Eg0B;IAAG,UAAA;IAAU,0BAAA;EA8E70B;AACF;AA/E02B;EAA0B;IAAG,oDAAA;EAmFr4B;EAnFy7B;IAAG,oDAAA;EAsF57B;AACF;AAvFm/B;EAAkB;IAAG,oDAAA;EA2FtgC;EA3F0jC;IAAG,oDAAA;EA8F7jC;AACF;AA/FonC;EAAO,eAAA;EAAe,MAAA;EAAM,OAAA;EAAO,YAAA;EAAY,WAAA;EAAW,WAAA;EAAW,aAAA;EAAa,aAAA;EAAa,sBAAA;EAAsB,qBAAA;EAAqB,yBAAA;EAAyB,oBAAA;EAAoB,sBAAA;EAAsB,aAAA;AA+Gj0C;;AA/G80C;EAA0C,YAAA;EAAY,WAAA;EAAW,gBAAA;EAAgB,kBAAA;EAAkB,cAAA;EAAc,cAAA;EAAc,kBAAA;AAyH78C;;AAzH+9C;EAAqD,WAAA;EAAW,wBAAA;EAAwB,cAAA;EAAc,kBAAA;EAAkB,UAAA;EAAU,kBAAA;EAAkB,SAAA;EAAS,YAAA;EAAY,QAAA;AAqIxoD;;AArIgpD;EAA0B,yBAAA;AAyI1qD;;AAzImsD;EAA2B,wBAAA;AA6I9tD;;AA7IsvD;EAAyD,WAAA;EAAW,wBAAA;EAAwB,cAAA;EAAc,kBAAA;EAAkB,UAAA;EAAU,kBAAA;AAsJ53D;;AAtJ84D;EAA4B,WAAA;EAAW,yBAAA;EAAyB,QAAA;EAAQ,SAAA;AA6Jt9D;;AA7J+9D;EAA6B,YAAA;EAAY,wBAAA;EAAwB,QAAA;EAAQ,UAAA;AAoKxiE;;AApKkjE;EAAc,cAAA;EAAc,gBAAA;EAAgB,oBAAA;EAAoB,uDAAA;EAAsD,+CAAA;EAA8C,2CAAA;EAAuC,kBAAA;EAAkB,eAAA;EAAe,kBAAA;EAAkB,gBAAA;EAAgB,0BAAA;EAA0B,sBAAA;EAAsB,cAAA;AAoLh3E;;AApL83E;EAAyB,wBAAA;EAAwB,kDAAA;EAAiD,0CAAA;EAAyC,8BAAA;EAA6B,sBAAA;AA4LtiF;;AA5L2jF;EAA+E,kDAAA;EAAiD,0CAAA;EAAyC,UAAA;EAAU,wBAAA;AAmM9uF;;AAnMswF;EAAyC,mDAAA;EAAkD,2CAAA;EAA0C,UAAA;EAAU,wBAAA;AA0Mr5F;;AA1M66F;EAAyC,8BAAA;EAA6B,sBAAA;AA+Mn/F;;AA/MwgG;EAAqB,mBAAA;AAmN7hG;;AAnNgjG;EAAqB,gBAAA;AAuNrkG;;AAvNqlG;EAA2C,mBAAA;AA2NhoG;;AA3NmpG;EAAe,aAAA;EAAa,YAAA;EAAY,kBAAA;EAAkB,8BAAA;EAA8B,QAAA;EAAQ,MAAA;EAAM,kBAAA;EAAkB,oDAAA;EAAoD,UAAA;EAAU,gDAAA;EAA+C,wCAAA;AAyOx3G;;AAzO+5G;EAAgB,aAAA;EAAa,mBAAA;EAAmB,iBAAA;EAAiB,oBAAA;EAAoB,mBAAA;EAAmB,kBAAA;EAAkB,kBAAA;EAAkB,WAAA;AAoP3iH;;AApPsjH;EAAa,WAAA;EAAW,kBAAA;EAAkB,gBAAA;EAAgB,UAAA;EAAU,+CAAA;EAA8C,uCAAA;EAAsC,6BAAA;EAA4B,qBAAA;EAAoB,kBAAA;AAgQ9vH;;AAhQgxH;EAAgB,kBAAA;EAAkB,MAAA;EAAM,QAAA;EAAQ,YAAA;EAAY,WAAA;EAAW,mBAAA;EAAmB,iDAAA;EAAgD,yCAAA;EAAwC,8BAAA;EAA6B,sBAAA;EAAqB,UAAA;AA8Qp/H;;AA9Q8/H;EAAoB,qCAAA;EAAiC,YAAA;EAAY,eAAA;EAAe,yDAAA;EAAsD,aAAA;EAAa,aAAA;EAAY,YAAA;EAAY,WAAA;AAyRzqI;;AAzRorI;EAAqD,WAAA;EAAW,gBAAA;EAAgB,YAAA;EAAY,UAAA;EAAU,kBAAA;EAAkB,kBAAA;EAAkB,qBAAA;EAAqB,oBAAA;AAoSn1I;;AApSu2I;EAA0B,yBAAA;AAwSj4I;;AAxS05I;EAA2B,wBAAA;AA4Sr7I;;AA5S68I;EAA0B,YAAA;EAAW,qCAAA;AAiTl/I;;AAjTmhJ;EAA2B,YAAA;AAqT9iJ;;AArTyjJ;EAAgB,sBAAA;EAAsB,kBAAA;EAAkB,UAAA;EAAU,+CAAA;EAA8C,uCAAA;EAAsC,8BAAA;EAA6B,sBAAA;EAAqB,kBAAA;AAgUjwJ;;AAhUmxJ;EAAyC;IAAO,UAAA;EAqUj0J;EArU20J;IAAe,aAAA;IAAa,YAAA;IAAY,gCAAA;IAA+B,wBAAA;EA2Ul5J;EA3Uy6J;IAAc,eAAA;IAAe,gBAAA;IAAgB,4CAAA;IAAwC,WAAA;EAiV9/J;EAjVygK;IAAgB,WAAA;EAoVzhK;AACF","sourcesContent":["@-webkit-keyframes notyf-fadeinup{0%{opacity:0;transform:translateY(25%)}to{opacity:1;transform:translateY(0)}}@keyframes notyf-fadeinup{0%{opacity:0;transform:translateY(25%)}to{opacity:1;transform:translateY(0)}}@-webkit-keyframes notyf-fadeinleft{0%{opacity:0;transform:translateX(25%)}to{opacity:1;transform:translateX(0)}}@keyframes notyf-fadeinleft{0%{opacity:0;transform:translateX(25%)}to{opacity:1;transform:translateX(0)}}@-webkit-keyframes notyf-fadeoutright{0%{opacity:1;transform:translateX(0)}to{opacity:0;transform:translateX(25%)}}@keyframes notyf-fadeoutright{0%{opacity:1;transform:translateX(0)}to{opacity:0;transform:translateX(25%)}}@-webkit-keyframes notyf-fadeoutdown{0%{opacity:1;transform:translateY(0)}to{opacity:0;transform:translateY(25%)}}@keyframes notyf-fadeoutdown{0%{opacity:1;transform:translateY(0)}to{opacity:0;transform:translateY(25%)}}@-webkit-keyframes ripple{0%{transform:scale(0) translateY(-45%) translateX(13%)}to{transform:scale(1) translateY(-45%) translateX(13%)}}@keyframes ripple{0%{transform:scale(0) translateY(-45%) translateX(13%)}to{transform:scale(1) translateY(-45%) translateX(13%)}}.notyf{position:fixed;top:0;left:0;height:100%;width:100%;color:#fff;z-index:9999;display:flex;flex-direction:column;align-items:flex-end;justify-content:flex-end;pointer-events:none;box-sizing:border-box;padding:20px}.notyf__icon--error,.notyf__icon--success{height:21px;width:21px;background:#fff;border-radius:50%;display:block;margin:0 auto;position:relative}.notyf__icon--error:after,.notyf__icon--error:before{content:\"\";background:currentColor;display:block;position:absolute;width:3px;border-radius:3px;left:9px;height:12px;top:5px}.notyf__icon--error:after{transform:rotate(-45deg)}.notyf__icon--error:before{transform:rotate(45deg)}.notyf__icon--success:after,.notyf__icon--success:before{content:\"\";background:currentColor;display:block;position:absolute;width:3px;border-radius:3px}.notyf__icon--success:after{height:6px;transform:rotate(-45deg);top:9px;left:6px}.notyf__icon--success:before{height:11px;transform:rotate(45deg);top:5px;left:10px}.notyf__toast{display:block;overflow:hidden;pointer-events:auto;-webkit-animation:notyf-fadeinup .3s ease-in forwards;animation:notyf-fadeinup .3s ease-in forwards;box-shadow:0 3px 7px 0 rgba(0,0,0,.25);position:relative;padding:0 15px;border-radius:2px;max-width:300px;transform:translateY(25%);box-sizing:border-box;flex-shrink:0}.notyf__toast--disappear{transform:translateY(0);-webkit-animation:notyf-fadeoutdown .3s forwards;animation:notyf-fadeoutdown .3s forwards;-webkit-animation-delay:.25s;animation-delay:.25s}.notyf__toast--disappear .notyf__icon,.notyf__toast--disappear .notyf__message{-webkit-animation:notyf-fadeoutdown .3s forwards;animation:notyf-fadeoutdown .3s forwards;opacity:1;transform:translateY(0)}.notyf__toast--disappear .notyf__dismiss{-webkit-animation:notyf-fadeoutright .3s forwards;animation:notyf-fadeoutright .3s forwards;opacity:1;transform:translateX(0)}.notyf__toast--disappear .notyf__message{-webkit-animation-delay:.05s;animation-delay:.05s}.notyf__toast--upper{margin-bottom:20px}.notyf__toast--lower{margin-top:20px}.notyf__toast--dismissible .notyf__wrapper{padding-right:30px}.notyf__ripple{height:400px;width:400px;position:absolute;transform-origin:bottom right;right:0;top:0;border-radius:50%;transform:scale(0) translateY(-51%) translateX(13%);z-index:5;-webkit-animation:ripple .4s ease-out forwards;animation:ripple .4s ease-out forwards}.notyf__wrapper{display:flex;align-items:center;padding-top:17px;padding-bottom:17px;padding-right:15px;border-radius:3px;position:relative;z-index:10}.notyf__icon{width:22px;text-align:center;font-size:1.3em;opacity:0;-webkit-animation:notyf-fadeinup .3s forwards;animation:notyf-fadeinup .3s forwards;-webkit-animation-delay:.3s;animation-delay:.3s;margin-right:13px}.notyf__dismiss{position:absolute;top:0;right:0;height:100%;width:26px;margin-right:-15px;-webkit-animation:notyf-fadeinleft .3s forwards;animation:notyf-fadeinleft .3s forwards;-webkit-animation-delay:.35s;animation-delay:.35s;opacity:0}.notyf__dismiss-btn{background-color:rgba(0,0,0,.25);border:none;cursor:pointer;transition:opacity .2s ease,background-color .2s ease;outline:none;opacity:.35;height:100%;width:100%}.notyf__dismiss-btn:after,.notyf__dismiss-btn:before{content:\"\";background:#fff;height:12px;width:2px;border-radius:3px;position:absolute;left:calc(50% - 1px);top:calc(50% - 5px)}.notyf__dismiss-btn:after{transform:rotate(-45deg)}.notyf__dismiss-btn:before{transform:rotate(45deg)}.notyf__dismiss-btn:hover{opacity:.7;background-color:rgba(0,0,0,.15)}.notyf__dismiss-btn:active{opacity:.8}.notyf__message{vertical-align:middle;position:relative;opacity:0;-webkit-animation:notyf-fadeinup .3s forwards;animation:notyf-fadeinup .3s forwards;-webkit-animation-delay:.25s;animation-delay:.25s;line-height:1.5em}@media only screen and (max-width:480px){.notyf{padding:0}.notyf__ripple{height:600px;width:600px;-webkit-animation-duration:.5s;animation-duration:.5s}.notyf__toast{max-width:none;border-radius:0;box-shadow:0 -2px 7px 0 rgba(0,0,0,.13);width:100%}.notyf__dismiss{width:56px}}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./public/css/sweetalert2.scss":
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./public/css/custom-notyf.css":
 /*!******************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./public/css/sweetalert2.scss ***!
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./public/css/custom-notyf.css ***!
   \******************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
@@ -1133,15 +384,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sweetalert2_themes_dark_dark_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! -!../../node_modules/css-loader/dist/cjs.js!../../node_modules/@sweetalert2/themes/dark/dark.css */ "./node_modules/css-loader/dist/cjs.js!./node_modules/@sweetalert2/themes/dark/dark.css");
 // Imports
 
 
-
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
-___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_node_modules_sweetalert2_themes_dark_dark_css__WEBPACK_IMPORTED_MODULE_2__["default"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ``, "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, `.notyf__toast {
+  max-width: 50em !important;
+}
+
+.notyf__toast .notyf__ripple {
+  height: 60em;
+  width: 60em;
+}`, "",{"version":3,"sources":["webpack://./public/css/custom-notyf.css"],"names":[],"mappings":"AAAA;EACI,0BAAA;AACJ;;AACA;EACI,YAAA;EACA,WAAA;AAEJ","sourcesContent":[".notyf__toast {\n    max-width: 50em !important;\n}\n.notyf__toast .notyf__ripple {\n    height: 60em;\n    width: 60em;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -2823,9 +2078,526 @@ module.exports = window.DOMPurify || (window.DOMPurify = (__webpack_require__(/*
 
 /***/ }),
 
-/***/ "./public/css/sweetalert2.scss":
+/***/ "./node_modules/notyf/notyf.es.js":
+/*!****************************************!*\
+  !*** ./node_modules/notyf/notyf.es.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   DEFAULT_OPTIONS: () => (/* binding */ DEFAULT_OPTIONS),
+/* harmony export */   Notyf: () => (/* binding */ Notyf),
+/* harmony export */   NotyfArray: () => (/* binding */ NotyfArray),
+/* harmony export */   NotyfArrayEvent: () => (/* binding */ NotyfArrayEvent),
+/* harmony export */   NotyfEvent: () => (/* binding */ NotyfEvent),
+/* harmony export */   NotyfNotification: () => (/* binding */ NotyfNotification),
+/* harmony export */   NotyfView: () => (/* binding */ NotyfView)
+/* harmony export */ });
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+***************************************************************************** */
+
+var __assign = function() {
+    __assign = Object.assign || function __assign(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+
+var NotyfNotification = /** @class */ (function () {
+    function NotyfNotification(options) {
+        this.options = options;
+        this.listeners = {};
+    }
+    NotyfNotification.prototype.on = function (eventType, cb) {
+        var callbacks = this.listeners[eventType] || [];
+        this.listeners[eventType] = callbacks.concat([cb]);
+    };
+    NotyfNotification.prototype.triggerEvent = function (eventType, event) {
+        var _this = this;
+        var callbacks = this.listeners[eventType] || [];
+        callbacks.forEach(function (cb) { return cb({ target: _this, event: event }); });
+    };
+    return NotyfNotification;
+}());
+var NotyfArrayEvent;
+(function (NotyfArrayEvent) {
+    NotyfArrayEvent[NotyfArrayEvent["Add"] = 0] = "Add";
+    NotyfArrayEvent[NotyfArrayEvent["Remove"] = 1] = "Remove";
+})(NotyfArrayEvent || (NotyfArrayEvent = {}));
+var NotyfArray = /** @class */ (function () {
+    function NotyfArray() {
+        this.notifications = [];
+    }
+    NotyfArray.prototype.push = function (elem) {
+        this.notifications.push(elem);
+        this.updateFn(elem, NotyfArrayEvent.Add, this.notifications);
+    };
+    NotyfArray.prototype.splice = function (index, num) {
+        var elem = this.notifications.splice(index, num)[0];
+        this.updateFn(elem, NotyfArrayEvent.Remove, this.notifications);
+        return elem;
+    };
+    NotyfArray.prototype.indexOf = function (elem) {
+        return this.notifications.indexOf(elem);
+    };
+    NotyfArray.prototype.onUpdate = function (fn) {
+        this.updateFn = fn;
+    };
+    return NotyfArray;
+}());
+
+var NotyfEvent;
+(function (NotyfEvent) {
+    NotyfEvent["Dismiss"] = "dismiss";
+    NotyfEvent["Click"] = "click";
+})(NotyfEvent || (NotyfEvent = {}));
+var DEFAULT_OPTIONS = {
+    types: [
+        {
+            type: 'success',
+            className: 'notyf__toast--success',
+            backgroundColor: '#3dc763',
+            icon: {
+                className: 'notyf__icon--success',
+                tagName: 'i',
+            },
+        },
+        {
+            type: 'error',
+            className: 'notyf__toast--error',
+            backgroundColor: '#ed3d3d',
+            icon: {
+                className: 'notyf__icon--error',
+                tagName: 'i',
+            },
+        },
+    ],
+    duration: 2000,
+    ripple: true,
+    position: {
+        x: 'right',
+        y: 'bottom',
+    },
+    dismissible: false,
+};
+
+var NotyfView = /** @class */ (function () {
+    function NotyfView() {
+        this.notifications = [];
+        this.events = {};
+        this.X_POSITION_FLEX_MAP = {
+            left: 'flex-start',
+            center: 'center',
+            right: 'flex-end',
+        };
+        this.Y_POSITION_FLEX_MAP = {
+            top: 'flex-start',
+            center: 'center',
+            bottom: 'flex-end',
+        };
+        // Creates the main notifications container
+        var docFrag = document.createDocumentFragment();
+        var notyfContainer = this._createHTMLElement({ tagName: 'div', className: 'notyf' });
+        docFrag.appendChild(notyfContainer);
+        document.body.appendChild(docFrag);
+        this.container = notyfContainer;
+        // Identifies the main animation end event
+        this.animationEndEventName = this._getAnimationEndEventName();
+        this._createA11yContainer();
+    }
+    NotyfView.prototype.on = function (event, cb) {
+        var _a;
+        this.events = __assign(__assign({}, this.events), (_a = {}, _a[event] = cb, _a));
+    };
+    NotyfView.prototype.update = function (notification, type) {
+        if (type === NotyfArrayEvent.Add) {
+            this.addNotification(notification);
+        }
+        else if (type === NotyfArrayEvent.Remove) {
+            this.removeNotification(notification);
+        }
+    };
+    NotyfView.prototype.removeNotification = function (notification) {
+        var _this = this;
+        var renderedNotification = this._popRenderedNotification(notification);
+        var node;
+        if (!renderedNotification) {
+            return;
+        }
+        node = renderedNotification.node;
+        node.classList.add('notyf__toast--disappear');
+        var handleEvent;
+        node.addEventListener(this.animationEndEventName, (handleEvent = function (event) {
+            if (event.target === node) {
+                node.removeEventListener(_this.animationEndEventName, handleEvent);
+                _this.container.removeChild(node);
+            }
+        }));
+    };
+    NotyfView.prototype.addNotification = function (notification) {
+        var node = this._renderNotification(notification);
+        this.notifications.push({ notification: notification, node: node });
+        // For a11y purposes, we still want to announce that there's a notification in the screen
+        // even if it comes with no message.
+        this._announce(notification.options.message || 'Notification');
+    };
+    NotyfView.prototype._renderNotification = function (notification) {
+        var _a;
+        var card = this._buildNotificationCard(notification);
+        var className = notification.options.className;
+        if (className) {
+            (_a = card.classList).add.apply(_a, className.split(' '));
+        }
+        this.container.appendChild(card);
+        return card;
+    };
+    NotyfView.prototype._popRenderedNotification = function (notification) {
+        var idx = -1;
+        for (var i = 0; i < this.notifications.length && idx < 0; i++) {
+            if (this.notifications[i].notification === notification) {
+                idx = i;
+            }
+        }
+        if (idx !== -1) {
+            return this.notifications.splice(idx, 1)[0];
+        }
+        return;
+    };
+    NotyfView.prototype.getXPosition = function (options) {
+        var _a;
+        return ((_a = options === null || options === void 0 ? void 0 : options.position) === null || _a === void 0 ? void 0 : _a.x) || 'right';
+    };
+    NotyfView.prototype.getYPosition = function (options) {
+        var _a;
+        return ((_a = options === null || options === void 0 ? void 0 : options.position) === null || _a === void 0 ? void 0 : _a.y) || 'bottom';
+    };
+    NotyfView.prototype.adjustContainerAlignment = function (options) {
+        var align = this.X_POSITION_FLEX_MAP[this.getXPosition(options)];
+        var justify = this.Y_POSITION_FLEX_MAP[this.getYPosition(options)];
+        var style = this.container.style;
+        style.setProperty('justify-content', justify);
+        style.setProperty('align-items', align);
+    };
+    NotyfView.prototype._buildNotificationCard = function (notification) {
+        var _this = this;
+        var options = notification.options;
+        var iconOpts = options.icon;
+        // Adjust container according to position (e.g. top-left, bottom-center, etc)
+        this.adjustContainerAlignment(options);
+        // Create elements
+        var notificationElem = this._createHTMLElement({ tagName: 'div', className: 'notyf__toast' });
+        var ripple = this._createHTMLElement({ tagName: 'div', className: 'notyf__ripple' });
+        var wrapper = this._createHTMLElement({ tagName: 'div', className: 'notyf__wrapper' });
+        var message = this._createHTMLElement({ tagName: 'div', className: 'notyf__message' });
+        message.innerHTML = options.message || '';
+        var mainColor = options.background || options.backgroundColor;
+        // Build the icon and append it to the card
+        if (iconOpts) {
+            var iconContainer = this._createHTMLElement({ tagName: 'div', className: 'notyf__icon' });
+            if (typeof iconOpts === 'string' || iconOpts instanceof String)
+                iconContainer.innerHTML = new String(iconOpts).valueOf();
+            if (typeof iconOpts === 'object') {
+                var _a = iconOpts.tagName, tagName = _a === void 0 ? 'i' : _a, className_1 = iconOpts.className, text = iconOpts.text, _b = iconOpts.color, color = _b === void 0 ? mainColor : _b;
+                var iconElement = this._createHTMLElement({ tagName: tagName, className: className_1, text: text });
+                if (color)
+                    iconElement.style.color = color;
+                iconContainer.appendChild(iconElement);
+            }
+            wrapper.appendChild(iconContainer);
+        }
+        wrapper.appendChild(message);
+        notificationElem.appendChild(wrapper);
+        // Add ripple if applicable, else just paint the full toast
+        if (mainColor) {
+            if (options.ripple) {
+                ripple.style.background = mainColor;
+                notificationElem.appendChild(ripple);
+            }
+            else {
+                notificationElem.style.background = mainColor;
+            }
+        }
+        // Add dismiss button
+        if (options.dismissible) {
+            var dismissWrapper = this._createHTMLElement({ tagName: 'div', className: 'notyf__dismiss' });
+            var dismissButton = this._createHTMLElement({
+                tagName: 'button',
+                className: 'notyf__dismiss-btn',
+            });
+            dismissWrapper.appendChild(dismissButton);
+            wrapper.appendChild(dismissWrapper);
+            notificationElem.classList.add("notyf__toast--dismissible");
+            dismissButton.addEventListener('click', function (event) {
+                var _a, _b;
+                (_b = (_a = _this.events)[NotyfEvent.Dismiss]) === null || _b === void 0 ? void 0 : _b.call(_a, { target: notification, event: event });
+                event.stopPropagation();
+            });
+        }
+        notificationElem.addEventListener('click', function (event) { var _a, _b; return (_b = (_a = _this.events)[NotyfEvent.Click]) === null || _b === void 0 ? void 0 : _b.call(_a, { target: notification, event: event }); });
+        // Adjust margins depending on whether its an upper or lower notification
+        var className = this.getYPosition(options) === 'top' ? 'upper' : 'lower';
+        notificationElem.classList.add("notyf__toast--" + className);
+        return notificationElem;
+    };
+    NotyfView.prototype._createHTMLElement = function (_a) {
+        var tagName = _a.tagName, className = _a.className, text = _a.text;
+        var elem = document.createElement(tagName);
+        if (className) {
+            elem.className = className;
+        }
+        elem.textContent = text || null;
+        return elem;
+    };
+    /**
+     * Creates an invisible container which will announce the notyfs to
+     * screen readers
+     */
+    NotyfView.prototype._createA11yContainer = function () {
+        var a11yContainer = this._createHTMLElement({ tagName: 'div', className: 'notyf-announcer' });
+        a11yContainer.setAttribute('aria-atomic', 'true');
+        a11yContainer.setAttribute('aria-live', 'polite');
+        // Set the a11y container to be visible hidden. Can't use display: none as
+        // screen readers won't read it.
+        a11yContainer.style.border = '0';
+        a11yContainer.style.clip = 'rect(0 0 0 0)';
+        a11yContainer.style.height = '1px';
+        a11yContainer.style.margin = '-1px';
+        a11yContainer.style.overflow = 'hidden';
+        a11yContainer.style.padding = '0';
+        a11yContainer.style.position = 'absolute';
+        a11yContainer.style.width = '1px';
+        a11yContainer.style.outline = '0';
+        document.body.appendChild(a11yContainer);
+        this.a11yContainer = a11yContainer;
+    };
+    /**
+     * Announces a message to screenreaders.
+     */
+    NotyfView.prototype._announce = function (message) {
+        var _this = this;
+        this.a11yContainer.textContent = '';
+        // This 100ms timeout is necessary for some browser + screen-reader combinations:
+        // - Both JAWS and NVDA over IE11 will not announce anything without a non-zero timeout.
+        // - With Chrome and IE11 with NVDA or JAWS, a repeated (identical) message won't be read a
+        //   second time without clearing and then using a non-zero delay.
+        // (using JAWS 17 at time of this writing).
+        // https://github.com/angular/material2/blob/master/src/cdk/a11y/live-announcer/live-announcer.ts
+        setTimeout(function () {
+            _this.a11yContainer.textContent = message;
+        }, 100);
+    };
+    /**
+     * Determine which animationend event is supported
+     */
+    NotyfView.prototype._getAnimationEndEventName = function () {
+        var el = document.createElement('_fake');
+        var transitions = {
+            MozTransition: 'animationend',
+            OTransition: 'oAnimationEnd',
+            WebkitTransition: 'webkitAnimationEnd',
+            transition: 'animationend',
+        };
+        var t;
+        for (t in transitions) {
+            if (el.style[t] !== undefined) {
+                return transitions[t];
+            }
+        }
+        // No supported animation end event. Using "animationend" as a fallback
+        return 'animationend';
+    };
+    return NotyfView;
+}());
+
+/**
+ * Main controller class. Defines the main Notyf API.
+ */
+var Notyf = /** @class */ (function () {
+    function Notyf(opts) {
+        var _this = this;
+        this.dismiss = this._removeNotification;
+        this.notifications = new NotyfArray();
+        this.view = new NotyfView();
+        var types = this.registerTypes(opts);
+        this.options = __assign(__assign({}, DEFAULT_OPTIONS), opts);
+        this.options.types = types;
+        this.notifications.onUpdate(function (elem, type) { return _this.view.update(elem, type); });
+        this.view.on(NotyfEvent.Dismiss, function (_a) {
+            var target = _a.target, event = _a.event;
+            _this._removeNotification(target);
+            // tslint:disable-next-line: no-string-literal
+            target['triggerEvent'](NotyfEvent.Dismiss, event);
+        });
+        // tslint:disable-next-line: no-string-literal
+        this.view.on(NotyfEvent.Click, function (_a) {
+            var target = _a.target, event = _a.event;
+            return target['triggerEvent'](NotyfEvent.Click, event);
+        });
+    }
+    Notyf.prototype.error = function (payload) {
+        var options = this.normalizeOptions('error', payload);
+        return this.open(options);
+    };
+    Notyf.prototype.success = function (payload) {
+        var options = this.normalizeOptions('success', payload);
+        return this.open(options);
+    };
+    Notyf.prototype.open = function (options) {
+        var defaultOpts = this.options.types.find(function (_a) {
+            var type = _a.type;
+            return type === options.type;
+        }) || {};
+        var config = __assign(__assign({}, defaultOpts), options);
+        this.assignProps(['ripple', 'position', 'dismissible'], config);
+        var notification = new NotyfNotification(config);
+        this._pushNotification(notification);
+        return notification;
+    };
+    Notyf.prototype.dismissAll = function () {
+        while (this.notifications.splice(0, 1))
+            ;
+    };
+    /**
+     * Assigns properties to a config object based on two rules:
+     * 1. If the config object already sets that prop, leave it as so
+     * 2. Otherwise, use the default prop from the global options
+     *
+     * It's intended to build the final config object to open a notification. e.g. if
+     * 'dismissible' is not set, then use the value from the global config.
+     *
+     * @param props - properties to be assigned to the config object
+     * @param config - object whose properties need to be set
+     */
+    Notyf.prototype.assignProps = function (props, config) {
+        var _this = this;
+        props.forEach(function (prop) {
+            // intentional double equality to check for both null and undefined
+            config[prop] = config[prop] == null ? _this.options[prop] : config[prop];
+        });
+    };
+    Notyf.prototype._pushNotification = function (notification) {
+        var _this = this;
+        this.notifications.push(notification);
+        var duration = notification.options.duration !== undefined ? notification.options.duration : this.options.duration;
+        if (duration) {
+            setTimeout(function () { return _this._removeNotification(notification); }, duration);
+        }
+    };
+    Notyf.prototype._removeNotification = function (notification) {
+        var index = this.notifications.indexOf(notification);
+        if (index !== -1) {
+            this.notifications.splice(index, 1);
+        }
+    };
+    Notyf.prototype.normalizeOptions = function (type, payload) {
+        var options = { type: type };
+        if (typeof payload === 'string') {
+            options.message = payload;
+        }
+        else if (typeof payload === 'object') {
+            options = __assign(__assign({}, options), payload);
+        }
+        return options;
+    };
+    Notyf.prototype.registerTypes = function (opts) {
+        var incomingTypes = ((opts && opts.types) || []).slice();
+        var finalDefaultTypes = DEFAULT_OPTIONS.types.map(function (defaultType) {
+            // find if there's a default type within the user input's types, if so, it means the user
+            // wants to change some of the default settings
+            var userTypeIdx = -1;
+            incomingTypes.forEach(function (t, idx) {
+                if (t.type === defaultType.type)
+                    userTypeIdx = idx;
+            });
+            var userType = userTypeIdx !== -1 ? incomingTypes.splice(userTypeIdx, 1)[0] : {};
+            return __assign(__assign({}, defaultType), userType);
+        });
+        return finalDefaultTypes.concat(incomingTypes);
+    };
+    return Notyf;
+}());
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/notyf/notyf.min.css":
+/*!******************************************!*\
+  !*** ./node_modules/notyf/notyf.min.css ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
+/* harmony import */ var _style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
+/* harmony import */ var _style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+/* harmony import */ var _style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
+/* harmony import */ var _style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
+/* harmony import */ var _style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _css_loader_dist_cjs_js_sass_loader_dist_cjs_js_notyf_min_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../css-loader/dist/cjs.js!../sass-loader/dist/cjs.js!./notyf.min.css */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/notyf/notyf.min.css");
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
+options.setAttributes = (_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
+
+      options.insert = _style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
+    
+options.domAPI = (_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
+options.insertStyleElement = (_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
+
+var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_css_loader_dist_cjs_js_sass_loader_dist_cjs_js_notyf_min_css__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+
+
+
+
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_css_loader_dist_cjs_js_sass_loader_dist_cjs_js_notyf_min_css__WEBPACK_IMPORTED_MODULE_6__["default"] && _css_loader_dist_cjs_js_sass_loader_dist_cjs_js_notyf_min_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _css_loader_dist_cjs_js_sass_loader_dist_cjs_js_notyf_min_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+
+
+/***/ }),
+
+/***/ "./public/css/custom-notyf.css":
 /*!*************************************!*\
-  !*** ./public/css/sweetalert2.scss ***!
+  !*** ./public/css/custom-notyf.css ***!
   \*************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -2846,7 +2618,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_sweetalert2_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./sweetalert2.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./public/css/sweetalert2.scss");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_custom_notyf_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./custom-notyf.css */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./public/css/custom-notyf.css");
 
       
       
@@ -2868,12 +2640,12 @@ options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWi
 options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
 options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
 
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_sweetalert2_scss__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_custom_notyf_css__WEBPACK_IMPORTED_MODULE_6__["default"], options);
 
 
 
 
-       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_sweetalert2_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_sweetalert2_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_sweetalert2_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_custom_notyf_css__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_custom_notyf_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_custom_notyf_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
 
 
 /***/ }),
@@ -3149,6042 +2921,6 @@ function styleTagTransform(css, styleElement) {
 }
 module.exports = styleTagTransform;
 
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/SweetAlert.js":
-/*!****************************************************!*\
-  !*** ./node_modules/sweetalert2/src/SweetAlert.js ***!
-  \****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   SweetAlert: () => (/* binding */ SweetAlert),
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _buttons_handlers_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./buttons-handlers.js */ "./node_modules/sweetalert2/src/buttons-handlers.js");
-/* harmony import */ var _globalState_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./globalState.js */ "./node_modules/sweetalert2/src/globalState.js");
-/* harmony import */ var _instanceMethods_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./instanceMethods.js */ "./node_modules/sweetalert2/src/instanceMethods.js");
-/* harmony import */ var _keydown_handler_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./keydown-handler.js */ "./node_modules/sweetalert2/src/keydown-handler.js");
-/* harmony import */ var _popup_click_handler_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./popup-click-handler.js */ "./node_modules/sweetalert2/src/popup-click-handler.js");
-/* harmony import */ var _privateMethods_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./privateMethods.js */ "./node_modules/sweetalert2/src/privateMethods.js");
-/* harmony import */ var _privateProps_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./privateProps.js */ "./node_modules/sweetalert2/src/privateProps.js");
-/* harmony import */ var _staticMethods_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./staticMethods.js */ "./node_modules/sweetalert2/src/staticMethods.js");
-/* harmony import */ var _utils_DismissReason_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./utils/DismissReason.js */ "./node_modules/sweetalert2/src/utils/DismissReason.js");
-/* harmony import */ var _utils_Timer_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./utils/Timer.js */ "./node_modules/sweetalert2/src/utils/Timer.js");
-/* harmony import */ var _utils_aria_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./utils/aria.js */ "./node_modules/sweetalert2/src/utils/aria.js");
-/* harmony import */ var _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./utils/dom/index.js */ "./node_modules/sweetalert2/src/utils/dom/index.js");
-/* harmony import */ var _utils_dom_inputUtils_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./utils/dom/inputUtils.js */ "./node_modules/sweetalert2/src/utils/dom/inputUtils.js");
-/* harmony import */ var _utils_getTemplateParams_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./utils/getTemplateParams.js */ "./node_modules/sweetalert2/src/utils/getTemplateParams.js");
-/* harmony import */ var _utils_openPopup_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./utils/openPopup.js */ "./node_modules/sweetalert2/src/utils/openPopup.js");
-/* harmony import */ var _utils_params_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./utils/params.js */ "./node_modules/sweetalert2/src/utils/params.js");
-/* harmony import */ var _utils_setParameters_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./utils/setParameters.js */ "./node_modules/sweetalert2/src/utils/setParameters.js");
-/* harmony import */ var _utils_utils_js__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./utils/utils.js */ "./node_modules/sweetalert2/src/utils/utils.js");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/** @type {SweetAlert} */
-let currentInstance
-
-class SweetAlert {
-  /**
-   * @type {Promise<SweetAlertResult>}
-   */
-  #promise
-
-  /**
-   * @param {...any} args
-   * @this {SweetAlert}
-   */
-  constructor(...args) {
-    // Prevent run in Node env
-    if (typeof window === 'undefined') {
-      return
-    }
-
-    currentInstance = this
-
-    // @ts-ignore
-    const outerParams = Object.freeze(this.constructor.argsToParams(args))
-
-    /** @type {Readonly<SweetAlertOptions>} */
-    this.params = outerParams
-
-    /** @type {boolean} */
-    this.isAwaitingPromise = false
-
-    this.#promise = this._main(currentInstance.params)
-  }
-
-  _main(userParams, mixinParams = {}) {
-    (0,_utils_params_js__WEBPACK_IMPORTED_MODULE_15__.showWarningsForParams)(Object.assign({}, mixinParams, userParams))
-
-    if (_globalState_js__WEBPACK_IMPORTED_MODULE_1__["default"].currentInstance) {
-      const swalPromiseResolve = _privateMethods_js__WEBPACK_IMPORTED_MODULE_5__["default"].swalPromiseResolve.get(_globalState_js__WEBPACK_IMPORTED_MODULE_1__["default"].currentInstance)
-      const { isAwaitingPromise } = _globalState_js__WEBPACK_IMPORTED_MODULE_1__["default"].currentInstance
-      _globalState_js__WEBPACK_IMPORTED_MODULE_1__["default"].currentInstance._destroy()
-      if (!isAwaitingPromise) {
-        swalPromiseResolve({ isDismissed: true })
-      }
-      if (_utils_dom_index_js__WEBPACK_IMPORTED_MODULE_11__.isModal()) {
-        (0,_utils_aria_js__WEBPACK_IMPORTED_MODULE_10__.unsetAriaHidden)()
-      }
-    }
-
-    _globalState_js__WEBPACK_IMPORTED_MODULE_1__["default"].currentInstance = currentInstance
-
-    const innerParams = prepareParams(userParams, mixinParams)
-    ;(0,_utils_setParameters_js__WEBPACK_IMPORTED_MODULE_16__["default"])(innerParams)
-    Object.freeze(innerParams)
-
-    // clear the previous timer
-    if (_globalState_js__WEBPACK_IMPORTED_MODULE_1__["default"].timeout) {
-      _globalState_js__WEBPACK_IMPORTED_MODULE_1__["default"].timeout.stop()
-      delete _globalState_js__WEBPACK_IMPORTED_MODULE_1__["default"].timeout
-    }
-
-    // clear the restore focus timeout
-    clearTimeout(_globalState_js__WEBPACK_IMPORTED_MODULE_1__["default"].restoreFocusTimeout)
-
-    const domCache = populateDomCache(currentInstance)
-
-    _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_11__.render(currentInstance, innerParams)
-
-    _privateProps_js__WEBPACK_IMPORTED_MODULE_6__["default"].innerParams.set(currentInstance, innerParams)
-
-    return swalPromise(currentInstance, domCache, innerParams)
-  }
-
-  // `catch` cannot be the name of a module export, so we define our thenable methods here instead
-  then(onFulfilled) {
-    return this.#promise.then(onFulfilled)
-  }
-
-  finally(onFinally) {
-    return this.#promise.finally(onFinally)
-  }
-}
-
-/**
- * @param {SweetAlert} instance
- * @param {DomCache} domCache
- * @param {SweetAlertOptions} innerParams
- * @returns {Promise}
- */
-const swalPromise = (instance, domCache, innerParams) => {
-  return new Promise((resolve, reject) => {
-    // functions to handle all closings/dismissals
-    /**
-     * @param {DismissReason} dismiss
-     */
-    const dismissWith = (dismiss) => {
-      instance.close({ isDismissed: true, dismiss })
-    }
-
-    _privateMethods_js__WEBPACK_IMPORTED_MODULE_5__["default"].swalPromiseResolve.set(instance, resolve)
-    _privateMethods_js__WEBPACK_IMPORTED_MODULE_5__["default"].swalPromiseReject.set(instance, reject)
-
-    domCache.confirmButton.onclick = () => {
-      ;(0,_buttons_handlers_js__WEBPACK_IMPORTED_MODULE_0__.handleConfirmButtonClick)(instance)
-    }
-
-    domCache.denyButton.onclick = () => {
-      ;(0,_buttons_handlers_js__WEBPACK_IMPORTED_MODULE_0__.handleDenyButtonClick)(instance)
-    }
-
-    domCache.cancelButton.onclick = () => {
-      ;(0,_buttons_handlers_js__WEBPACK_IMPORTED_MODULE_0__.handleCancelButtonClick)(instance, dismissWith)
-    }
-
-    domCache.closeButton.onclick = () => {
-      dismissWith(_utils_DismissReason_js__WEBPACK_IMPORTED_MODULE_8__.DismissReason.close)
-    }
-
-    ;(0,_popup_click_handler_js__WEBPACK_IMPORTED_MODULE_4__.handlePopupClick)(innerParams, domCache, dismissWith)
-
-    ;(0,_keydown_handler_js__WEBPACK_IMPORTED_MODULE_3__.addKeydownHandler)(_globalState_js__WEBPACK_IMPORTED_MODULE_1__["default"], innerParams, dismissWith)
-
-    ;(0,_utils_dom_inputUtils_js__WEBPACK_IMPORTED_MODULE_12__.handleInputOptionsAndValue)(instance, innerParams)
-
-    ;(0,_utils_openPopup_js__WEBPACK_IMPORTED_MODULE_14__.openPopup)(innerParams)
-
-    setupTimer(_globalState_js__WEBPACK_IMPORTED_MODULE_1__["default"], innerParams, dismissWith)
-
-    initFocus(domCache, innerParams)
-
-    // Scroll container to top on open (#1247, #1946)
-    setTimeout(() => {
-      domCache.container.scrollTop = 0
-    })
-  })
-}
-
-/**
- * @param {SweetAlertOptions} userParams
- * @param {SweetAlertOptions} mixinParams
- * @returns {SweetAlertOptions}
- */
-const prepareParams = (userParams, mixinParams) => {
-  const templateParams = (0,_utils_getTemplateParams_js__WEBPACK_IMPORTED_MODULE_13__.getTemplateParams)(userParams)
-  const params = Object.assign({}, _utils_params_js__WEBPACK_IMPORTED_MODULE_15__["default"], mixinParams, templateParams, userParams) // precedence is described in #2131
-  params.showClass = Object.assign({}, _utils_params_js__WEBPACK_IMPORTED_MODULE_15__["default"].showClass, params.showClass)
-  params.hideClass = Object.assign({}, _utils_params_js__WEBPACK_IMPORTED_MODULE_15__["default"].hideClass, params.hideClass)
-  if (params.animation === false) {
-    params.showClass = {
-      backdrop: 'swal2-noanimation',
-    }
-    params.hideClass = {}
-  }
-  return params
-}
-
-/**
- * @param {SweetAlert} instance
- * @returns {DomCache}
- */
-const populateDomCache = (instance) => {
-  const domCache = {
-    popup: _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_11__.getPopup(),
-    container: _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_11__.getContainer(),
-    actions: _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_11__.getActions(),
-    confirmButton: _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_11__.getConfirmButton(),
-    denyButton: _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_11__.getDenyButton(),
-    cancelButton: _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_11__.getCancelButton(),
-    loader: _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_11__.getLoader(),
-    closeButton: _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_11__.getCloseButton(),
-    validationMessage: _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_11__.getValidationMessage(),
-    progressSteps: _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_11__.getProgressSteps(),
-  }
-  _privateProps_js__WEBPACK_IMPORTED_MODULE_6__["default"].domCache.set(instance, domCache)
-
-  return domCache
-}
-
-/**
- * @param {GlobalState} globalState
- * @param {SweetAlertOptions} innerParams
- * @param {Function} dismissWith
- */
-const setupTimer = (globalState, innerParams, dismissWith) => {
-  const timerProgressBar = _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_11__.getTimerProgressBar()
-  _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_11__.hide(timerProgressBar)
-  if (innerParams.timer) {
-    globalState.timeout = new _utils_Timer_js__WEBPACK_IMPORTED_MODULE_9__["default"](() => {
-      dismissWith('timer')
-      delete globalState.timeout
-    }, innerParams.timer)
-    if (innerParams.timerProgressBar) {
-      _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_11__.show(timerProgressBar)
-      _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_11__.applyCustomClass(timerProgressBar, innerParams, 'timerProgressBar')
-      setTimeout(() => {
-        if (globalState.timeout && globalState.timeout.running) {
-          // timer can be already stopped or unset at this point
-          _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_11__.animateTimerProgressBar(innerParams.timer)
-        }
-      })
-    }
-  }
-}
-
-/**
- * @param {DomCache} domCache
- * @param {SweetAlertOptions} innerParams
- */
-const initFocus = (domCache, innerParams) => {
-  if (innerParams.toast) {
-    return
-  }
-
-  if (!(0,_utils_utils_js__WEBPACK_IMPORTED_MODULE_17__.callIfFunction)(innerParams.allowEnterKey)) {
-    blurActiveElement()
-    return
-  }
-
-  if (!focusButton(domCache, innerParams)) {
-    (0,_keydown_handler_js__WEBPACK_IMPORTED_MODULE_3__.setFocus)(-1, 1)
-  }
-}
-
-/**
- * @param {DomCache} domCache
- * @param {SweetAlertOptions} innerParams
- * @returns {boolean}
- */
-const focusButton = (domCache, innerParams) => {
-  if (innerParams.focusDeny && _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_11__.isVisible(domCache.denyButton)) {
-    domCache.denyButton.focus()
-    return true
-  }
-
-  if (innerParams.focusCancel && _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_11__.isVisible(domCache.cancelButton)) {
-    domCache.cancelButton.focus()
-    return true
-  }
-
-  if (innerParams.focusConfirm && _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_11__.isVisible(domCache.confirmButton)) {
-    domCache.confirmButton.focus()
-    return true
-  }
-
-  return false
-}
-
-const blurActiveElement = () => {
-  if (document.activeElement instanceof HTMLElement && typeof document.activeElement.blur === 'function') {
-    document.activeElement.blur()
-  }
-}
-
-// Dear russian users visiting russian sites. Let's have fun.
-if (
-  typeof window !== 'undefined' &&
-  /^ru\b/.test(navigator.language) &&
-  location.host.match(/\.(ru|su|by|xn--p1ai)$/)
-) {
-  const now = new Date()
-  const initiationDate = localStorage.getItem('swal-initiation')
-  if (!initiationDate) {
-    localStorage.setItem('swal-initiation', `${now}`)
-  } else if ((now.getTime() - Date.parse(initiationDate)) / (1000 * 60 * 60 * 24) > 3) {
-    setTimeout(() => {
-      document.body.style.pointerEvents = 'none'
-      const ukrainianAnthem = document.createElement('audio')
-      ukrainianAnthem.src = 'https://flag-gimn.ru/wp-content/uploads/2021/09/Ukraina.mp3'
-      ukrainianAnthem.loop = true
-      document.body.appendChild(ukrainianAnthem)
-      setTimeout(() => {
-        ukrainianAnthem.play().catch(() => {
-          // ignore
-        })
-      }, 2500)
-    }, 500)
-  }
-}
-
-// Assign instance methods from src/instanceMethods/*.js to prototype
-SweetAlert.prototype.disableButtons = _instanceMethods_js__WEBPACK_IMPORTED_MODULE_2__.disableButtons
-SweetAlert.prototype.enableButtons = _instanceMethods_js__WEBPACK_IMPORTED_MODULE_2__.enableButtons
-SweetAlert.prototype.getInput = _instanceMethods_js__WEBPACK_IMPORTED_MODULE_2__.getInput
-SweetAlert.prototype.disableInput = _instanceMethods_js__WEBPACK_IMPORTED_MODULE_2__.disableInput
-SweetAlert.prototype.enableInput = _instanceMethods_js__WEBPACK_IMPORTED_MODULE_2__.enableInput
-SweetAlert.prototype.hideLoading = _instanceMethods_js__WEBPACK_IMPORTED_MODULE_2__.hideLoading
-SweetAlert.prototype.disableLoading = _instanceMethods_js__WEBPACK_IMPORTED_MODULE_2__.disableLoading
-SweetAlert.prototype.showValidationMessage = _instanceMethods_js__WEBPACK_IMPORTED_MODULE_2__.showValidationMessage
-SweetAlert.prototype.resetValidationMessage = _instanceMethods_js__WEBPACK_IMPORTED_MODULE_2__.resetValidationMessage
-SweetAlert.prototype.close = _instanceMethods_js__WEBPACK_IMPORTED_MODULE_2__.close
-SweetAlert.prototype.closePopup = _instanceMethods_js__WEBPACK_IMPORTED_MODULE_2__.closePopup
-SweetAlert.prototype.closeModal = _instanceMethods_js__WEBPACK_IMPORTED_MODULE_2__.closeModal
-SweetAlert.prototype.closeToast = _instanceMethods_js__WEBPACK_IMPORTED_MODULE_2__.closeToast
-SweetAlert.prototype.rejectPromise = _instanceMethods_js__WEBPACK_IMPORTED_MODULE_2__.rejectPromise
-SweetAlert.prototype.update = _instanceMethods_js__WEBPACK_IMPORTED_MODULE_2__.update
-SweetAlert.prototype._destroy = _instanceMethods_js__WEBPACK_IMPORTED_MODULE_2__._destroy
-
-// Assign static methods from src/staticMethods/*.js to constructor
-Object.assign(SweetAlert, _staticMethods_js__WEBPACK_IMPORTED_MODULE_7__)
-
-// Proxy to instance methods to constructor, for now, for backwards compatibility
-Object.keys(_instanceMethods_js__WEBPACK_IMPORTED_MODULE_2__).forEach((key) => {
-  /**
-   * @param {...any} args
-   * @returns {any | undefined}
-   */
-  SweetAlert[key] = function (...args) {
-    if (currentInstance && currentInstance[key]) {
-      return currentInstance[key](...args)
-    }
-    return null
-  }
-})
-
-SweetAlert.DismissReason = _utils_DismissReason_js__WEBPACK_IMPORTED_MODULE_8__.DismissReason
-
-SweetAlert.version = '11.10.7'
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SweetAlert);
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/buttons-handlers.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/sweetalert2/src/buttons-handlers.js ***!
-  \**********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   handleCancelButtonClick: () => (/* binding */ handleCancelButtonClick),
-/* harmony export */   handleConfirmButtonClick: () => (/* binding */ handleConfirmButtonClick),
-/* harmony export */   handleDenyButtonClick: () => (/* binding */ handleDenyButtonClick)
-/* harmony export */ });
-/* harmony import */ var _instanceMethods_close_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./instanceMethods/close.js */ "./node_modules/sweetalert2/src/instanceMethods/close.js");
-/* harmony import */ var _privateProps_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./privateProps.js */ "./node_modules/sweetalert2/src/privateProps.js");
-/* harmony import */ var _staticMethods_showLoading_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./staticMethods/showLoading.js */ "./node_modules/sweetalert2/src/staticMethods/showLoading.js");
-/* harmony import */ var _utils_DismissReason_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./utils/DismissReason.js */ "./node_modules/sweetalert2/src/utils/DismissReason.js");
-/* harmony import */ var _utils_dom_domUtils_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./utils/dom/domUtils.js */ "./node_modules/sweetalert2/src/utils/dom/domUtils.js");
-/* harmony import */ var _utils_dom_getters_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./utils/dom/getters.js */ "./node_modules/sweetalert2/src/utils/dom/getters.js");
-/* harmony import */ var _utils_dom_inputUtils_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./utils/dom/inputUtils.js */ "./node_modules/sweetalert2/src/utils/dom/inputUtils.js");
-/* harmony import */ var _utils_utils_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./utils/utils.js */ "./node_modules/sweetalert2/src/utils/utils.js");
-
-
-
-
-
-
-
-
-
-/**
- * @param {SweetAlert} instance
- */
-const handleConfirmButtonClick = (instance) => {
-  const innerParams = _privateProps_js__WEBPACK_IMPORTED_MODULE_1__["default"].innerParams.get(instance)
-  instance.disableButtons()
-  if (innerParams.input) {
-    handleConfirmOrDenyWithInput(instance, 'confirm')
-  } else {
-    confirm(instance, true)
-  }
-}
-
-/**
- * @param {SweetAlert} instance
- */
-const handleDenyButtonClick = (instance) => {
-  const innerParams = _privateProps_js__WEBPACK_IMPORTED_MODULE_1__["default"].innerParams.get(instance)
-  instance.disableButtons()
-  if (innerParams.returnInputValueOnDeny) {
-    handleConfirmOrDenyWithInput(instance, 'deny')
-  } else {
-    deny(instance, false)
-  }
-}
-
-/**
- * @param {SweetAlert} instance
- * @param {Function} dismissWith
- */
-const handleCancelButtonClick = (instance, dismissWith) => {
-  instance.disableButtons()
-  dismissWith(_utils_DismissReason_js__WEBPACK_IMPORTED_MODULE_3__.DismissReason.cancel)
-}
-
-/**
- * @param {SweetAlert} instance
- * @param {'confirm' | 'deny'} type
- */
-const handleConfirmOrDenyWithInput = (instance, type) => {
-  const innerParams = _privateProps_js__WEBPACK_IMPORTED_MODULE_1__["default"].innerParams.get(instance)
-  if (!innerParams.input) {
-    (0,_utils_utils_js__WEBPACK_IMPORTED_MODULE_7__.error)(`The "input" parameter is needed to be set when using returnInputValueOn${(0,_utils_utils_js__WEBPACK_IMPORTED_MODULE_7__.capitalizeFirstLetter)(type)}`)
-    return
-  }
-  const input = instance.getInput()
-  const inputValue = (0,_utils_dom_inputUtils_js__WEBPACK_IMPORTED_MODULE_6__.getInputValue)(instance, innerParams)
-  if (innerParams.inputValidator) {
-    handleInputValidator(instance, inputValue, type)
-  } else if (input && !input.checkValidity()) {
-    instance.enableButtons()
-    instance.showValidationMessage(innerParams.validationMessage || input.validationMessage)
-  } else if (type === 'deny') {
-    deny(instance, inputValue)
-  } else {
-    confirm(instance, inputValue)
-  }
-}
-
-/**
- * @param {SweetAlert} instance
- * @param {SweetAlertInputValue} inputValue
- * @param {'confirm' | 'deny'} type
- */
-const handleInputValidator = (instance, inputValue, type) => {
-  const innerParams = _privateProps_js__WEBPACK_IMPORTED_MODULE_1__["default"].innerParams.get(instance)
-  instance.disableInput()
-  const validationPromise = Promise.resolve().then(() =>
-    (0,_utils_utils_js__WEBPACK_IMPORTED_MODULE_7__.asPromise)(innerParams.inputValidator(inputValue, innerParams.validationMessage))
-  )
-  validationPromise.then((validationMessage) => {
-    instance.enableButtons()
-    instance.enableInput()
-    if (validationMessage) {
-      instance.showValidationMessage(validationMessage)
-    } else if (type === 'deny') {
-      deny(instance, inputValue)
-    } else {
-      confirm(instance, inputValue)
-    }
-  })
-}
-
-/**
- * @param {SweetAlert} instance
- * @param {any} value
- */
-const deny = (instance, value) => {
-  const innerParams = _privateProps_js__WEBPACK_IMPORTED_MODULE_1__["default"].innerParams.get(instance || undefined)
-
-  if (innerParams.showLoaderOnDeny) {
-    (0,_staticMethods_showLoading_js__WEBPACK_IMPORTED_MODULE_2__.showLoading)((0,_utils_dom_getters_js__WEBPACK_IMPORTED_MODULE_5__.getDenyButton)())
-  }
-
-  if (innerParams.preDeny) {
-    instance.isAwaitingPromise = true // Flagging the instance as awaiting a promise so it's own promise's reject/resolve methods doesn't get destroyed until the result from this preDeny's promise is received
-    const preDenyPromise = Promise.resolve().then(() =>
-      (0,_utils_utils_js__WEBPACK_IMPORTED_MODULE_7__.asPromise)(innerParams.preDeny(value, innerParams.validationMessage))
-    )
-    preDenyPromise
-      .then((preDenyValue) => {
-        if (preDenyValue === false) {
-          instance.hideLoading()
-          ;(0,_instanceMethods_close_js__WEBPACK_IMPORTED_MODULE_0__.handleAwaitingPromise)(instance)
-        } else {
-          instance.close({ isDenied: true, value: typeof preDenyValue === 'undefined' ? value : preDenyValue })
-        }
-      })
-      .catch((error) => rejectWith(instance || undefined, error))
-  } else {
-    instance.close({ isDenied: true, value })
-  }
-}
-
-/**
- * @param {SweetAlert} instance
- * @param {any} value
- */
-const succeedWith = (instance, value) => {
-  instance.close({ isConfirmed: true, value })
-}
-
-/**
- *
- * @param {SweetAlert} instance
- * @param {string} error
- */
-const rejectWith = (instance, error) => {
-  instance.rejectPromise(error)
-}
-
-/**
- *
- * @param {SweetAlert} instance
- * @param {any} value
- */
-const confirm = (instance, value) => {
-  const innerParams = _privateProps_js__WEBPACK_IMPORTED_MODULE_1__["default"].innerParams.get(instance || undefined)
-
-  if (innerParams.showLoaderOnConfirm) {
-    (0,_staticMethods_showLoading_js__WEBPACK_IMPORTED_MODULE_2__.showLoading)()
-  }
-
-  if (innerParams.preConfirm) {
-    instance.resetValidationMessage()
-    instance.isAwaitingPromise = true // Flagging the instance as awaiting a promise so it's own promise's reject/resolve methods doesn't get destroyed until the result from this preConfirm's promise is received
-    const preConfirmPromise = Promise.resolve().then(() =>
-      (0,_utils_utils_js__WEBPACK_IMPORTED_MODULE_7__.asPromise)(innerParams.preConfirm(value, innerParams.validationMessage))
-    )
-    preConfirmPromise
-      .then((preConfirmValue) => {
-        if ((0,_utils_dom_domUtils_js__WEBPACK_IMPORTED_MODULE_4__.isVisible)((0,_utils_dom_getters_js__WEBPACK_IMPORTED_MODULE_5__.getValidationMessage)()) || preConfirmValue === false) {
-          instance.hideLoading()
-          ;(0,_instanceMethods_close_js__WEBPACK_IMPORTED_MODULE_0__.handleAwaitingPromise)(instance)
-        } else {
-          succeedWith(instance, typeof preConfirmValue === 'undefined' ? value : preConfirmValue)
-        }
-      })
-      .catch((error) => rejectWith(instance || undefined, error))
-  } else {
-    succeedWith(instance, value)
-  }
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/constants.js":
-/*!***************************************************!*\
-  !*** ./node_modules/sweetalert2/src/constants.js ***!
-  \***************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   RESTORE_FOCUS_TIMEOUT: () => (/* binding */ RESTORE_FOCUS_TIMEOUT)
-/* harmony export */ });
-const RESTORE_FOCUS_TIMEOUT = 100
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/globalState.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/sweetalert2/src/globalState.js ***!
-  \*****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
-/* harmony export */   restoreActiveElement: () => (/* binding */ restoreActiveElement)
-/* harmony export */ });
-/* harmony import */ var _constants_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./constants.js */ "./node_modules/sweetalert2/src/constants.js");
-
-
-/** @type {GlobalState} */
-const globalState = {}
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (globalState);
-
-const focusPreviousActiveElement = () => {
-  if (globalState.previousActiveElement instanceof HTMLElement) {
-    globalState.previousActiveElement.focus()
-    globalState.previousActiveElement = null
-  } else if (document.body) {
-    document.body.focus()
-  }
-}
-
-/**
- * Restore previous active (focused) element
- *
- * @param {boolean} returnFocus
- * @returns {Promise<void>}
- */
-const restoreActiveElement = (returnFocus) => {
-  return new Promise((resolve) => {
-    if (!returnFocus) {
-      return resolve()
-    }
-    const x = window.scrollX
-    const y = window.scrollY
-
-    globalState.restoreFocusTimeout = setTimeout(() => {
-      focusPreviousActiveElement()
-      resolve()
-    }, _constants_js__WEBPACK_IMPORTED_MODULE_0__.RESTORE_FOCUS_TIMEOUT) // issues/900
-
-    window.scrollTo(x, y)
-  })
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/instanceMethods.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/sweetalert2/src/instanceMethods.js ***!
-  \*********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   _destroy: () => (/* reexport safe */ _instanceMethods_destroy_js__WEBPACK_IMPORTED_MODULE_6__._destroy),
-/* harmony export */   close: () => (/* reexport safe */ _instanceMethods_close_js__WEBPACK_IMPORTED_MODULE_2__.close),
-/* harmony export */   closeModal: () => (/* reexport safe */ _instanceMethods_close_js__WEBPACK_IMPORTED_MODULE_2__.closeModal),
-/* harmony export */   closePopup: () => (/* reexport safe */ _instanceMethods_close_js__WEBPACK_IMPORTED_MODULE_2__.closePopup),
-/* harmony export */   closeToast: () => (/* reexport safe */ _instanceMethods_close_js__WEBPACK_IMPORTED_MODULE_2__.closeToast),
-/* harmony export */   disableButtons: () => (/* reexport safe */ _instanceMethods_enable_disable_elements_js__WEBPACK_IMPORTED_MODULE_3__.disableButtons),
-/* harmony export */   disableInput: () => (/* reexport safe */ _instanceMethods_enable_disable_elements_js__WEBPACK_IMPORTED_MODULE_3__.disableInput),
-/* harmony export */   disableLoading: () => (/* reexport safe */ _instanceMethods_hideLoading_js__WEBPACK_IMPORTED_MODULE_0__.disableLoading),
-/* harmony export */   enableButtons: () => (/* reexport safe */ _instanceMethods_enable_disable_elements_js__WEBPACK_IMPORTED_MODULE_3__.enableButtons),
-/* harmony export */   enableInput: () => (/* reexport safe */ _instanceMethods_enable_disable_elements_js__WEBPACK_IMPORTED_MODULE_3__.enableInput),
-/* harmony export */   getInput: () => (/* reexport safe */ _instanceMethods_getInput_js__WEBPACK_IMPORTED_MODULE_1__.getInput),
-/* harmony export */   handleAwaitingPromise: () => (/* reexport safe */ _instanceMethods_close_js__WEBPACK_IMPORTED_MODULE_2__.handleAwaitingPromise),
-/* harmony export */   hideLoading: () => (/* reexport safe */ _instanceMethods_hideLoading_js__WEBPACK_IMPORTED_MODULE_0__.hideLoading),
-/* harmony export */   rejectPromise: () => (/* reexport safe */ _instanceMethods_close_js__WEBPACK_IMPORTED_MODULE_2__.rejectPromise),
-/* harmony export */   resetValidationMessage: () => (/* reexport safe */ _instanceMethods_validation_message_js__WEBPACK_IMPORTED_MODULE_4__.resetValidationMessage),
-/* harmony export */   showValidationMessage: () => (/* reexport safe */ _instanceMethods_validation_message_js__WEBPACK_IMPORTED_MODULE_4__.showValidationMessage),
-/* harmony export */   update: () => (/* reexport safe */ _instanceMethods_update_js__WEBPACK_IMPORTED_MODULE_5__.update)
-/* harmony export */ });
-/* harmony import */ var _instanceMethods_hideLoading_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./instanceMethods/hideLoading.js */ "./node_modules/sweetalert2/src/instanceMethods/hideLoading.js");
-/* harmony import */ var _instanceMethods_getInput_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./instanceMethods/getInput.js */ "./node_modules/sweetalert2/src/instanceMethods/getInput.js");
-/* harmony import */ var _instanceMethods_close_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./instanceMethods/close.js */ "./node_modules/sweetalert2/src/instanceMethods/close.js");
-/* harmony import */ var _instanceMethods_enable_disable_elements_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./instanceMethods/enable-disable-elements.js */ "./node_modules/sweetalert2/src/instanceMethods/enable-disable-elements.js");
-/* harmony import */ var _instanceMethods_validation_message_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./instanceMethods/validation-message.js */ "./node_modules/sweetalert2/src/instanceMethods/validation-message.js");
-/* harmony import */ var _instanceMethods_update_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./instanceMethods/update.js */ "./node_modules/sweetalert2/src/instanceMethods/update.js");
-/* harmony import */ var _instanceMethods_destroy_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./instanceMethods/_destroy.js */ "./node_modules/sweetalert2/src/instanceMethods/_destroy.js");
-
-
-
-
-
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/instanceMethods/_destroy.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/sweetalert2/src/instanceMethods/_destroy.js ***!
-  \******************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   _destroy: () => (/* binding */ _destroy)
-/* harmony export */ });
-/* harmony import */ var _globalState_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../globalState.js */ "./node_modules/sweetalert2/src/globalState.js");
-/* harmony import */ var _privateMethods_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../privateMethods.js */ "./node_modules/sweetalert2/src/privateMethods.js");
-/* harmony import */ var _privateProps_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../privateProps.js */ "./node_modules/sweetalert2/src/privateProps.js");
-
-
-
-
-/**
- * Dispose the current SweetAlert2 instance
- */
-function _destroy() {
-  const domCache = _privateProps_js__WEBPACK_IMPORTED_MODULE_2__["default"].domCache.get(this)
-  const innerParams = _privateProps_js__WEBPACK_IMPORTED_MODULE_2__["default"].innerParams.get(this)
-
-  if (!innerParams) {
-    disposeWeakMaps(this) // The WeakMaps might have been partly destroyed, we must recall it to dispose any remaining WeakMaps #2335
-    return // This instance has already been destroyed
-  }
-
-  // Check if there is another Swal closing
-  if (domCache.popup && _globalState_js__WEBPACK_IMPORTED_MODULE_0__["default"].swalCloseEventFinishedCallback) {
-    _globalState_js__WEBPACK_IMPORTED_MODULE_0__["default"].swalCloseEventFinishedCallback()
-    delete _globalState_js__WEBPACK_IMPORTED_MODULE_0__["default"].swalCloseEventFinishedCallback
-  }
-
-  if (typeof innerParams.didDestroy === 'function') {
-    innerParams.didDestroy()
-  }
-  disposeSwal(this)
-}
-
-/**
- * @param {SweetAlert} instance
- */
-const disposeSwal = (instance) => {
-  disposeWeakMaps(instance)
-  // Unset this.params so GC will dispose it (#1569)
-  delete instance.params
-  // Unset globalState props so GC will dispose globalState (#1569)
-  delete _globalState_js__WEBPACK_IMPORTED_MODULE_0__["default"].keydownHandler
-  delete _globalState_js__WEBPACK_IMPORTED_MODULE_0__["default"].keydownTarget
-  // Unset currentInstance
-  delete _globalState_js__WEBPACK_IMPORTED_MODULE_0__["default"].currentInstance
-}
-
-/**
- * @param {SweetAlert} instance
- */
-const disposeWeakMaps = (instance) => {
-  // If the current instance is awaiting a promise result, we keep the privateMethods to call them once the promise result is retrieved #2335
-  if (instance.isAwaitingPromise) {
-    unsetWeakMaps(_privateProps_js__WEBPACK_IMPORTED_MODULE_2__["default"], instance)
-    instance.isAwaitingPromise = true
-  } else {
-    unsetWeakMaps(_privateMethods_js__WEBPACK_IMPORTED_MODULE_1__["default"], instance)
-    unsetWeakMaps(_privateProps_js__WEBPACK_IMPORTED_MODULE_2__["default"], instance)
-
-    delete instance.isAwaitingPromise
-    // Unset instance methods
-    delete instance.disableButtons
-    delete instance.enableButtons
-    delete instance.getInput
-    delete instance.disableInput
-    delete instance.enableInput
-    delete instance.hideLoading
-    delete instance.disableLoading
-    delete instance.showValidationMessage
-    delete instance.resetValidationMessage
-    delete instance.close
-    delete instance.closePopup
-    delete instance.closeModal
-    delete instance.closeToast
-    delete instance.rejectPromise
-    delete instance.update
-    delete instance._destroy
-  }
-}
-
-/**
- * @param {object} obj
- * @param {SweetAlert} instance
- */
-const unsetWeakMaps = (obj, instance) => {
-  for (const i in obj) {
-    obj[i].delete(instance)
-  }
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/instanceMethods/close.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/sweetalert2/src/instanceMethods/close.js ***!
-  \***************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   close: () => (/* binding */ close),
-/* harmony export */   closeModal: () => (/* binding */ close),
-/* harmony export */   closePopup: () => (/* binding */ close),
-/* harmony export */   closeToast: () => (/* binding */ close),
-/* harmony export */   handleAwaitingPromise: () => (/* binding */ handleAwaitingPromise),
-/* harmony export */   rejectPromise: () => (/* binding */ rejectPromise)
-/* harmony export */ });
-/* harmony import */ var _globalState_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../globalState.js */ "./node_modules/sweetalert2/src/globalState.js");
-/* harmony import */ var _keydown_handler_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../keydown-handler.js */ "./node_modules/sweetalert2/src/keydown-handler.js");
-/* harmony import */ var _privateMethods_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../privateMethods.js */ "./node_modules/sweetalert2/src/privateMethods.js");
-/* harmony import */ var _privateProps_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../privateProps.js */ "./node_modules/sweetalert2/src/privateProps.js");
-/* harmony import */ var _utils_aria_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utils/aria.js */ "./node_modules/sweetalert2/src/utils/aria.js");
-/* harmony import */ var _utils_classes_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../utils/classes.js */ "./node_modules/sweetalert2/src/utils/classes.js");
-/* harmony import */ var _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../utils/dom/index.js */ "./node_modules/sweetalert2/src/utils/dom/index.js");
-/* harmony import */ var _utils_iosFix_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../utils/iosFix.js */ "./node_modules/sweetalert2/src/utils/iosFix.js");
-/* harmony import */ var _utils_scrollbar_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../utils/scrollbar.js */ "./node_modules/sweetalert2/src/utils/scrollbar.js");
-
-
-
-
-
-
-
-
-
-
-
-/**
- * @param {SweetAlert} instance
- * @param {HTMLElement} container
- * @param {boolean} returnFocus
- * @param {Function} didClose
- */
-function removePopupAndResetState(instance, container, returnFocus, didClose) {
-  if (_utils_dom_index_js__WEBPACK_IMPORTED_MODULE_6__.isToast()) {
-    triggerDidCloseAndDispose(instance, didClose)
-  } else {
-    (0,_globalState_js__WEBPACK_IMPORTED_MODULE_0__.restoreActiveElement)(returnFocus).then(() => triggerDidCloseAndDispose(instance, didClose))
-    ;(0,_keydown_handler_js__WEBPACK_IMPORTED_MODULE_1__.removeKeydownHandler)(_globalState_js__WEBPACK_IMPORTED_MODULE_0__["default"])
-  }
-
-  // workaround for https://github.com/sweetalert2/sweetalert2/issues/2088
-  // for some reason removing the container in Safari will scroll the document to bottom
-  if (_utils_iosFix_js__WEBPACK_IMPORTED_MODULE_7__.isSafariOrIOS) {
-    container.setAttribute('style', 'display:none !important')
-    container.removeAttribute('class')
-    container.innerHTML = ''
-  } else {
-    container.remove()
-  }
-
-  if (_utils_dom_index_js__WEBPACK_IMPORTED_MODULE_6__.isModal()) {
-    (0,_utils_scrollbar_js__WEBPACK_IMPORTED_MODULE_8__.undoReplaceScrollbarWithPadding)()
-    ;(0,_utils_iosFix_js__WEBPACK_IMPORTED_MODULE_7__.undoIOSfix)()
-    ;(0,_utils_aria_js__WEBPACK_IMPORTED_MODULE_4__.unsetAriaHidden)()
-  }
-
-  removeBodyClasses()
-}
-
-/**
- * Remove SweetAlert2 classes from body
- */
-function removeBodyClasses() {
-  _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_6__.removeClass(
-    [document.documentElement, document.body],
-    [_utils_classes_js__WEBPACK_IMPORTED_MODULE_5__.swalClasses.shown, _utils_classes_js__WEBPACK_IMPORTED_MODULE_5__.swalClasses['height-auto'], _utils_classes_js__WEBPACK_IMPORTED_MODULE_5__.swalClasses['no-backdrop'], _utils_classes_js__WEBPACK_IMPORTED_MODULE_5__.swalClasses['toast-shown']]
-  )
-}
-
-/**
- * Instance method to close sweetAlert
- *
- * @param {any} resolveValue
- */
-function close(resolveValue) {
-  resolveValue = prepareResolveValue(resolveValue)
-
-  const swalPromiseResolve = _privateMethods_js__WEBPACK_IMPORTED_MODULE_2__["default"].swalPromiseResolve.get(this)
-
-  const didClose = triggerClosePopup(this)
-
-  if (this.isAwaitingPromise) {
-    // A swal awaiting for a promise (after a click on Confirm or Deny) cannot be dismissed anymore #2335
-    if (!resolveValue.isDismissed) {
-      handleAwaitingPromise(this)
-      swalPromiseResolve(resolveValue)
-    }
-  } else if (didClose) {
-    // Resolve Swal promise
-    swalPromiseResolve(resolveValue)
-  }
-}
-
-const triggerClosePopup = (instance) => {
-  const popup = _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_6__.getPopup()
-
-  if (!popup) {
-    return false
-  }
-
-  const innerParams = _privateProps_js__WEBPACK_IMPORTED_MODULE_3__["default"].innerParams.get(instance)
-  if (!innerParams || _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_6__.hasClass(popup, innerParams.hideClass.popup)) {
-    return false
-  }
-
-  _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_6__.removeClass(popup, innerParams.showClass.popup)
-  _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_6__.addClass(popup, innerParams.hideClass.popup)
-
-  const backdrop = _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_6__.getContainer()
-  _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_6__.removeClass(backdrop, innerParams.showClass.backdrop)
-  _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_6__.addClass(backdrop, innerParams.hideClass.backdrop)
-
-  handlePopupAnimation(instance, popup, innerParams)
-
-  return true
-}
-
-/**
- * @param {any} error
- */
-function rejectPromise(error) {
-  const rejectPromise = _privateMethods_js__WEBPACK_IMPORTED_MODULE_2__["default"].swalPromiseReject.get(this)
-  handleAwaitingPromise(this)
-  if (rejectPromise) {
-    // Reject Swal promise
-    rejectPromise(error)
-  }
-}
-
-/**
- * @param {SweetAlert} instance
- */
-const handleAwaitingPromise = (instance) => {
-  if (instance.isAwaitingPromise) {
-    delete instance.isAwaitingPromise
-    // The instance might have been previously partly destroyed, we must resume the destroy process in this case #2335
-    if (!_privateProps_js__WEBPACK_IMPORTED_MODULE_3__["default"].innerParams.get(instance)) {
-      instance._destroy()
-    }
-  }
-}
-
-/**
- * @param {any} resolveValue
- * @returns {SweetAlertResult}
- */
-const prepareResolveValue = (resolveValue) => {
-  // When user calls Swal.close()
-  if (typeof resolveValue === 'undefined') {
-    return {
-      isConfirmed: false,
-      isDenied: false,
-      isDismissed: true,
-    }
-  }
-
-  return Object.assign(
-    {
-      isConfirmed: false,
-      isDenied: false,
-      isDismissed: false,
-    },
-    resolveValue
-  )
-}
-
-/**
- * @param {SweetAlert} instance
- * @param {HTMLElement} popup
- * @param {SweetAlertOptions} innerParams
- */
-const handlePopupAnimation = (instance, popup, innerParams) => {
-  const container = _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_6__.getContainer()
-  // If animation is supported, animate
-  const animationIsSupported = _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_6__.animationEndEvent && _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_6__.hasCssAnimation(popup)
-
-  if (typeof innerParams.willClose === 'function') {
-    innerParams.willClose(popup)
-  }
-
-  if (animationIsSupported) {
-    animatePopup(instance, popup, container, innerParams.returnFocus, innerParams.didClose)
-  } else {
-    // Otherwise, remove immediately
-    removePopupAndResetState(instance, container, innerParams.returnFocus, innerParams.didClose)
-  }
-}
-
-/**
- * @param {SweetAlert} instance
- * @param {HTMLElement} popup
- * @param {HTMLElement} container
- * @param {boolean} returnFocus
- * @param {Function} didClose
- */
-const animatePopup = (instance, popup, container, returnFocus, didClose) => {
-  if (!_utils_dom_index_js__WEBPACK_IMPORTED_MODULE_6__.animationEndEvent) {
-    return
-  }
-  _globalState_js__WEBPACK_IMPORTED_MODULE_0__["default"].swalCloseEventFinishedCallback = removePopupAndResetState.bind(
-    null,
-    instance,
-    container,
-    returnFocus,
-    didClose
-  )
-  popup.addEventListener(_utils_dom_index_js__WEBPACK_IMPORTED_MODULE_6__.animationEndEvent, function (e) {
-    if (e.target === popup) {
-      _globalState_js__WEBPACK_IMPORTED_MODULE_0__["default"].swalCloseEventFinishedCallback()
-      delete _globalState_js__WEBPACK_IMPORTED_MODULE_0__["default"].swalCloseEventFinishedCallback
-    }
-  })
-}
-
-/**
- * @param {SweetAlert} instance
- * @param {Function} didClose
- */
-const triggerDidCloseAndDispose = (instance, didClose) => {
-  setTimeout(() => {
-    if (typeof didClose === 'function') {
-      didClose.bind(instance.params)()
-    }
-    // instance might have been destroyed already
-    if (instance._destroy) {
-      instance._destroy()
-    }
-  })
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/instanceMethods/enable-disable-elements.js":
-/*!*********************************************************************************!*\
-  !*** ./node_modules/sweetalert2/src/instanceMethods/enable-disable-elements.js ***!
-  \*********************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   disableButtons: () => (/* binding */ disableButtons),
-/* harmony export */   disableInput: () => (/* binding */ disableInput),
-/* harmony export */   enableButtons: () => (/* binding */ enableButtons),
-/* harmony export */   enableInput: () => (/* binding */ enableInput)
-/* harmony export */ });
-/* harmony import */ var _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/dom/index.js */ "./node_modules/sweetalert2/src/utils/dom/index.js");
-/* harmony import */ var _privateProps_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../privateProps.js */ "./node_modules/sweetalert2/src/privateProps.js");
-/* harmony import */ var _utils_classes_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/classes.js */ "./node_modules/sweetalert2/src/utils/classes.js");
-
-
-
-
-/**
- * @param {SweetAlert} instance
- * @param {string[]} buttons
- * @param {boolean} disabled
- */
-function setButtonsDisabled(instance, buttons, disabled) {
-  const domCache = _privateProps_js__WEBPACK_IMPORTED_MODULE_1__["default"].domCache.get(instance)
-  buttons.forEach((button) => {
-    domCache[button].disabled = disabled
-  })
-}
-
-/**
- * @param {HTMLInputElement | null} input
- * @param {boolean} disabled
- */
-function setInputDisabled(input, disabled) {
-  const popup = _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_0__.getPopup()
-  if (!popup || !input) {
-    return
-  }
-  if (input.type === 'radio') {
-    /** @type {NodeListOf<HTMLInputElement>} */
-    const radios = popup.querySelectorAll(`[name="${_utils_classes_js__WEBPACK_IMPORTED_MODULE_2__.swalClasses.radio}"]`)
-    for (let i = 0; i < radios.length; i++) {
-      radios[i].disabled = disabled
-    }
-  } else {
-    input.disabled = disabled
-  }
-}
-
-/**
- * Enable all the buttons
- * @this {SweetAlert}
- */
-function enableButtons() {
-  setButtonsDisabled(this, ['confirmButton', 'denyButton', 'cancelButton'], false)
-}
-
-/**
- * Disable all the buttons
- * @this {SweetAlert}
- */
-function disableButtons() {
-  setButtonsDisabled(this, ['confirmButton', 'denyButton', 'cancelButton'], true)
-}
-
-/**
- * Enable the input field
- * @this {SweetAlert}
- */
-function enableInput() {
-  setInputDisabled(this.getInput(), false)
-}
-
-/**
- * Disable the input field
- * @this {SweetAlert}
- */
-function disableInput() {
-  setInputDisabled(this.getInput(), true)
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/instanceMethods/getInput.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/sweetalert2/src/instanceMethods/getInput.js ***!
-  \******************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   getInput: () => (/* binding */ getInput)
-/* harmony export */ });
-/* harmony import */ var _privateProps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../privateProps.js */ "./node_modules/sweetalert2/src/privateProps.js");
-/* harmony import */ var _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/dom/index.js */ "./node_modules/sweetalert2/src/utils/dom/index.js");
-
-
-
-/**
- * Gets the input DOM node, this method works with input parameter.
- *
- * @returns {HTMLInputElement | null}
- */
-function getInput() {
-  const innerParams = _privateProps_js__WEBPACK_IMPORTED_MODULE_0__["default"].innerParams.get(this)
-  const domCache = _privateProps_js__WEBPACK_IMPORTED_MODULE_0__["default"].domCache.get(this)
-  if (!domCache) {
-    return null
-  }
-  return _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__.getInput(domCache.popup, innerParams.input)
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/instanceMethods/hideLoading.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/sweetalert2/src/instanceMethods/hideLoading.js ***!
-  \*********************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   disableLoading: () => (/* binding */ hideLoading),
-/* harmony export */   hideLoading: () => (/* binding */ hideLoading)
-/* harmony export */ });
-/* harmony import */ var _privateProps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../privateProps.js */ "./node_modules/sweetalert2/src/privateProps.js");
-/* harmony import */ var _utils_classes_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/classes.js */ "./node_modules/sweetalert2/src/utils/classes.js");
-/* harmony import */ var _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/dom/index.js */ "./node_modules/sweetalert2/src/utils/dom/index.js");
-
-
-
-
-/**
- * Hides loader and shows back the button which was hidden by .showLoading()
- */
-function hideLoading() {
-  // do nothing if popup is closed
-  const innerParams = _privateProps_js__WEBPACK_IMPORTED_MODULE_0__["default"].innerParams.get(this)
-  if (!innerParams) {
-    return
-  }
-  const domCache = _privateProps_js__WEBPACK_IMPORTED_MODULE_0__["default"].domCache.get(this)
-  _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.hide(domCache.loader)
-  if (_utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.isToast()) {
-    if (innerParams.icon) {
-      _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.show(_utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.getIcon())
-    }
-  } else {
-    showRelatedButton(domCache)
-  }
-  _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.removeClass([domCache.popup, domCache.actions], _utils_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.loading)
-  domCache.popup.removeAttribute('aria-busy')
-  domCache.popup.removeAttribute('data-loading')
-  domCache.confirmButton.disabled = false
-  domCache.denyButton.disabled = false
-  domCache.cancelButton.disabled = false
-}
-
-const showRelatedButton = (domCache) => {
-  const buttonToReplace = domCache.popup.getElementsByClassName(domCache.loader.getAttribute('data-button-to-replace'))
-  if (buttonToReplace.length) {
-    _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.show(buttonToReplace[0], 'inline-block')
-  } else if (_utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.allButtonsAreHidden()) {
-    _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.hide(domCache.actions)
-  }
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/instanceMethods/update.js":
-/*!****************************************************************!*\
-  !*** ./node_modules/sweetalert2/src/instanceMethods/update.js ***!
-  \****************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   update: () => (/* binding */ update)
-/* harmony export */ });
-/* harmony import */ var _src_utils_dom_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../src/utils/dom/index.js */ "./node_modules/sweetalert2/src/utils/dom/index.js");
-/* harmony import */ var _src_utils_params_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../src/utils/params.js */ "./node_modules/sweetalert2/src/utils/params.js");
-/* harmony import */ var _src_utils_utils_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/utils/utils.js */ "./node_modules/sweetalert2/src/utils/utils.js");
-/* harmony import */ var _privateProps_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../privateProps.js */ "./node_modules/sweetalert2/src/privateProps.js");
-
-
-
-
-
-/**
- * Updates popup parameters.
- *
- * @param {SweetAlertOptions} params
- */
-function update(params) {
-  const popup = _src_utils_dom_index_js__WEBPACK_IMPORTED_MODULE_0__.getPopup()
-  const innerParams = _privateProps_js__WEBPACK_IMPORTED_MODULE_3__["default"].innerParams.get(this)
-
-  if (!popup || _src_utils_dom_index_js__WEBPACK_IMPORTED_MODULE_0__.hasClass(popup, innerParams.hideClass.popup)) {
-    (0,_src_utils_utils_js__WEBPACK_IMPORTED_MODULE_2__.warn)(
-      `You're trying to update the closed or closing popup, that won't work. Use the update() method in preConfirm parameter or show a new popup.`
-    )
-    return
-  }
-
-  const validUpdatableParams = filterValidParams(params)
-
-  const updatedParams = Object.assign({}, innerParams, validUpdatableParams)
-
-  _src_utils_dom_index_js__WEBPACK_IMPORTED_MODULE_0__.render(this, updatedParams)
-
-  _privateProps_js__WEBPACK_IMPORTED_MODULE_3__["default"].innerParams.set(this, updatedParams)
-  Object.defineProperties(this, {
-    params: {
-      value: Object.assign({}, this.params, params),
-      writable: false,
-      enumerable: true,
-    },
-  })
-}
-
-/**
- * @param {SweetAlertOptions} params
- * @returns {SweetAlertOptions}
- */
-const filterValidParams = (params) => {
-  const validUpdatableParams = {}
-  Object.keys(params).forEach((param) => {
-    if ((0,_src_utils_params_js__WEBPACK_IMPORTED_MODULE_1__.isUpdatableParameter)(param)) {
-      validUpdatableParams[param] = params[param]
-    } else {
-      (0,_src_utils_utils_js__WEBPACK_IMPORTED_MODULE_2__.warn)(`Invalid parameter to update: ${param}`)
-    }
-  })
-  return validUpdatableParams
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/instanceMethods/validation-message.js":
-/*!****************************************************************************!*\
-  !*** ./node_modules/sweetalert2/src/instanceMethods/validation-message.js ***!
-  \****************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   resetValidationMessage: () => (/* binding */ resetValidationMessage),
-/* harmony export */   showValidationMessage: () => (/* binding */ showValidationMessage)
-/* harmony export */ });
-/* harmony import */ var _privateProps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../privateProps.js */ "./node_modules/sweetalert2/src/privateProps.js");
-/* harmony import */ var _utils_classes_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/classes.js */ "./node_modules/sweetalert2/src/utils/classes.js");
-/* harmony import */ var _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/dom/index.js */ "./node_modules/sweetalert2/src/utils/dom/index.js");
-
-
-
-
-/**
- * Show block with validation message
- *
- * @param {string} error
- * @this {SweetAlert}
- */
-function showValidationMessage(error) {
-  const domCache = _privateProps_js__WEBPACK_IMPORTED_MODULE_0__["default"].domCache.get(this)
-  const params = _privateProps_js__WEBPACK_IMPORTED_MODULE_0__["default"].innerParams.get(this)
-  _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.setInnerHtml(domCache.validationMessage, error)
-  domCache.validationMessage.className = _utils_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses['validation-message']
-  if (params.customClass && params.customClass.validationMessage) {
-    _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.addClass(domCache.validationMessage, params.customClass.validationMessage)
-  }
-  _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.show(domCache.validationMessage)
-
-  const input = this.getInput()
-  if (input) {
-    input.setAttribute('aria-invalid', 'true')
-    input.setAttribute('aria-describedby', _utils_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses['validation-message'])
-    _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.focusInput(input)
-    _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.addClass(input, _utils_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.inputerror)
-  }
-}
-
-/**
- * Hide block with validation message
- *
- * @this {SweetAlert}
- */
-function resetValidationMessage() {
-  const domCache = _privateProps_js__WEBPACK_IMPORTED_MODULE_0__["default"].domCache.get(this)
-  if (domCache.validationMessage) {
-    _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.hide(domCache.validationMessage)
-  }
-
-  const input = this.getInput()
-  if (input) {
-    input.removeAttribute('aria-invalid')
-    input.removeAttribute('aria-describedby')
-    _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.removeClass(input, _utils_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.inputerror)
-  }
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/keydown-handler.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/sweetalert2/src/keydown-handler.js ***!
-  \*********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   addKeydownHandler: () => (/* binding */ addKeydownHandler),
-/* harmony export */   removeKeydownHandler: () => (/* binding */ removeKeydownHandler),
-/* harmony export */   setFocus: () => (/* binding */ setFocus)
-/* harmony export */ });
-/* harmony import */ var _staticMethods_dom_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./staticMethods/dom.js */ "./node_modules/sweetalert2/src/staticMethods/dom.js");
-/* harmony import */ var _utils_DismissReason_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils/DismissReason.js */ "./node_modules/sweetalert2/src/utils/DismissReason.js");
-/* harmony import */ var _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./utils/dom/index.js */ "./node_modules/sweetalert2/src/utils/dom/index.js");
-/* harmony import */ var _utils_utils_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./utils/utils.js */ "./node_modules/sweetalert2/src/utils/utils.js");
-
-
-
-
-
-/**
- * @param {GlobalState} globalState
- */
-const removeKeydownHandler = (globalState) => {
-  if (globalState.keydownTarget && globalState.keydownHandlerAdded) {
-    globalState.keydownTarget.removeEventListener('keydown', globalState.keydownHandler, {
-      capture: globalState.keydownListenerCapture,
-    })
-    globalState.keydownHandlerAdded = false
-  }
-}
-
-/**
- * @param {GlobalState} globalState
- * @param {SweetAlertOptions} innerParams
- * @param {*} dismissWith
- */
-const addKeydownHandler = (globalState, innerParams, dismissWith) => {
-  removeKeydownHandler(globalState)
-  if (!innerParams.toast) {
-    globalState.keydownHandler = (e) => keydownHandler(innerParams, e, dismissWith)
-    globalState.keydownTarget = innerParams.keydownListenerCapture ? window : _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.getPopup()
-    globalState.keydownListenerCapture = innerParams.keydownListenerCapture
-    globalState.keydownTarget.addEventListener('keydown', globalState.keydownHandler, {
-      capture: globalState.keydownListenerCapture,
-    })
-    globalState.keydownHandlerAdded = true
-  }
-}
-
-/**
- * @param {number} index
- * @param {number} increment
- */
-const setFocus = (index, increment) => {
-  const focusableElements = _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.getFocusableElements()
-  // search for visible elements and select the next possible match
-  if (focusableElements.length) {
-    index = index + increment
-
-    // rollover to first item
-    if (index === focusableElements.length) {
-      index = 0
-
-      // go to last item
-    } else if (index === -1) {
-      index = focusableElements.length - 1
-    }
-
-    focusableElements[index].focus()
-    return
-  }
-  // no visible focusable elements, focus the popup
-  _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.getPopup()?.focus()
-}
-
-const arrowKeysNextButton = ['ArrowRight', 'ArrowDown']
-
-const arrowKeysPreviousButton = ['ArrowLeft', 'ArrowUp']
-
-/**
- * @param {SweetAlertOptions} innerParams
- * @param {KeyboardEvent} event
- * @param {Function} dismissWith
- */
-const keydownHandler = (innerParams, event, dismissWith) => {
-  if (!innerParams) {
-    return // This instance has already been destroyed
-  }
-
-  // Ignore keydown during IME composition
-  // https://developer.mozilla.org/en-US/docs/Web/API/Document/keydown_event#ignoring_keydown_during_ime_composition
-  // https://github.com/sweetalert2/sweetalert2/issues/720
-  // https://github.com/sweetalert2/sweetalert2/issues/2406
-  if (event.isComposing || event.keyCode === 229) {
-    return
-  }
-
-  if (innerParams.stopKeydownPropagation) {
-    event.stopPropagation()
-  }
-
-  // ENTER
-  if (event.key === 'Enter') {
-    handleEnter(event, innerParams)
-  }
-
-  // TAB
-  else if (event.key === 'Tab') {
-    handleTab(event)
-  }
-
-  // ARROWS - switch focus between buttons
-  else if ([...arrowKeysNextButton, ...arrowKeysPreviousButton].includes(event.key)) {
-    handleArrows(event.key)
-  }
-
-  // ESC
-  else if (event.key === 'Escape') {
-    handleEsc(event, innerParams, dismissWith)
-  }
-}
-
-/**
- * @param {KeyboardEvent} event
- * @param {SweetAlertOptions} innerParams
- */
-const handleEnter = (event, innerParams) => {
-  // https://github.com/sweetalert2/sweetalert2/issues/2386
-  if (!(0,_utils_utils_js__WEBPACK_IMPORTED_MODULE_3__.callIfFunction)(innerParams.allowEnterKey)) {
-    return
-  }
-
-  const input = _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.getInput(_utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.getPopup(), innerParams.input)
-
-  if (event.target && input && event.target instanceof HTMLElement && event.target.outerHTML === input.outerHTML) {
-    if (['textarea', 'file'].includes(innerParams.input)) {
-      return // do not submit
-    }
-
-    (0,_staticMethods_dom_js__WEBPACK_IMPORTED_MODULE_0__.clickConfirm)()
-    event.preventDefault()
-  }
-}
-
-/**
- * @param {KeyboardEvent} event
- */
-const handleTab = (event) => {
-  const targetElement = event.target
-
-  const focusableElements = _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.getFocusableElements()
-  let btnIndex = -1
-  for (let i = 0; i < focusableElements.length; i++) {
-    if (targetElement === focusableElements[i]) {
-      btnIndex = i
-      break
-    }
-  }
-
-  // Cycle to the next button
-  if (!event.shiftKey) {
-    setFocus(btnIndex, 1)
-  }
-
-  // Cycle to the prev button
-  else {
-    setFocus(btnIndex, -1)
-  }
-
-  event.stopPropagation()
-  event.preventDefault()
-}
-
-/**
- * @param {string} key
- */
-const handleArrows = (key) => {
-  const actions = _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.getActions()
-  const confirmButton = _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.getConfirmButton()
-  const denyButton = _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.getDenyButton()
-  const cancelButton = _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.getCancelButton()
-  if (!actions || !confirmButton || !denyButton || !cancelButton) {
-    return
-  }
-  /** @type HTMLElement[] */
-  const buttons = [confirmButton, denyButton, cancelButton]
-  if (document.activeElement instanceof HTMLElement && !buttons.includes(document.activeElement)) {
-    return
-  }
-  const sibling = arrowKeysNextButton.includes(key) ? 'nextElementSibling' : 'previousElementSibling'
-  let buttonToFocus = document.activeElement
-  if (!buttonToFocus) {
-    return
-  }
-  for (let i = 0; i < actions.children.length; i++) {
-    buttonToFocus = buttonToFocus[sibling]
-    if (!buttonToFocus) {
-      return
-    }
-    if (buttonToFocus instanceof HTMLButtonElement && _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.isVisible(buttonToFocus)) {
-      break
-    }
-  }
-  if (buttonToFocus instanceof HTMLButtonElement) {
-    buttonToFocus.focus()
-  }
-}
-
-/**
- * @param {KeyboardEvent} event
- * @param {SweetAlertOptions} innerParams
- * @param {Function} dismissWith
- */
-const handleEsc = (event, innerParams, dismissWith) => {
-  if ((0,_utils_utils_js__WEBPACK_IMPORTED_MODULE_3__.callIfFunction)(innerParams.allowEscapeKey)) {
-    event.preventDefault()
-    dismissWith(_utils_DismissReason_js__WEBPACK_IMPORTED_MODULE_1__.DismissReason.esc)
-  }
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/popup-click-handler.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/sweetalert2/src/popup-click-handler.js ***!
-  \*************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   handlePopupClick: () => (/* binding */ handlePopupClick)
-/* harmony export */ });
-/* harmony import */ var _utils_DismissReason_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils/DismissReason.js */ "./node_modules/sweetalert2/src/utils/DismissReason.js");
-/* harmony import */ var _utils_utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils/utils.js */ "./node_modules/sweetalert2/src/utils/utils.js");
-
-
-
-/**
- * @param {SweetAlertOptions} innerParams
- * @param {DomCache} domCache
- * @param {Function} dismissWith
- */
-const handlePopupClick = (innerParams, domCache, dismissWith) => {
-  if (innerParams.toast) {
-    handleToastClick(innerParams, domCache, dismissWith)
-  } else {
-    // Ignore click events that had mousedown on the popup but mouseup on the container
-    // This can happen when the user drags a slider
-    handleModalMousedown(domCache)
-
-    // Ignore click events that had mousedown on the container but mouseup on the popup
-    handleContainerMousedown(domCache)
-
-    handleModalClick(innerParams, domCache, dismissWith)
-  }
-}
-
-/**
- * @param {SweetAlertOptions} innerParams
- * @param {DomCache} domCache
- * @param {Function} dismissWith
- */
-const handleToastClick = (innerParams, domCache, dismissWith) => {
-  // Closing toast by internal click
-  domCache.popup.onclick = () => {
-    if (innerParams && (isAnyButtonShown(innerParams) || innerParams.timer || innerParams.input)) {
-      return
-    }
-    dismissWith(_utils_DismissReason_js__WEBPACK_IMPORTED_MODULE_0__.DismissReason.close)
-  }
-}
-
-/**
- * @param {SweetAlertOptions} innerParams
- * @returns {boolean}
- */
-const isAnyButtonShown = (innerParams) => {
-  return !!(
-    innerParams.showConfirmButton ||
-    innerParams.showDenyButton ||
-    innerParams.showCancelButton ||
-    innerParams.showCloseButton
-  )
-}
-
-let ignoreOutsideClick = false
-
-/**
- * @param {DomCache} domCache
- */
-const handleModalMousedown = (domCache) => {
-  domCache.popup.onmousedown = () => {
-    domCache.container.onmouseup = function (e) {
-      domCache.container.onmouseup = () => {}
-      // We only check if the mouseup target is the container because usually it doesn't
-      // have any other direct children aside of the popup
-      if (e.target === domCache.container) {
-        ignoreOutsideClick = true
-      }
-    }
-  }
-}
-
-/**
- * @param {DomCache} domCache
- */
-const handleContainerMousedown = (domCache) => {
-  domCache.container.onmousedown = () => {
-    domCache.popup.onmouseup = function (e) {
-      domCache.popup.onmouseup = () => {}
-      // We also need to check if the mouseup target is a child of the popup
-      if (e.target === domCache.popup || (e.target instanceof HTMLElement && domCache.popup.contains(e.target))) {
-        ignoreOutsideClick = true
-      }
-    }
-  }
-}
-
-/**
- * @param {SweetAlertOptions} innerParams
- * @param {DomCache} domCache
- * @param {Function} dismissWith
- */
-const handleModalClick = (innerParams, domCache, dismissWith) => {
-  domCache.container.onclick = (e) => {
-    if (ignoreOutsideClick) {
-      ignoreOutsideClick = false
-      return
-    }
-    if (e.target === domCache.container && (0,_utils_utils_js__WEBPACK_IMPORTED_MODULE_1__.callIfFunction)(innerParams.allowOutsideClick)) {
-      dismissWith(_utils_DismissReason_js__WEBPACK_IMPORTED_MODULE_0__.DismissReason.backdrop)
-    }
-  }
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/privateMethods.js":
-/*!********************************************************!*\
-  !*** ./node_modules/sweetalert2/src/privateMethods.js ***!
-  \********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/**
- * This module contains `WeakMap`s for each effectively-"private  property" that a `Swal` has.
- * For example, to set the private property "foo" of `this` to "bar", you can `privateProps.foo.set(this, 'bar')`
- * This is the approach that Babel will probably take to implement private methods/fields
- *   https://github.com/tc39/proposal-private-methods
- *   https://github.com/babel/babel/pull/7555
- * Once we have the changes from that PR in Babel, and our core class fits reasonable in *one module*
- *   then we can use that language feature.
- */
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  swalPromiseResolve: new WeakMap(),
-  swalPromiseReject: new WeakMap(),
-});
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/privateProps.js":
-/*!******************************************************!*\
-  !*** ./node_modules/sweetalert2/src/privateProps.js ***!
-  \******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/**
- * This module contains `WeakMap`s for each effectively-"private  property" that a `Swal` has.
- * For example, to set the private property "foo" of `this` to "bar", you can `privateProps.foo.set(this, 'bar')`
- * This is the approach that Babel will probably take to implement private methods/fields
- *   https://github.com/tc39/proposal-private-methods
- *   https://github.com/babel/babel/pull/7555
- * Once we have the changes from that PR in Babel, and our core class fits reasonable in *one module*
- *   then we can use that language feature.
- */
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  innerParams: new WeakMap(),
-  domCache: new WeakMap(),
-});
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/staticMethods.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/sweetalert2/src/staticMethods.js ***!
-  \*******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   argsToParams: () => (/* reexport safe */ _staticMethods_argsToParams_js__WEBPACK_IMPORTED_MODULE_0__.argsToParams),
-/* harmony export */   bindClickHandler: () => (/* reexport safe */ _staticMethods_bindClickHandler_js__WEBPACK_IMPORTED_MODULE_6__.bindClickHandler),
-/* harmony export */   clickCancel: () => (/* reexport safe */ _staticMethods_dom_js__WEBPACK_IMPORTED_MODULE_1__.clickCancel),
-/* harmony export */   clickConfirm: () => (/* reexport safe */ _staticMethods_dom_js__WEBPACK_IMPORTED_MODULE_1__.clickConfirm),
-/* harmony export */   clickDeny: () => (/* reexport safe */ _staticMethods_dom_js__WEBPACK_IMPORTED_MODULE_1__.clickDeny),
-/* harmony export */   enableLoading: () => (/* reexport safe */ _staticMethods_showLoading_js__WEBPACK_IMPORTED_MODULE_4__.enableLoading),
-/* harmony export */   fire: () => (/* reexport safe */ _staticMethods_fire_js__WEBPACK_IMPORTED_MODULE_2__.fire),
-/* harmony export */   getActions: () => (/* reexport safe */ _staticMethods_dom_js__WEBPACK_IMPORTED_MODULE_1__.getActions),
-/* harmony export */   getCancelButton: () => (/* reexport safe */ _staticMethods_dom_js__WEBPACK_IMPORTED_MODULE_1__.getCancelButton),
-/* harmony export */   getCloseButton: () => (/* reexport safe */ _staticMethods_dom_js__WEBPACK_IMPORTED_MODULE_1__.getCloseButton),
-/* harmony export */   getConfirmButton: () => (/* reexport safe */ _staticMethods_dom_js__WEBPACK_IMPORTED_MODULE_1__.getConfirmButton),
-/* harmony export */   getContainer: () => (/* reexport safe */ _staticMethods_dom_js__WEBPACK_IMPORTED_MODULE_1__.getContainer),
-/* harmony export */   getDenyButton: () => (/* reexport safe */ _staticMethods_dom_js__WEBPACK_IMPORTED_MODULE_1__.getDenyButton),
-/* harmony export */   getFocusableElements: () => (/* reexport safe */ _staticMethods_dom_js__WEBPACK_IMPORTED_MODULE_1__.getFocusableElements),
-/* harmony export */   getFooter: () => (/* reexport safe */ _staticMethods_dom_js__WEBPACK_IMPORTED_MODULE_1__.getFooter),
-/* harmony export */   getHtmlContainer: () => (/* reexport safe */ _staticMethods_dom_js__WEBPACK_IMPORTED_MODULE_1__.getHtmlContainer),
-/* harmony export */   getIcon: () => (/* reexport safe */ _staticMethods_dom_js__WEBPACK_IMPORTED_MODULE_1__.getIcon),
-/* harmony export */   getIconContent: () => (/* reexport safe */ _staticMethods_dom_js__WEBPACK_IMPORTED_MODULE_1__.getIconContent),
-/* harmony export */   getImage: () => (/* reexport safe */ _staticMethods_dom_js__WEBPACK_IMPORTED_MODULE_1__.getImage),
-/* harmony export */   getInputLabel: () => (/* reexport safe */ _staticMethods_dom_js__WEBPACK_IMPORTED_MODULE_1__.getInputLabel),
-/* harmony export */   getLoader: () => (/* reexport safe */ _staticMethods_dom_js__WEBPACK_IMPORTED_MODULE_1__.getLoader),
-/* harmony export */   getPopup: () => (/* reexport safe */ _staticMethods_dom_js__WEBPACK_IMPORTED_MODULE_1__.getPopup),
-/* harmony export */   getProgressSteps: () => (/* reexport safe */ _staticMethods_dom_js__WEBPACK_IMPORTED_MODULE_1__.getProgressSteps),
-/* harmony export */   getTimerLeft: () => (/* reexport safe */ _staticMethods_timer_js__WEBPACK_IMPORTED_MODULE_5__.getTimerLeft),
-/* harmony export */   getTimerProgressBar: () => (/* reexport safe */ _staticMethods_dom_js__WEBPACK_IMPORTED_MODULE_1__.getTimerProgressBar),
-/* harmony export */   getTitle: () => (/* reexport safe */ _staticMethods_dom_js__WEBPACK_IMPORTED_MODULE_1__.getTitle),
-/* harmony export */   getValidationMessage: () => (/* reexport safe */ _staticMethods_dom_js__WEBPACK_IMPORTED_MODULE_1__.getValidationMessage),
-/* harmony export */   increaseTimer: () => (/* reexport safe */ _staticMethods_timer_js__WEBPACK_IMPORTED_MODULE_5__.increaseTimer),
-/* harmony export */   isDeprecatedParameter: () => (/* reexport safe */ _utils_params_js__WEBPACK_IMPORTED_MODULE_7__.isDeprecatedParameter),
-/* harmony export */   isLoading: () => (/* reexport safe */ _staticMethods_dom_js__WEBPACK_IMPORTED_MODULE_1__.isLoading),
-/* harmony export */   isTimerRunning: () => (/* reexport safe */ _staticMethods_timer_js__WEBPACK_IMPORTED_MODULE_5__.isTimerRunning),
-/* harmony export */   isUpdatableParameter: () => (/* reexport safe */ _utils_params_js__WEBPACK_IMPORTED_MODULE_7__.isUpdatableParameter),
-/* harmony export */   isValidParameter: () => (/* reexport safe */ _utils_params_js__WEBPACK_IMPORTED_MODULE_7__.isValidParameter),
-/* harmony export */   isVisible: () => (/* reexport safe */ _staticMethods_dom_js__WEBPACK_IMPORTED_MODULE_1__.isVisible),
-/* harmony export */   mixin: () => (/* reexport safe */ _staticMethods_mixin_js__WEBPACK_IMPORTED_MODULE_3__.mixin),
-/* harmony export */   resumeTimer: () => (/* reexport safe */ _staticMethods_timer_js__WEBPACK_IMPORTED_MODULE_5__.resumeTimer),
-/* harmony export */   showLoading: () => (/* reexport safe */ _staticMethods_showLoading_js__WEBPACK_IMPORTED_MODULE_4__.showLoading),
-/* harmony export */   stopTimer: () => (/* reexport safe */ _staticMethods_timer_js__WEBPACK_IMPORTED_MODULE_5__.stopTimer),
-/* harmony export */   toggleTimer: () => (/* reexport safe */ _staticMethods_timer_js__WEBPACK_IMPORTED_MODULE_5__.toggleTimer)
-/* harmony export */ });
-/* harmony import */ var _staticMethods_argsToParams_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./staticMethods/argsToParams.js */ "./node_modules/sweetalert2/src/staticMethods/argsToParams.js");
-/* harmony import */ var _staticMethods_dom_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./staticMethods/dom.js */ "./node_modules/sweetalert2/src/staticMethods/dom.js");
-/* harmony import */ var _staticMethods_fire_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./staticMethods/fire.js */ "./node_modules/sweetalert2/src/staticMethods/fire.js");
-/* harmony import */ var _staticMethods_mixin_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./staticMethods/mixin.js */ "./node_modules/sweetalert2/src/staticMethods/mixin.js");
-/* harmony import */ var _staticMethods_showLoading_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./staticMethods/showLoading.js */ "./node_modules/sweetalert2/src/staticMethods/showLoading.js");
-/* harmony import */ var _staticMethods_timer_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./staticMethods/timer.js */ "./node_modules/sweetalert2/src/staticMethods/timer.js");
-/* harmony import */ var _staticMethods_bindClickHandler_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./staticMethods/bindClickHandler.js */ "./node_modules/sweetalert2/src/staticMethods/bindClickHandler.js");
-/* harmony import */ var _utils_params_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./utils/params.js */ "./node_modules/sweetalert2/src/utils/params.js");
-
-
-
-
-
-
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/staticMethods/argsToParams.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/sweetalert2/src/staticMethods/argsToParams.js ***!
-  \********************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   argsToParams: () => (/* binding */ argsToParams)
-/* harmony export */ });
-/* harmony import */ var _utils_utils_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/utils.js */ "./node_modules/sweetalert2/src/utils/utils.js");
-
-
-const isJqueryElement = (elem) => typeof elem === 'object' && elem.jquery
-const isElement = (elem) => elem instanceof Element || isJqueryElement(elem)
-
-const argsToParams = (args) => {
-  const params = {}
-  if (typeof args[0] === 'object' && !isElement(args[0])) {
-    Object.assign(params, args[0])
-  } else {
-    ;['title', 'html', 'icon'].forEach((name, index) => {
-      const arg = args[index]
-      if (typeof arg === 'string' || isElement(arg)) {
-        params[name] = arg
-      } else if (arg !== undefined) {
-        (0,_utils_utils_js__WEBPACK_IMPORTED_MODULE_0__.error)(`Unexpected type of ${name}! Expected "string" or "Element", got ${typeof arg}`)
-      }
-    })
-  }
-  return params
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/staticMethods/bindClickHandler.js":
-/*!************************************************************************!*\
-  !*** ./node_modules/sweetalert2/src/staticMethods/bindClickHandler.js ***!
-  \************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   bindClickHandler: () => (/* binding */ bindClickHandler)
-/* harmony export */ });
-let bodyClickListenerAdded = false
-const clickHandlers = {}
-
-/**
- * @param {string} attr
- */
-function bindClickHandler(attr = 'data-swal-template') {
-  clickHandlers[attr] = this
-
-  if (!bodyClickListenerAdded) {
-    document.body.addEventListener('click', bodyClickListener)
-    bodyClickListenerAdded = true
-  }
-}
-
-const bodyClickListener = (event) => {
-  for (let el = event.target; el && el !== document; el = el.parentNode) {
-    for (const attr in clickHandlers) {
-      const template = el.getAttribute(attr)
-      if (template) {
-        clickHandlers[attr].fire({ template })
-        return
-      }
-    }
-  }
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/staticMethods/dom.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/sweetalert2/src/staticMethods/dom.js ***!
-  \***********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   clickCancel: () => (/* binding */ clickCancel),
-/* harmony export */   clickConfirm: () => (/* binding */ clickConfirm),
-/* harmony export */   clickDeny: () => (/* binding */ clickDeny),
-/* harmony export */   getActions: () => (/* reexport safe */ _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__.getActions),
-/* harmony export */   getCancelButton: () => (/* reexport safe */ _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__.getCancelButton),
-/* harmony export */   getCloseButton: () => (/* reexport safe */ _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__.getCloseButton),
-/* harmony export */   getConfirmButton: () => (/* reexport safe */ _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__.getConfirmButton),
-/* harmony export */   getContainer: () => (/* reexport safe */ _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__.getContainer),
-/* harmony export */   getDenyButton: () => (/* reexport safe */ _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__.getDenyButton),
-/* harmony export */   getFocusableElements: () => (/* reexport safe */ _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__.getFocusableElements),
-/* harmony export */   getFooter: () => (/* reexport safe */ _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__.getFooter),
-/* harmony export */   getHtmlContainer: () => (/* reexport safe */ _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__.getHtmlContainer),
-/* harmony export */   getIcon: () => (/* reexport safe */ _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__.getIcon),
-/* harmony export */   getIconContent: () => (/* reexport safe */ _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__.getIconContent),
-/* harmony export */   getImage: () => (/* reexport safe */ _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__.getImage),
-/* harmony export */   getInputLabel: () => (/* reexport safe */ _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__.getInputLabel),
-/* harmony export */   getLoader: () => (/* reexport safe */ _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__.getLoader),
-/* harmony export */   getPopup: () => (/* reexport safe */ _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__.getPopup),
-/* harmony export */   getProgressSteps: () => (/* reexport safe */ _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__.getProgressSteps),
-/* harmony export */   getTimerProgressBar: () => (/* reexport safe */ _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__.getTimerProgressBar),
-/* harmony export */   getTitle: () => (/* reexport safe */ _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__.getTitle),
-/* harmony export */   getValidationMessage: () => (/* reexport safe */ _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__.getValidationMessage),
-/* harmony export */   isLoading: () => (/* reexport safe */ _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__.isLoading),
-/* harmony export */   isVisible: () => (/* binding */ isVisible)
-/* harmony export */ });
-/* harmony import */ var _utils_dom_domUtils_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/dom/domUtils.js */ "./node_modules/sweetalert2/src/utils/dom/domUtils.js");
-/* harmony import */ var _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/dom/index.js */ "./node_modules/sweetalert2/src/utils/dom/index.js");
-
-
-
-
-
-/*
- * Global function to determine if SweetAlert2 popup is shown
- */
-const isVisible = () => {
-  return _utils_dom_domUtils_js__WEBPACK_IMPORTED_MODULE_0__.isVisible(_utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__.getPopup())
-}
-
-/*
- * Global function to click 'Confirm' button
- */
-const clickConfirm = () => _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__.getConfirmButton()?.click()
-
-/*
- * Global function to click 'Deny' button
- */
-const clickDeny = () => _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__.getDenyButton()?.click()
-
-/*
- * Global function to click 'Cancel' button
- */
-const clickCancel = () => _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_1__.getCancelButton()?.click()
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/staticMethods/fire.js":
-/*!************************************************************!*\
-  !*** ./node_modules/sweetalert2/src/staticMethods/fire.js ***!
-  \************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   fire: () => (/* binding */ fire)
-/* harmony export */ });
-/**
- * Main method to create a new SweetAlert2 popup
- *
- * @param  {...SweetAlertOptions} args
- * @returns {Promise<SweetAlertResult>}
- */
-function fire(...args) {
-  const Swal = this // eslint-disable-line @typescript-eslint/no-this-alias
-  return new Swal(...args)
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/staticMethods/mixin.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/sweetalert2/src/staticMethods/mixin.js ***!
-  \*************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   mixin: () => (/* binding */ mixin)
-/* harmony export */ });
-/**
- * Returns an extended version of `Swal` containing `params` as defaults.
- * Useful for reusing Swal configuration.
- *
- * For example:
- *
- * Before:
- * const textPromptOptions = { input: 'text', showCancelButton: true }
- * const {value: firstName} = await Swal.fire({ ...textPromptOptions, title: 'What is your first name?' })
- * const {value: lastName} = await Swal.fire({ ...textPromptOptions, title: 'What is your last name?' })
- *
- * After:
- * const TextPrompt = Swal.mixin({ input: 'text', showCancelButton: true })
- * const {value: firstName} = await TextPrompt('What is your first name?')
- * const {value: lastName} = await TextPrompt('What is your last name?')
- *
- * @param {SweetAlertOptions} mixinParams
- * @returns {SweetAlert}
- */
-function mixin(mixinParams) {
-  class MixinSwal extends this {
-    _main(params, priorityMixinParams) {
-      return super._main(params, Object.assign({}, mixinParams, priorityMixinParams))
-    }
-  }
-  // @ts-ignore
-  return MixinSwal
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/staticMethods/showLoading.js":
-/*!*******************************************************************!*\
-  !*** ./node_modules/sweetalert2/src/staticMethods/showLoading.js ***!
-  \*******************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   enableLoading: () => (/* binding */ showLoading),
-/* harmony export */   showLoading: () => (/* binding */ showLoading)
-/* harmony export */ });
-/* harmony import */ var _sweetalert2_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../sweetalert2.js */ "./node_modules/sweetalert2/src/sweetalert2.js");
-/* harmony import */ var _utils_classes_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/classes.js */ "./node_modules/sweetalert2/src/utils/classes.js");
-/* harmony import */ var _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/dom/index.js */ "./node_modules/sweetalert2/src/utils/dom/index.js");
-
-
-
-
-/**
- * Shows loader (spinner), this is useful with AJAX requests.
- * By default the loader be shown instead of the "Confirm" button.
- *
- * @param {HTMLButtonElement | null} [buttonToReplace]
- */
-const showLoading = (buttonToReplace) => {
-  let popup = _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.getPopup()
-  if (!popup) {
-    new _sweetalert2_js__WEBPACK_IMPORTED_MODULE_0__["default"]() // eslint-disable-line no-new
-  }
-  popup = _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.getPopup()
-  if (!popup) {
-    return
-  }
-  const loader = _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.getLoader()
-
-  if (_utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.isToast()) {
-    _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.hide(_utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.getIcon())
-  } else {
-    replaceButton(popup, buttonToReplace)
-  }
-  _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.show(loader)
-
-  popup.setAttribute('data-loading', 'true')
-  popup.setAttribute('aria-busy', 'true')
-  popup.focus()
-}
-
-/**
- * @param {HTMLElement} popup
- * @param {HTMLButtonElement | null} [buttonToReplace]
- */
-const replaceButton = (popup, buttonToReplace) => {
-  const actions = _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.getActions()
-  const loader = _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.getLoader()
-  if (!actions || !loader) {
-    return
-  }
-
-  if (!buttonToReplace && _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.isVisible(_utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.getConfirmButton())) {
-    buttonToReplace = _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.getConfirmButton()
-  }
-
-  _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.show(actions)
-  if (buttonToReplace) {
-    _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.hide(buttonToReplace)
-    loader.setAttribute('data-button-to-replace', buttonToReplace.className)
-    actions.insertBefore(loader, buttonToReplace)
-  }
-  _utils_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.addClass([popup, actions], _utils_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.loading)
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/staticMethods/timer.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/sweetalert2/src/staticMethods/timer.js ***!
-  \*************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   getTimerLeft: () => (/* binding */ getTimerLeft),
-/* harmony export */   increaseTimer: () => (/* binding */ increaseTimer),
-/* harmony export */   isTimerRunning: () => (/* binding */ isTimerRunning),
-/* harmony export */   resumeTimer: () => (/* binding */ resumeTimer),
-/* harmony export */   stopTimer: () => (/* binding */ stopTimer),
-/* harmony export */   toggleTimer: () => (/* binding */ toggleTimer)
-/* harmony export */ });
-/* harmony import */ var _globalState_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../globalState.js */ "./node_modules/sweetalert2/src/globalState.js");
-/* harmony import */ var _utils_dom_domUtils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/dom/domUtils.js */ "./node_modules/sweetalert2/src/utils/dom/domUtils.js");
-
-
-
-/**
- * If `timer` parameter is set, returns number of milliseconds of timer remained.
- * Otherwise, returns undefined.
- *
- * @returns {number | undefined}
- */
-const getTimerLeft = () => {
-  return _globalState_js__WEBPACK_IMPORTED_MODULE_0__["default"].timeout && _globalState_js__WEBPACK_IMPORTED_MODULE_0__["default"].timeout.getTimerLeft()
-}
-
-/**
- * Stop timer. Returns number of milliseconds of timer remained.
- * If `timer` parameter isn't set, returns undefined.
- *
- * @returns {number | undefined}
- */
-const stopTimer = () => {
-  if (_globalState_js__WEBPACK_IMPORTED_MODULE_0__["default"].timeout) {
-    (0,_utils_dom_domUtils_js__WEBPACK_IMPORTED_MODULE_1__.stopTimerProgressBar)()
-    return _globalState_js__WEBPACK_IMPORTED_MODULE_0__["default"].timeout.stop()
-  }
-}
-
-/**
- * Resume timer. Returns number of milliseconds of timer remained.
- * If `timer` parameter isn't set, returns undefined.
- *
- * @returns {number | undefined}
- */
-const resumeTimer = () => {
-  if (_globalState_js__WEBPACK_IMPORTED_MODULE_0__["default"].timeout) {
-    const remaining = _globalState_js__WEBPACK_IMPORTED_MODULE_0__["default"].timeout.start()
-    ;(0,_utils_dom_domUtils_js__WEBPACK_IMPORTED_MODULE_1__.animateTimerProgressBar)(remaining)
-    return remaining
-  }
-}
-
-/**
- * Resume timer. Returns number of milliseconds of timer remained.
- * If `timer` parameter isn't set, returns undefined.
- *
- * @returns {number | undefined}
- */
-const toggleTimer = () => {
-  const timer = _globalState_js__WEBPACK_IMPORTED_MODULE_0__["default"].timeout
-  return timer && (timer.running ? stopTimer() : resumeTimer())
-}
-
-/**
- * Increase timer. Returns number of milliseconds of an updated timer.
- * If `timer` parameter isn't set, returns undefined.
- *
- * @param {number} ms
- * @returns {number | undefined}
- */
-const increaseTimer = (ms) => {
-  if (_globalState_js__WEBPACK_IMPORTED_MODULE_0__["default"].timeout) {
-    const remaining = _globalState_js__WEBPACK_IMPORTED_MODULE_0__["default"].timeout.increase(ms)
-    ;(0,_utils_dom_domUtils_js__WEBPACK_IMPORTED_MODULE_1__.animateTimerProgressBar)(remaining, true)
-    return remaining
-  }
-}
-
-/**
- * Check if timer is running. Returns true if timer is running
- * or false if timer is paused or stopped.
- * If `timer` parameter isn't set, returns undefined
- *
- * @returns {boolean}
- */
-const isTimerRunning = () => {
-  return !!(_globalState_js__WEBPACK_IMPORTED_MODULE_0__["default"].timeout && _globalState_js__WEBPACK_IMPORTED_MODULE_0__["default"].timeout.isRunning())
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/sweetalert2.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/sweetalert2/src/sweetalert2.js ***!
-  \*****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _SweetAlert_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SweetAlert.js */ "./node_modules/sweetalert2/src/SweetAlert.js");
-
-
-const Swal = _SweetAlert_js__WEBPACK_IMPORTED_MODULE_0__["default"]
-// @ts-ignore
-Swal.default = Swal
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Swal);
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/utils/DismissReason.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/sweetalert2/src/utils/DismissReason.js ***!
-  \*************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   DismissReason: () => (/* binding */ DismissReason)
-/* harmony export */ });
-/** @typedef {'cancel' | 'backdrop' | 'close' | 'esc' | 'timer'} DismissReason */
-
-/** @type {Record<DismissReason, DismissReason>} */
-const DismissReason = Object.freeze({
-  cancel: 'cancel',
-  backdrop: 'backdrop',
-  close: 'close',
-  esc: 'esc',
-  timer: 'timer',
-})
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/utils/Timer.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/sweetalert2/src/utils/Timer.js ***!
-  \*****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ Timer)
-/* harmony export */ });
-class Timer {
-  /**
-   * @param {Function} callback
-   * @param {number} delay
-   */
-  constructor(callback, delay) {
-    this.callback = callback
-    this.remaining = delay
-    this.running = false
-
-    this.start()
-  }
-
-  /**
-   * @returns {number}
-   */
-  start() {
-    if (!this.running) {
-      this.running = true
-      this.started = new Date()
-      this.id = setTimeout(this.callback, this.remaining)
-    }
-    return this.remaining
-  }
-
-  /**
-   * @returns {number}
-   */
-  stop() {
-    if (this.started && this.running) {
-      this.running = false
-      clearTimeout(this.id)
-      this.remaining -= new Date().getTime() - this.started.getTime()
-    }
-    return this.remaining
-  }
-
-  /**
-   * @param {number} n
-   * @returns {number}
-   */
-  increase(n) {
-    const running = this.running
-    if (running) {
-      this.stop()
-    }
-    this.remaining += n
-    if (running) {
-      this.start()
-    }
-    return this.remaining
-  }
-
-  /**
-   * @returns {number}
-   */
-  getTimerLeft() {
-    if (this.running) {
-      this.stop()
-      this.start()
-    }
-    return this.remaining
-  }
-
-  /**
-   * @returns {boolean}
-   */
-  isRunning() {
-    return this.running
-  }
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/utils/aria.js":
-/*!****************************************************!*\
-  !*** ./node_modules/sweetalert2/src/utils/aria.js ***!
-  \****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   setAriaHidden: () => (/* binding */ setAriaHidden),
-/* harmony export */   unsetAriaHidden: () => (/* binding */ unsetAriaHidden)
-/* harmony export */ });
-/* harmony import */ var _dom_getters_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dom/getters.js */ "./node_modules/sweetalert2/src/utils/dom/getters.js");
-
-
-// From https://developer.paciellogroup.com/blog/2018/06/the-current-state-of-modal-dialog-accessibility/
-// Adding aria-hidden="true" to elements outside of the active modal dialog ensures that
-// elements not within the active modal dialog will not be surfaced if a user opens a screen
-// reader’s list of elements (headings, form controls, landmarks, etc.) in the document.
-
-const setAriaHidden = () => {
-  const container = (0,_dom_getters_js__WEBPACK_IMPORTED_MODULE_0__.getContainer)()
-  const bodyChildren = Array.from(document.body.children)
-  bodyChildren.forEach((el) => {
-    if (el.contains(container)) {
-      return
-    }
-
-    if (el.hasAttribute('aria-hidden')) {
-      el.setAttribute('data-previous-aria-hidden', el.getAttribute('aria-hidden') || '')
-    }
-    el.setAttribute('aria-hidden', 'true')
-  })
-}
-
-const unsetAriaHidden = () => {
-  const bodyChildren = Array.from(document.body.children)
-  bodyChildren.forEach((el) => {
-    if (el.hasAttribute('data-previous-aria-hidden')) {
-      el.setAttribute('aria-hidden', el.getAttribute('data-previous-aria-hidden') || '')
-      el.removeAttribute('data-previous-aria-hidden')
-    } else {
-      el.removeAttribute('aria-hidden')
-    }
-  })
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/utils/classes.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/sweetalert2/src/utils/classes.js ***!
-  \*******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   iconTypes: () => (/* binding */ iconTypes),
-/* harmony export */   swalClasses: () => (/* binding */ swalClasses),
-/* harmony export */   swalPrefix: () => (/* binding */ swalPrefix)
-/* harmony export */ });
-const swalPrefix = 'swal2-'
-
-/**
- * @typedef
- * { | 'container'
- *   | 'shown'
- *   | 'height-auto'
- *   | 'iosfix'
- *   | 'popup'
- *   | 'modal'
- *   | 'no-backdrop'
- *   | 'no-transition'
- *   | 'toast'
- *   | 'toast-shown'
- *   | 'show'
- *   | 'hide'
- *   | 'close'
- *   | 'title'
- *   | 'html-container'
- *   | 'actions'
- *   | 'confirm'
- *   | 'deny'
- *   | 'cancel'
- *   | 'default-outline'
- *   | 'footer'
- *   | 'icon'
- *   | 'icon-content'
- *   | 'image'
- *   | 'input'
- *   | 'file'
- *   | 'range'
- *   | 'select'
- *   | 'radio'
- *   | 'checkbox'
- *   | 'label'
- *   | 'textarea'
- *   | 'inputerror'
- *   | 'input-label'
- *   | 'validation-message'
- *   | 'progress-steps'
- *   | 'active-progress-step'
- *   | 'progress-step'
- *   | 'progress-step-line'
- *   | 'loader'
- *   | 'loading'
- *   | 'styled'
- *   | 'top'
- *   | 'top-start'
- *   | 'top-end'
- *   | 'top-left'
- *   | 'top-right'
- *   | 'center'
- *   | 'center-start'
- *   | 'center-end'
- *   | 'center-left'
- *   | 'center-right'
- *   | 'bottom'
- *   | 'bottom-start'
- *   | 'bottom-end'
- *   | 'bottom-left'
- *   | 'bottom-right'
- *   | 'grow-row'
- *   | 'grow-column'
- *   | 'grow-fullscreen'
- *   | 'rtl'
- *   | 'timer-progress-bar'
- *   | 'timer-progress-bar-container'
- *   | 'scrollbar-measure'
- *   | 'icon-success'
- *   | 'icon-warning'
- *   | 'icon-info'
- *   | 'icon-question'
- *   | 'icon-error'
- * } SwalClass
- * @typedef {Record<SwalClass, string>} SwalClasses
- */
-
-/**
- * @typedef {'success' | 'warning' | 'info' | 'question' | 'error'} SwalIcon
- * @typedef {Record<SwalIcon, string>} SwalIcons
- */
-
-/** @type {SwalClass[]} */
-const classNames = [
-  'container',
-  'shown',
-  'height-auto',
-  'iosfix',
-  'popup',
-  'modal',
-  'no-backdrop',
-  'no-transition',
-  'toast',
-  'toast-shown',
-  'show',
-  'hide',
-  'close',
-  'title',
-  'html-container',
-  'actions',
-  'confirm',
-  'deny',
-  'cancel',
-  'default-outline',
-  'footer',
-  'icon',
-  'icon-content',
-  'image',
-  'input',
-  'file',
-  'range',
-  'select',
-  'radio',
-  'checkbox',
-  'label',
-  'textarea',
-  'inputerror',
-  'input-label',
-  'validation-message',
-  'progress-steps',
-  'active-progress-step',
-  'progress-step',
-  'progress-step-line',
-  'loader',
-  'loading',
-  'styled',
-  'top',
-  'top-start',
-  'top-end',
-  'top-left',
-  'top-right',
-  'center',
-  'center-start',
-  'center-end',
-  'center-left',
-  'center-right',
-  'bottom',
-  'bottom-start',
-  'bottom-end',
-  'bottom-left',
-  'bottom-right',
-  'grow-row',
-  'grow-column',
-  'grow-fullscreen',
-  'rtl',
-  'timer-progress-bar',
-  'timer-progress-bar-container',
-  'scrollbar-measure',
-  'icon-success',
-  'icon-warning',
-  'icon-info',
-  'icon-question',
-  'icon-error',
-]
-
-const swalClasses = classNames.reduce((acc, className) => {
-  acc[className] = swalPrefix + className
-  return acc
-}, /** @type {SwalClasses} */ ({}))
-
-/** @type {SwalIcon[]} */
-const icons = ['success', 'warning', 'info', 'question', 'error']
-
-const iconTypes = icons.reduce((acc, icon) => {
-  acc[icon] = swalPrefix + icon
-  return acc
-}, /** @type {SwalIcons} */ ({}))
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/utils/defaultInputValidators.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/sweetalert2/src/utils/defaultInputValidators.js ***!
-  \**********************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  /**
-   * @param {string} string
-   * @param {string} [validationMessage]
-   * @returns {Promise<string | void>}
-   */
-  email: (string, validationMessage) => {
-    return /^[a-zA-Z0-9.+_'-]+@[a-zA-Z0-9.-]+\.[a-zA-Z0-9-]+$/.test(string)
-      ? Promise.resolve()
-      : Promise.resolve(validationMessage || 'Invalid email address')
-  },
-  /**
-   * @param {string} string
-   * @param {string} [validationMessage]
-   * @returns {Promise<string | void>}
-   */
-  url: (string, validationMessage) => {
-    // taken from https://stackoverflow.com/a/3809435 with a small change from #1306 and #2013
-    return /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-z]{2,63}\b([-a-zA-Z0-9@:%_+.~#?&/=]*)$/.test(string)
-      ? Promise.resolve()
-      : Promise.resolve(validationMessage || 'Invalid URL')
-  },
-});
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/utils/dom/animationEndEvent.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/sweetalert2/src/utils/dom/animationEndEvent.js ***!
-  \*********************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   animationEndEvent: () => (/* binding */ animationEndEvent)
-/* harmony export */ });
-/* harmony import */ var _isNodeEnv_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../isNodeEnv.js */ "./node_modules/sweetalert2/src/utils/isNodeEnv.js");
-
-
-/**
- * @returns {'webkitAnimationEnd' | 'animationend' | false}
- */
-const animationEndEvent = (() => {
-  // Prevent run in Node env
-  if ((0,_isNodeEnv_js__WEBPACK_IMPORTED_MODULE_0__.isNodeEnv)()) {
-    return false
-  }
-
-  const testEl = document.createElement('div')
-
-  // Chrome, Safari and Opera
-  if (typeof testEl.style.webkitAnimation !== 'undefined') {
-    return 'webkitAnimationEnd'
-  }
-
-  // Standard syntax
-  if (typeof testEl.style.animation !== 'undefined') {
-    return 'animationend'
-  }
-
-  return false
-})()
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/utils/dom/domUtils.js":
-/*!************************************************************!*\
-  !*** ./node_modules/sweetalert2/src/utils/dom/domUtils.js ***!
-  \************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   addClass: () => (/* binding */ addClass),
-/* harmony export */   allButtonsAreHidden: () => (/* binding */ allButtonsAreHidden),
-/* harmony export */   animateTimerProgressBar: () => (/* binding */ animateTimerProgressBar),
-/* harmony export */   applyCustomClass: () => (/* binding */ applyCustomClass),
-/* harmony export */   applyNumericalStyle: () => (/* binding */ applyNumericalStyle),
-/* harmony export */   focusInput: () => (/* binding */ focusInput),
-/* harmony export */   getDirectChildByClass: () => (/* binding */ getDirectChildByClass),
-/* harmony export */   getInput: () => (/* binding */ getInput),
-/* harmony export */   hasClass: () => (/* binding */ hasClass),
-/* harmony export */   hasCssAnimation: () => (/* binding */ hasCssAnimation),
-/* harmony export */   hide: () => (/* binding */ hide),
-/* harmony export */   isScrollable: () => (/* binding */ isScrollable),
-/* harmony export */   isVisible: () => (/* binding */ isVisible),
-/* harmony export */   removeClass: () => (/* binding */ removeClass),
-/* harmony export */   setInnerHtml: () => (/* binding */ setInnerHtml),
-/* harmony export */   setStyle: () => (/* binding */ setStyle),
-/* harmony export */   show: () => (/* binding */ show),
-/* harmony export */   showWhenInnerHtmlPresent: () => (/* binding */ showWhenInnerHtmlPresent),
-/* harmony export */   stopTimerProgressBar: () => (/* binding */ stopTimerProgressBar),
-/* harmony export */   toggle: () => (/* binding */ toggle),
-/* harmony export */   toggleClass: () => (/* binding */ toggleClass)
-/* harmony export */ });
-/* harmony import */ var _classes_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../classes.js */ "./node_modules/sweetalert2/src/utils/classes.js");
-/* harmony import */ var _utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils.js */ "./node_modules/sweetalert2/src/utils/utils.js");
-/* harmony import */ var _getters_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./getters.js */ "./node_modules/sweetalert2/src/utils/dom/getters.js");
-
-
-
-
-/**
- * Securely set innerHTML of an element
- * https://github.com/sweetalert2/sweetalert2/issues/1926
- *
- * @param {HTMLElement} elem
- * @param {string} html
- */
-const setInnerHtml = (elem, html) => {
-  elem.textContent = ''
-  if (html) {
-    const parser = new DOMParser()
-    const parsed = parser.parseFromString(html, `text/html`)
-    const head = parsed.querySelector('head')
-    head &&
-      Array.from(head.childNodes).forEach((child) => {
-        elem.appendChild(child)
-      })
-    const body = parsed.querySelector('body')
-    body &&
-      Array.from(body.childNodes).forEach((child) => {
-        if (child instanceof HTMLVideoElement || child instanceof HTMLAudioElement) {
-          elem.appendChild(child.cloneNode(true)) // https://github.com/sweetalert2/sweetalert2/issues/2507
-        } else {
-          elem.appendChild(child)
-        }
-      })
-  }
-}
-
-/**
- * @param {HTMLElement} elem
- * @param {string} className
- * @returns {boolean}
- */
-const hasClass = (elem, className) => {
-  if (!className) {
-    return false
-  }
-  const classList = className.split(/\s+/)
-  for (let i = 0; i < classList.length; i++) {
-    if (!elem.classList.contains(classList[i])) {
-      return false
-    }
-  }
-  return true
-}
-
-/**
- * @param {HTMLElement} elem
- * @param {SweetAlertOptions} params
- */
-const removeCustomClasses = (elem, params) => {
-  Array.from(elem.classList).forEach((className) => {
-    if (
-      !Object.values(_classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses).includes(className) &&
-      !Object.values(_classes_js__WEBPACK_IMPORTED_MODULE_0__.iconTypes).includes(className) &&
-      !Object.values(params.showClass || {}).includes(className)
-    ) {
-      elem.classList.remove(className)
-    }
-  })
-}
-
-/**
- * @param {HTMLElement} elem
- * @param {SweetAlertOptions} params
- * @param {string} className
- */
-const applyCustomClass = (elem, params, className) => {
-  removeCustomClasses(elem, params)
-
-  if (params.customClass && params.customClass[className]) {
-    if (typeof params.customClass[className] !== 'string' && !params.customClass[className].forEach) {
-      (0,_utils_js__WEBPACK_IMPORTED_MODULE_1__.warn)(
-        `Invalid type of customClass.${className}! Expected string or iterable object, got "${typeof params.customClass[
-          className
-        ]}"`
-      )
-      return
-    }
-
-    addClass(elem, params.customClass[className])
-  }
-}
-
-/**
- * @param {HTMLElement} popup
- * @param {import('./renderers/renderInput').InputClass | SweetAlertInput} inputClass
- * @returns {HTMLInputElement | null}
- */
-const getInput = (popup, inputClass) => {
-  if (!inputClass) {
-    return null
-  }
-  switch (inputClass) {
-    case 'select':
-    case 'textarea':
-    case 'file':
-      return popup.querySelector(`.${_classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses.popup} > .${_classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses[inputClass]}`)
-    case 'checkbox':
-      return popup.querySelector(`.${_classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses.popup} > .${_classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses.checkbox} input`)
-    case 'radio':
-      return (
-        popup.querySelector(`.${_classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses.popup} > .${_classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses.radio} input:checked`) ||
-        popup.querySelector(`.${_classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses.popup} > .${_classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses.radio} input:first-child`)
-      )
-    case 'range':
-      return popup.querySelector(`.${_classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses.popup} > .${_classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses.range} input`)
-    default:
-      return popup.querySelector(`.${_classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses.popup} > .${_classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses.input}`)
-  }
-}
-
-/**
- * @param {HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement} input
- */
-const focusInput = (input) => {
-  input.focus()
-
-  // place cursor at end of text in text input
-  if (input.type !== 'file') {
-    // http://stackoverflow.com/a/2345915
-    const val = input.value
-    input.value = ''
-    input.value = val
-  }
-}
-
-/**
- * @param {HTMLElement | HTMLElement[] | null} target
- * @param {string | string[] | readonly string[] | undefined} classList
- * @param {boolean} condition
- */
-const toggleClass = (target, classList, condition) => {
-  if (!target || !classList) {
-    return
-  }
-  if (typeof classList === 'string') {
-    classList = classList.split(/\s+/).filter(Boolean)
-  }
-  classList.forEach((className) => {
-    if (Array.isArray(target)) {
-      target.forEach((elem) => {
-        condition ? elem.classList.add(className) : elem.classList.remove(className)
-      })
-    } else {
-      condition ? target.classList.add(className) : target.classList.remove(className)
-    }
-  })
-}
-
-/**
- * @param {HTMLElement | HTMLElement[] | null} target
- * @param {string | string[] | readonly string[] | undefined} classList
- */
-const addClass = (target, classList) => {
-  toggleClass(target, classList, true)
-}
-
-/**
- * @param {HTMLElement | HTMLElement[] | null} target
- * @param {string | string[] | readonly string[] | undefined} classList
- */
-const removeClass = (target, classList) => {
-  toggleClass(target, classList, false)
-}
-
-/**
- * Get direct child of an element by class name
- *
- * @param {HTMLElement} elem
- * @param {string} className
- * @returns {HTMLElement | undefined}
- */
-const getDirectChildByClass = (elem, className) => {
-  const children = Array.from(elem.children)
-  for (let i = 0; i < children.length; i++) {
-    const child = children[i]
-    if (child instanceof HTMLElement && hasClass(child, className)) {
-      return child
-    }
-  }
-}
-
-/**
- * @param {HTMLElement} elem
- * @param {string} property
- * @param {*} value
- */
-const applyNumericalStyle = (elem, property, value) => {
-  if (value === `${parseInt(value)}`) {
-    value = parseInt(value)
-  }
-  if (value || parseInt(value) === 0) {
-    elem.style.setProperty(property, typeof value === 'number' ? `${value}px` : value)
-  } else {
-    elem.style.removeProperty(property)
-  }
-}
-
-/**
- * @param {HTMLElement | null} elem
- * @param {string} display
- */
-const show = (elem, display = 'flex') => {
-  elem && (elem.style.display = display)
-}
-
-/**
- * @param {HTMLElement | null} elem
- */
-const hide = (elem) => {
-  elem && (elem.style.display = 'none')
-}
-
-/**
- * @param {HTMLElement | null} elem
- * @param {string} display
- */
-const showWhenInnerHtmlPresent = (elem, display = 'block') => {
-  if (!elem) {
-    return
-  }
-  new MutationObserver(() => {
-    toggle(elem, elem.innerHTML, display)
-  }).observe(elem, { childList: true, subtree: true })
-}
-
-/**
- * @param {HTMLElement} parent
- * @param {string} selector
- * @param {string} property
- * @param {string} value
- */
-const setStyle = (parent, selector, property, value) => {
-  /** @type {HTMLElement | null} */
-  const el = parent.querySelector(selector)
-  if (el) {
-    el.style.setProperty(property, value)
-  }
-}
-
-/**
- * @param {HTMLElement} elem
- * @param {any} condition
- * @param {string} display
- */
-const toggle = (elem, condition, display = 'flex') => {
-  condition ? show(elem, display) : hide(elem)
-}
-
-/**
- * borrowed from jquery $(elem).is(':visible') implementation
- *
- * @param {HTMLElement | null} elem
- * @returns {boolean}
- */
-const isVisible = (elem) => !!(elem && (elem.offsetWidth || elem.offsetHeight || elem.getClientRects().length))
-
-/**
- * @returns {boolean}
- */
-const allButtonsAreHidden = () =>
-  !isVisible((0,_getters_js__WEBPACK_IMPORTED_MODULE_2__.getConfirmButton)()) && !isVisible((0,_getters_js__WEBPACK_IMPORTED_MODULE_2__.getDenyButton)()) && !isVisible((0,_getters_js__WEBPACK_IMPORTED_MODULE_2__.getCancelButton)())
-
-/**
- * @param {HTMLElement} elem
- * @returns {boolean}
- */
-const isScrollable = (elem) => !!(elem.scrollHeight > elem.clientHeight)
-
-/**
- * borrowed from https://stackoverflow.com/a/46352119
- *
- * @param {HTMLElement} elem
- * @returns {boolean}
- */
-const hasCssAnimation = (elem) => {
-  const style = window.getComputedStyle(elem)
-
-  const animDuration = parseFloat(style.getPropertyValue('animation-duration') || '0')
-  const transDuration = parseFloat(style.getPropertyValue('transition-duration') || '0')
-
-  return animDuration > 0 || transDuration > 0
-}
-
-/**
- * @param {number} timer
- * @param {boolean} reset
- */
-const animateTimerProgressBar = (timer, reset = false) => {
-  const timerProgressBar = (0,_getters_js__WEBPACK_IMPORTED_MODULE_2__.getTimerProgressBar)()
-  if (!timerProgressBar) {
-    return
-  }
-  if (isVisible(timerProgressBar)) {
-    if (reset) {
-      timerProgressBar.style.transition = 'none'
-      timerProgressBar.style.width = '100%'
-    }
-    setTimeout(() => {
-      timerProgressBar.style.transition = `width ${timer / 1000}s linear`
-      timerProgressBar.style.width = '0%'
-    }, 10)
-  }
-}
-
-const stopTimerProgressBar = () => {
-  const timerProgressBar = (0,_getters_js__WEBPACK_IMPORTED_MODULE_2__.getTimerProgressBar)()
-  if (!timerProgressBar) {
-    return
-  }
-  const timerProgressBarWidth = parseInt(window.getComputedStyle(timerProgressBar).width)
-  timerProgressBar.style.removeProperty('transition')
-  timerProgressBar.style.width = '100%'
-  const timerProgressBarFullWidth = parseInt(window.getComputedStyle(timerProgressBar).width)
-  const timerProgressBarPercent = (timerProgressBarWidth / timerProgressBarFullWidth) * 100
-  timerProgressBar.style.width = `${timerProgressBarPercent}%`
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/utils/dom/getters.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/sweetalert2/src/utils/dom/getters.js ***!
-  \***********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   elementBySelector: () => (/* binding */ elementBySelector),
-/* harmony export */   getActions: () => (/* binding */ getActions),
-/* harmony export */   getCancelButton: () => (/* binding */ getCancelButton),
-/* harmony export */   getCloseButton: () => (/* binding */ getCloseButton),
-/* harmony export */   getConfirmButton: () => (/* binding */ getConfirmButton),
-/* harmony export */   getContainer: () => (/* binding */ getContainer),
-/* harmony export */   getDenyButton: () => (/* binding */ getDenyButton),
-/* harmony export */   getFocusableElements: () => (/* binding */ getFocusableElements),
-/* harmony export */   getFooter: () => (/* binding */ getFooter),
-/* harmony export */   getHtmlContainer: () => (/* binding */ getHtmlContainer),
-/* harmony export */   getIcon: () => (/* binding */ getIcon),
-/* harmony export */   getIconContent: () => (/* binding */ getIconContent),
-/* harmony export */   getImage: () => (/* binding */ getImage),
-/* harmony export */   getInputLabel: () => (/* binding */ getInputLabel),
-/* harmony export */   getLoader: () => (/* binding */ getLoader),
-/* harmony export */   getPopup: () => (/* binding */ getPopup),
-/* harmony export */   getProgressSteps: () => (/* binding */ getProgressSteps),
-/* harmony export */   getTimerProgressBar: () => (/* binding */ getTimerProgressBar),
-/* harmony export */   getTitle: () => (/* binding */ getTitle),
-/* harmony export */   getValidationMessage: () => (/* binding */ getValidationMessage),
-/* harmony export */   isLoading: () => (/* binding */ isLoading),
-/* harmony export */   isModal: () => (/* binding */ isModal),
-/* harmony export */   isToast: () => (/* binding */ isToast)
-/* harmony export */ });
-/* harmony import */ var _classes_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../classes.js */ "./node_modules/sweetalert2/src/utils/classes.js");
-/* harmony import */ var _domUtils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./domUtils.js */ "./node_modules/sweetalert2/src/utils/dom/domUtils.js");
-
-
-
-/**
- * Gets the popup container which contains the backdrop and the popup itself.
- *
- * @returns {HTMLElement | null}
- */
-const getContainer = () => document.body.querySelector(`.${_classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses.container}`)
-
-/**
- * @param {string} selectorString
- * @returns {HTMLElement | null}
- */
-const elementBySelector = (selectorString) => {
-  const container = getContainer()
-  return container ? container.querySelector(selectorString) : null
-}
-
-/**
- * @param {string} className
- * @returns {HTMLElement | null}
- */
-const elementByClass = (className) => {
-  return elementBySelector(`.${className}`)
-}
-
-/**
- * @returns {HTMLElement | null}
- */
-const getPopup = () => elementByClass(_classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses.popup)
-
-/**
- * @returns {HTMLElement | null}
- */
-const getIcon = () => elementByClass(_classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses.icon)
-
-/**
- * @returns {HTMLElement | null}
- */
-const getIconContent = () => elementByClass(_classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses['icon-content'])
-
-/**
- * @returns {HTMLElement | null}
- */
-const getTitle = () => elementByClass(_classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses.title)
-
-/**
- * @returns {HTMLElement | null}
- */
-const getHtmlContainer = () => elementByClass(_classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses['html-container'])
-
-/**
- * @returns {HTMLElement | null}
- */
-const getImage = () => elementByClass(_classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses.image)
-
-/**
- * @returns {HTMLElement | null}
- */
-const getProgressSteps = () => elementByClass(_classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses['progress-steps'])
-
-/**
- * @returns {HTMLElement | null}
- */
-const getValidationMessage = () => elementByClass(_classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses['validation-message'])
-
-/**
- * @returns {HTMLButtonElement | null}
- */
-const getConfirmButton = () =>
-  /** @type {HTMLButtonElement} */ (elementBySelector(`.${_classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses.actions} .${_classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses.confirm}`))
-
-/**
- * @returns {HTMLButtonElement | null}
- */
-const getCancelButton = () =>
-  /** @type {HTMLButtonElement} */ (elementBySelector(`.${_classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses.actions} .${_classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses.cancel}`))
-
-/**
- * @returns {HTMLButtonElement | null}
- */
-const getDenyButton = () =>
-  /** @type {HTMLButtonElement} */ (elementBySelector(`.${_classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses.actions} .${_classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses.deny}`))
-
-/**
- * @returns {HTMLElement | null}
- */
-const getInputLabel = () => elementByClass(_classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses['input-label'])
-
-/**
- * @returns {HTMLElement | null}
- */
-const getLoader = () => elementBySelector(`.${_classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses.loader}`)
-
-/**
- * @returns {HTMLElement | null}
- */
-const getActions = () => elementByClass(_classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses.actions)
-
-/**
- * @returns {HTMLElement | null}
- */
-const getFooter = () => elementByClass(_classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses.footer)
-
-/**
- * @returns {HTMLElement | null}
- */
-const getTimerProgressBar = () => elementByClass(_classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses['timer-progress-bar'])
-
-/**
- * @returns {HTMLElement | null}
- */
-const getCloseButton = () => elementByClass(_classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses.close)
-
-// https://github.com/jkup/focusable/blob/master/index.js
-const focusable = `
-  a[href],
-  area[href],
-  input:not([disabled]),
-  select:not([disabled]),
-  textarea:not([disabled]),
-  button:not([disabled]),
-  iframe,
-  object,
-  embed,
-  [tabindex="0"],
-  [contenteditable],
-  audio[controls],
-  video[controls],
-  summary
-`
-/**
- * @returns {HTMLElement[]}
- */
-const getFocusableElements = () => {
-  const popup = getPopup()
-  if (!popup) {
-    return []
-  }
-  /** @type {NodeListOf<HTMLElement>} */
-  const focusableElementsWithTabindex = popup.querySelectorAll('[tabindex]:not([tabindex="-1"]):not([tabindex="0"])')
-  const focusableElementsWithTabindexSorted = Array.from(focusableElementsWithTabindex)
-    // sort according to tabindex
-    .sort((a, b) => {
-      const tabindexA = parseInt(a.getAttribute('tabindex') || '0')
-      const tabindexB = parseInt(b.getAttribute('tabindex') || '0')
-      if (tabindexA > tabindexB) {
-        return 1
-      } else if (tabindexA < tabindexB) {
-        return -1
-      }
-      return 0
-    })
-
-  /** @type {NodeListOf<HTMLElement>} */
-  const otherFocusableElements = popup.querySelectorAll(focusable)
-  const otherFocusableElementsFiltered = Array.from(otherFocusableElements).filter(
-    (el) => el.getAttribute('tabindex') !== '-1'
-  )
-
-  return [...new Set(focusableElementsWithTabindexSorted.concat(otherFocusableElementsFiltered))].filter((el) =>
-    (0,_domUtils_js__WEBPACK_IMPORTED_MODULE_1__.isVisible)(el)
-  )
-}
-
-/**
- * @returns {boolean}
- */
-const isModal = () => {
-  return (
-    (0,_domUtils_js__WEBPACK_IMPORTED_MODULE_1__.hasClass)(document.body, _classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses.shown) &&
-    !(0,_domUtils_js__WEBPACK_IMPORTED_MODULE_1__.hasClass)(document.body, _classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses['toast-shown']) &&
-    !(0,_domUtils_js__WEBPACK_IMPORTED_MODULE_1__.hasClass)(document.body, _classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses['no-backdrop'])
-  )
-}
-
-/**
- * @returns {boolean}
- */
-const isToast = () => {
-  const popup = getPopup()
-  if (!popup) {
-    return false
-  }
-  return (0,_domUtils_js__WEBPACK_IMPORTED_MODULE_1__.hasClass)(popup, _classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses.toast)
-}
-
-/**
- * @returns {boolean}
- */
-const isLoading = () => {
-  const popup = getPopup()
-  if (!popup) {
-    return false
-  }
-  return popup.hasAttribute('data-loading')
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/utils/dom/index.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/sweetalert2/src/utils/dom/index.js ***!
-  \*********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   addClass: () => (/* reexport safe */ _domUtils_js__WEBPACK_IMPORTED_MODULE_0__.addClass),
-/* harmony export */   allButtonsAreHidden: () => (/* reexport safe */ _domUtils_js__WEBPACK_IMPORTED_MODULE_0__.allButtonsAreHidden),
-/* harmony export */   animateTimerProgressBar: () => (/* reexport safe */ _domUtils_js__WEBPACK_IMPORTED_MODULE_0__.animateTimerProgressBar),
-/* harmony export */   animationEndEvent: () => (/* reexport safe */ _animationEndEvent_js__WEBPACK_IMPORTED_MODULE_4__.animationEndEvent),
-/* harmony export */   applyCustomClass: () => (/* reexport safe */ _domUtils_js__WEBPACK_IMPORTED_MODULE_0__.applyCustomClass),
-/* harmony export */   applyNumericalStyle: () => (/* reexport safe */ _domUtils_js__WEBPACK_IMPORTED_MODULE_0__.applyNumericalStyle),
-/* harmony export */   elementBySelector: () => (/* reexport safe */ _getters_js__WEBPACK_IMPORTED_MODULE_2__.elementBySelector),
-/* harmony export */   focusInput: () => (/* reexport safe */ _domUtils_js__WEBPACK_IMPORTED_MODULE_0__.focusInput),
-/* harmony export */   getActions: () => (/* reexport safe */ _getters_js__WEBPACK_IMPORTED_MODULE_2__.getActions),
-/* harmony export */   getCancelButton: () => (/* reexport safe */ _getters_js__WEBPACK_IMPORTED_MODULE_2__.getCancelButton),
-/* harmony export */   getCloseButton: () => (/* reexport safe */ _getters_js__WEBPACK_IMPORTED_MODULE_2__.getCloseButton),
-/* harmony export */   getConfirmButton: () => (/* reexport safe */ _getters_js__WEBPACK_IMPORTED_MODULE_2__.getConfirmButton),
-/* harmony export */   getContainer: () => (/* reexport safe */ _getters_js__WEBPACK_IMPORTED_MODULE_2__.getContainer),
-/* harmony export */   getDenyButton: () => (/* reexport safe */ _getters_js__WEBPACK_IMPORTED_MODULE_2__.getDenyButton),
-/* harmony export */   getDirectChildByClass: () => (/* reexport safe */ _domUtils_js__WEBPACK_IMPORTED_MODULE_0__.getDirectChildByClass),
-/* harmony export */   getFocusableElements: () => (/* reexport safe */ _getters_js__WEBPACK_IMPORTED_MODULE_2__.getFocusableElements),
-/* harmony export */   getFooter: () => (/* reexport safe */ _getters_js__WEBPACK_IMPORTED_MODULE_2__.getFooter),
-/* harmony export */   getHtmlContainer: () => (/* reexport safe */ _getters_js__WEBPACK_IMPORTED_MODULE_2__.getHtmlContainer),
-/* harmony export */   getIcon: () => (/* reexport safe */ _getters_js__WEBPACK_IMPORTED_MODULE_2__.getIcon),
-/* harmony export */   getIconContent: () => (/* reexport safe */ _getters_js__WEBPACK_IMPORTED_MODULE_2__.getIconContent),
-/* harmony export */   getImage: () => (/* reexport safe */ _getters_js__WEBPACK_IMPORTED_MODULE_2__.getImage),
-/* harmony export */   getInput: () => (/* reexport safe */ _domUtils_js__WEBPACK_IMPORTED_MODULE_0__.getInput),
-/* harmony export */   getInputLabel: () => (/* reexport safe */ _getters_js__WEBPACK_IMPORTED_MODULE_2__.getInputLabel),
-/* harmony export */   getLoader: () => (/* reexport safe */ _getters_js__WEBPACK_IMPORTED_MODULE_2__.getLoader),
-/* harmony export */   getPopup: () => (/* reexport safe */ _getters_js__WEBPACK_IMPORTED_MODULE_2__.getPopup),
-/* harmony export */   getProgressSteps: () => (/* reexport safe */ _getters_js__WEBPACK_IMPORTED_MODULE_2__.getProgressSteps),
-/* harmony export */   getTimerProgressBar: () => (/* reexport safe */ _getters_js__WEBPACK_IMPORTED_MODULE_2__.getTimerProgressBar),
-/* harmony export */   getTitle: () => (/* reexport safe */ _getters_js__WEBPACK_IMPORTED_MODULE_2__.getTitle),
-/* harmony export */   getValidationMessage: () => (/* reexport safe */ _getters_js__WEBPACK_IMPORTED_MODULE_2__.getValidationMessage),
-/* harmony export */   hasClass: () => (/* reexport safe */ _domUtils_js__WEBPACK_IMPORTED_MODULE_0__.hasClass),
-/* harmony export */   hasCssAnimation: () => (/* reexport safe */ _domUtils_js__WEBPACK_IMPORTED_MODULE_0__.hasCssAnimation),
-/* harmony export */   hide: () => (/* reexport safe */ _domUtils_js__WEBPACK_IMPORTED_MODULE_0__.hide),
-/* harmony export */   init: () => (/* reexport safe */ _init_js__WEBPACK_IMPORTED_MODULE_1__.init),
-/* harmony export */   isLoading: () => (/* reexport safe */ _getters_js__WEBPACK_IMPORTED_MODULE_2__.isLoading),
-/* harmony export */   isModal: () => (/* reexport safe */ _getters_js__WEBPACK_IMPORTED_MODULE_2__.isModal),
-/* harmony export */   isScrollable: () => (/* reexport safe */ _domUtils_js__WEBPACK_IMPORTED_MODULE_0__.isScrollable),
-/* harmony export */   isToast: () => (/* reexport safe */ _getters_js__WEBPACK_IMPORTED_MODULE_2__.isToast),
-/* harmony export */   isVisible: () => (/* reexport safe */ _domUtils_js__WEBPACK_IMPORTED_MODULE_0__.isVisible),
-/* harmony export */   parseHtmlToContainer: () => (/* reexport safe */ _parseHtmlToContainer_js__WEBPACK_IMPORTED_MODULE_3__.parseHtmlToContainer),
-/* harmony export */   removeClass: () => (/* reexport safe */ _domUtils_js__WEBPACK_IMPORTED_MODULE_0__.removeClass),
-/* harmony export */   render: () => (/* reexport safe */ _renderers_render_js__WEBPACK_IMPORTED_MODULE_5__.render),
-/* harmony export */   setInnerHtml: () => (/* reexport safe */ _domUtils_js__WEBPACK_IMPORTED_MODULE_0__.setInnerHtml),
-/* harmony export */   setStyle: () => (/* reexport safe */ _domUtils_js__WEBPACK_IMPORTED_MODULE_0__.setStyle),
-/* harmony export */   show: () => (/* reexport safe */ _domUtils_js__WEBPACK_IMPORTED_MODULE_0__.show),
-/* harmony export */   showWhenInnerHtmlPresent: () => (/* reexport safe */ _domUtils_js__WEBPACK_IMPORTED_MODULE_0__.showWhenInnerHtmlPresent),
-/* harmony export */   stopTimerProgressBar: () => (/* reexport safe */ _domUtils_js__WEBPACK_IMPORTED_MODULE_0__.stopTimerProgressBar),
-/* harmony export */   toggle: () => (/* reexport safe */ _domUtils_js__WEBPACK_IMPORTED_MODULE_0__.toggle),
-/* harmony export */   toggleClass: () => (/* reexport safe */ _domUtils_js__WEBPACK_IMPORTED_MODULE_0__.toggleClass)
-/* harmony export */ });
-/* harmony import */ var _domUtils_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./domUtils.js */ "./node_modules/sweetalert2/src/utils/dom/domUtils.js");
-/* harmony import */ var _init_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./init.js */ "./node_modules/sweetalert2/src/utils/dom/init.js");
-/* harmony import */ var _getters_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./getters.js */ "./node_modules/sweetalert2/src/utils/dom/getters.js");
-/* harmony import */ var _parseHtmlToContainer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./parseHtmlToContainer.js */ "./node_modules/sweetalert2/src/utils/dom/parseHtmlToContainer.js");
-/* harmony import */ var _animationEndEvent_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./animationEndEvent.js */ "./node_modules/sweetalert2/src/utils/dom/animationEndEvent.js");
-/* harmony import */ var _renderers_render_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./renderers/render.js */ "./node_modules/sweetalert2/src/utils/dom/renderers/render.js");
-
-
-
-
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/utils/dom/init.js":
-/*!********************************************************!*\
-  !*** ./node_modules/sweetalert2/src/utils/dom/init.js ***!
-  \********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   init: () => (/* binding */ init)
-/* harmony export */ });
-/* harmony import */ var _globalState_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../globalState.js */ "./node_modules/sweetalert2/src/globalState.js");
-/* harmony import */ var _classes_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../classes.js */ "./node_modules/sweetalert2/src/utils/classes.js");
-/* harmony import */ var _isNodeEnv_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../isNodeEnv.js */ "./node_modules/sweetalert2/src/utils/isNodeEnv.js");
-/* harmony import */ var _utils_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils.js */ "./node_modules/sweetalert2/src/utils/utils.js");
-/* harmony import */ var _domUtils_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./domUtils.js */ "./node_modules/sweetalert2/src/utils/dom/domUtils.js");
-/* harmony import */ var _getters_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./getters.js */ "./node_modules/sweetalert2/src/utils/dom/getters.js");
-
-
-
-
-
-
-
-const sweetHTML = `
- <div aria-labelledby="${_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.title}" aria-describedby="${_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses['html-container']}" class="${_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.popup}" tabindex="-1">
-   <button type="button" class="${_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.close}"></button>
-   <ul class="${_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses['progress-steps']}"></ul>
-   <div class="${_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.icon}"></div>
-   <img class="${_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.image}" />
-   <h2 class="${_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.title}" id="${_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.title}"></h2>
-   <div class="${_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses['html-container']}" id="${_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses['html-container']}"></div>
-   <input class="${_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.input}" id="${_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.input}" />
-   <input type="file" class="${_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.file}" />
-   <div class="${_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.range}">
-     <input type="range" />
-     <output></output>
-   </div>
-   <select class="${_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.select}" id="${_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.select}"></select>
-   <div class="${_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.radio}"></div>
-   <label class="${_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.checkbox}">
-     <input type="checkbox" id="${_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.checkbox}" />
-     <span class="${_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.label}"></span>
-   </label>
-   <textarea class="${_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.textarea}" id="${_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.textarea}"></textarea>
-   <div class="${_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses['validation-message']}" id="${_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses['validation-message']}"></div>
-   <div class="${_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.actions}">
-     <div class="${_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.loader}"></div>
-     <button type="button" class="${_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.confirm}"></button>
-     <button type="button" class="${_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.deny}"></button>
-     <button type="button" class="${_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.cancel}"></button>
-   </div>
-   <div class="${_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.footer}"></div>
-   <div class="${_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses['timer-progress-bar-container']}">
-     <div class="${_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses['timer-progress-bar']}"></div>
-   </div>
- </div>
-`.replace(/(^|\n)\s*/g, '')
-
-/**
- * @returns {boolean}
- */
-const resetOldContainer = () => {
-  const oldContainer = (0,_getters_js__WEBPACK_IMPORTED_MODULE_5__.getContainer)()
-  if (!oldContainer) {
-    return false
-  }
-
-  oldContainer.remove()
-  ;(0,_domUtils_js__WEBPACK_IMPORTED_MODULE_4__.removeClass)(
-    [document.documentElement, document.body],
-    [_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses['no-backdrop'], _classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses['toast-shown'], _classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses['has-column']]
-  )
-
-  return true
-}
-
-const resetValidationMessage = () => {
-  _globalState_js__WEBPACK_IMPORTED_MODULE_0__["default"].currentInstance.resetValidationMessage()
-}
-
-const addInputChangeListeners = () => {
-  const popup = (0,_getters_js__WEBPACK_IMPORTED_MODULE_5__.getPopup)()
-
-  const input = (0,_domUtils_js__WEBPACK_IMPORTED_MODULE_4__.getDirectChildByClass)(popup, _classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.input)
-  const file = (0,_domUtils_js__WEBPACK_IMPORTED_MODULE_4__.getDirectChildByClass)(popup, _classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.file)
-  /** @type {HTMLInputElement} */
-  const range = popup.querySelector(`.${_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.range} input`)
-  /** @type {HTMLOutputElement} */
-  const rangeOutput = popup.querySelector(`.${_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.range} output`)
-  const select = (0,_domUtils_js__WEBPACK_IMPORTED_MODULE_4__.getDirectChildByClass)(popup, _classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.select)
-  /** @type {HTMLInputElement} */
-  const checkbox = popup.querySelector(`.${_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.checkbox} input`)
-  const textarea = (0,_domUtils_js__WEBPACK_IMPORTED_MODULE_4__.getDirectChildByClass)(popup, _classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.textarea)
-
-  input.oninput = resetValidationMessage
-  file.onchange = resetValidationMessage
-  select.onchange = resetValidationMessage
-  checkbox.onchange = resetValidationMessage
-  textarea.oninput = resetValidationMessage
-
-  range.oninput = () => {
-    resetValidationMessage()
-    rangeOutput.value = range.value
-  }
-
-  range.onchange = () => {
-    resetValidationMessage()
-    rangeOutput.value = range.value
-  }
-}
-
-/**
- * @param {string | HTMLElement} target
- * @returns {HTMLElement}
- */
-const getTarget = (target) => (typeof target === 'string' ? document.querySelector(target) : target)
-
-/**
- * @param {SweetAlertOptions} params
- */
-const setupAccessibility = (params) => {
-  const popup = (0,_getters_js__WEBPACK_IMPORTED_MODULE_5__.getPopup)()
-
-  popup.setAttribute('role', params.toast ? 'alert' : 'dialog')
-  popup.setAttribute('aria-live', params.toast ? 'polite' : 'assertive')
-  if (!params.toast) {
-    popup.setAttribute('aria-modal', 'true')
-  }
-}
-
-/**
- * @param {HTMLElement} targetElement
- */
-const setupRTL = (targetElement) => {
-  if (window.getComputedStyle(targetElement).direction === 'rtl') {
-    (0,_domUtils_js__WEBPACK_IMPORTED_MODULE_4__.addClass)((0,_getters_js__WEBPACK_IMPORTED_MODULE_5__.getContainer)(), _classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.rtl)
-  }
-}
-
-/**
- * Add modal + backdrop + no-war message for Russians to DOM
- *
- * @param {SweetAlertOptions} params
- */
-const init = (params) => {
-  // Clean up the old popup container if it exists
-  const oldContainerExisted = resetOldContainer()
-
-  if ((0,_isNodeEnv_js__WEBPACK_IMPORTED_MODULE_2__.isNodeEnv)()) {
-    (0,_utils_js__WEBPACK_IMPORTED_MODULE_3__.error)('SweetAlert2 requires document to initialize')
-    return
-  }
-
-  const container = document.createElement('div')
-  container.className = _classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.container
-  if (oldContainerExisted) {
-    (0,_domUtils_js__WEBPACK_IMPORTED_MODULE_4__.addClass)(container, _classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses['no-transition'])
-  }
-  (0,_domUtils_js__WEBPACK_IMPORTED_MODULE_4__.setInnerHtml)(container, sweetHTML)
-
-  const targetElement = getTarget(params.target)
-  targetElement.appendChild(container)
-
-  setupAccessibility(params)
-  setupRTL(targetElement)
-  addInputChangeListeners()
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/utils/dom/inputUtils.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/sweetalert2/src/utils/dom/inputUtils.js ***!
-  \**************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   getInputValue: () => (/* binding */ getInputValue),
-/* harmony export */   handleInputOptionsAndValue: () => (/* binding */ handleInputOptionsAndValue)
-/* harmony export */ });
-/* harmony import */ var _staticMethods_showLoading_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../staticMethods/showLoading.js */ "./node_modules/sweetalert2/src/staticMethods/showLoading.js");
-/* harmony import */ var _classes_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../classes.js */ "./node_modules/sweetalert2/src/utils/classes.js");
-/* harmony import */ var _utils_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils.js */ "./node_modules/sweetalert2/src/utils/utils.js");
-/* harmony import */ var _domUtils_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./domUtils.js */ "./node_modules/sweetalert2/src/utils/dom/domUtils.js");
-/* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./index.js */ "./node_modules/sweetalert2/src/utils/dom/index.js");
-
-
-
-
-
-
-/**
- * @param {SweetAlert} instance
- * @param {SweetAlertOptions} params
- */
-const handleInputOptionsAndValue = (instance, params) => {
-  if (params.input === 'select' || params.input === 'radio') {
-    handleInputOptions(instance, params)
-  } else if (
-    ['text', 'email', 'number', 'tel', 'textarea'].some((i) => i === params.input) &&
-    ((0,_utils_js__WEBPACK_IMPORTED_MODULE_2__.hasToPromiseFn)(params.inputValue) || (0,_utils_js__WEBPACK_IMPORTED_MODULE_2__.isPromise)(params.inputValue))
-  ) {
-    (0,_staticMethods_showLoading_js__WEBPACK_IMPORTED_MODULE_0__.showLoading)(_index_js__WEBPACK_IMPORTED_MODULE_4__.getConfirmButton())
-    handleInputValue(instance, params)
-  }
-}
-
-/**
- * @param {SweetAlert} instance
- * @param {SweetAlertOptions} innerParams
- * @returns {SweetAlertInputValue}
- */
-const getInputValue = (instance, innerParams) => {
-  const input = instance.getInput()
-  if (!input) {
-    return null
-  }
-  switch (innerParams.input) {
-    case 'checkbox':
-      return getCheckboxValue(input)
-    case 'radio':
-      return getRadioValue(input)
-    case 'file':
-      return getFileValue(input)
-    default:
-      return innerParams.inputAutoTrim ? input.value.trim() : input.value
-  }
-}
-
-/**
- * @param {HTMLInputElement} input
- * @returns {number}
- */
-const getCheckboxValue = (input) => (input.checked ? 1 : 0)
-
-/**
- * @param {HTMLInputElement} input
- * @returns {string | null}
- */
-const getRadioValue = (input) => (input.checked ? input.value : null)
-
-/**
- * @param {HTMLInputElement} input
- * @returns {FileList | File | null}
- */
-const getFileValue = (input) =>
-  input.files && input.files.length ? (input.getAttribute('multiple') !== null ? input.files : input.files[0]) : null
-
-/**
- * @param {SweetAlert} instance
- * @param {SweetAlertOptions} params
- */
-const handleInputOptions = (instance, params) => {
-  const popup = _index_js__WEBPACK_IMPORTED_MODULE_4__.getPopup()
-  if (!popup) {
-    return
-  }
-  /**
-   * @param {Record<string, any>} inputOptions
-   */
-  const processInputOptions = (inputOptions) => {
-    if (params.input === 'select') {
-      populateSelectOptions(popup, formatInputOptions(inputOptions), params)
-    } else if (params.input === 'radio') {
-      populateRadioOptions(popup, formatInputOptions(inputOptions), params)
-    }
-  }
-  if ((0,_utils_js__WEBPACK_IMPORTED_MODULE_2__.hasToPromiseFn)(params.inputOptions) || (0,_utils_js__WEBPACK_IMPORTED_MODULE_2__.isPromise)(params.inputOptions)) {
-    (0,_staticMethods_showLoading_js__WEBPACK_IMPORTED_MODULE_0__.showLoading)(_index_js__WEBPACK_IMPORTED_MODULE_4__.getConfirmButton())
-    ;(0,_utils_js__WEBPACK_IMPORTED_MODULE_2__.asPromise)(params.inputOptions).then((inputOptions) => {
-      instance.hideLoading()
-      processInputOptions(inputOptions)
-    })
-  } else if (typeof params.inputOptions === 'object') {
-    processInputOptions(params.inputOptions)
-  } else {
-    (0,_utils_js__WEBPACK_IMPORTED_MODULE_2__.error)(`Unexpected type of inputOptions! Expected object, Map or Promise, got ${typeof params.inputOptions}`)
-  }
-}
-
-/**
- * @param {SweetAlert} instance
- * @param {SweetAlertOptions} params
- */
-const handleInputValue = (instance, params) => {
-  const input = instance.getInput()
-  if (!input) {
-    return
-  }
-  _index_js__WEBPACK_IMPORTED_MODULE_4__.hide(input)
-  ;(0,_utils_js__WEBPACK_IMPORTED_MODULE_2__.asPromise)(params.inputValue)
-    .then((inputValue) => {
-      input.value = params.input === 'number' ? `${parseFloat(inputValue) || 0}` : `${inputValue}`
-      _index_js__WEBPACK_IMPORTED_MODULE_4__.show(input)
-      input.focus()
-      instance.hideLoading()
-    })
-    .catch((err) => {
-      (0,_utils_js__WEBPACK_IMPORTED_MODULE_2__.error)(`Error in inputValue promise: ${err}`)
-      input.value = ''
-      _index_js__WEBPACK_IMPORTED_MODULE_4__.show(input)
-      input.focus()
-      instance.hideLoading()
-    })
-}
-
-/**
- * @param {HTMLElement} popup
- * @param {InputOptionFlattened[]} inputOptions
- * @param {SweetAlertOptions} params
- */
-function populateSelectOptions(popup, inputOptions, params) {
-  const select = (0,_domUtils_js__WEBPACK_IMPORTED_MODULE_3__.getDirectChildByClass)(popup, _classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.select)
-  if (!select) {
-    return
-  }
-  /**
-   * @param {HTMLElement} parent
-   * @param {string} optionLabel
-   * @param {string} optionValue
-   */
-  const renderOption = (parent, optionLabel, optionValue) => {
-    const option = document.createElement('option')
-    option.value = optionValue
-    _index_js__WEBPACK_IMPORTED_MODULE_4__.setInnerHtml(option, optionLabel)
-    option.selected = isSelected(optionValue, params.inputValue)
-    parent.appendChild(option)
-  }
-  inputOptions.forEach((inputOption) => {
-    const optionValue = inputOption[0]
-    const optionLabel = inputOption[1]
-    // <optgroup> spec:
-    // https://www.w3.org/TR/html401/interact/forms.html#h-17.6
-    // "...all OPTGROUP elements must be specified directly within a SELECT element (i.e., groups may not be nested)..."
-    // check whether this is a <optgroup>
-    if (Array.isArray(optionLabel)) {
-      // if it is an array, then it is an <optgroup>
-      const optgroup = document.createElement('optgroup')
-      optgroup.label = optionValue
-      optgroup.disabled = false // not configurable for now
-      select.appendChild(optgroup)
-      optionLabel.forEach((o) => renderOption(optgroup, o[1], o[0]))
-    } else {
-      // case of <option>
-      renderOption(select, optionLabel, optionValue)
-    }
-  })
-  select.focus()
-}
-
-/**
- * @param {HTMLElement} popup
- * @param {InputOptionFlattened[]} inputOptions
- * @param {SweetAlertOptions} params
- */
-function populateRadioOptions(popup, inputOptions, params) {
-  const radio = (0,_domUtils_js__WEBPACK_IMPORTED_MODULE_3__.getDirectChildByClass)(popup, _classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.radio)
-  if (!radio) {
-    return
-  }
-  inputOptions.forEach((inputOption) => {
-    const radioValue = inputOption[0]
-    const radioLabel = inputOption[1]
-    const radioInput = document.createElement('input')
-    const radioLabelElement = document.createElement('label')
-    radioInput.type = 'radio'
-    radioInput.name = _classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.radio
-    radioInput.value = radioValue
-    if (isSelected(radioValue, params.inputValue)) {
-      radioInput.checked = true
-    }
-    const label = document.createElement('span')
-    _index_js__WEBPACK_IMPORTED_MODULE_4__.setInnerHtml(label, radioLabel)
-    label.className = _classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.label
-    radioLabelElement.appendChild(radioInput)
-    radioLabelElement.appendChild(label)
-    radio.appendChild(radioLabelElement)
-  })
-  const radios = radio.querySelectorAll('input')
-  if (radios.length) {
-    radios[0].focus()
-  }
-}
-
-/**
- * Converts `inputOptions` into an array of `[value, label]`s
- *
- * @param {Record<string, any>} inputOptions
- * @typedef {string[]} InputOptionFlattened
- * @returns {InputOptionFlattened[]}
- */
-const formatInputOptions = (inputOptions) => {
-  /** @type {InputOptionFlattened[]} */
-  const result = []
-  if (inputOptions instanceof Map) {
-    inputOptions.forEach((value, key) => {
-      let valueFormatted = value
-      if (typeof valueFormatted === 'object') {
-        // case of <optgroup>
-        valueFormatted = formatInputOptions(valueFormatted)
-      }
-      result.push([key, valueFormatted])
-    })
-  } else {
-    Object.keys(inputOptions).forEach((key) => {
-      let valueFormatted = inputOptions[key]
-      if (typeof valueFormatted === 'object') {
-        // case of <optgroup>
-        valueFormatted = formatInputOptions(valueFormatted)
-      }
-      result.push([key, valueFormatted])
-    })
-  }
-  return result
-}
-
-/**
- * @param {string} optionValue
- * @param {SweetAlertInputValue} inputValue
- * @returns {boolean}
- */
-const isSelected = (optionValue, inputValue) => {
-  return !!inputValue && inputValue.toString() === optionValue.toString()
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/utils/dom/parseHtmlToContainer.js":
-/*!************************************************************************!*\
-  !*** ./node_modules/sweetalert2/src/utils/dom/parseHtmlToContainer.js ***!
-  \************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   parseHtmlToContainer: () => (/* binding */ parseHtmlToContainer)
-/* harmony export */ });
-/* harmony import */ var _domUtils_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./domUtils.js */ "./node_modules/sweetalert2/src/utils/dom/domUtils.js");
-
-
-/**
- * @param {HTMLElement | object | string} param
- * @param {HTMLElement} target
- */
-const parseHtmlToContainer = (param, target) => {
-  // DOM element
-  if (param instanceof HTMLElement) {
-    target.appendChild(param)
-  }
-
-  // Object
-  else if (typeof param === 'object') {
-    handleObject(param, target)
-  }
-
-  // Plain string
-  else if (param) {
-    (0,_domUtils_js__WEBPACK_IMPORTED_MODULE_0__.setInnerHtml)(target, param)
-  }
-}
-
-/**
- * @param {any} param
- * @param {HTMLElement} target
- */
-const handleObject = (param, target) => {
-  // JQuery element(s)
-  if (param.jquery) {
-    handleJqueryElem(target, param)
-  }
-
-  // For other objects use their string representation
-  else {
-    (0,_domUtils_js__WEBPACK_IMPORTED_MODULE_0__.setInnerHtml)(target, param.toString())
-  }
-}
-
-/**
- * @param {HTMLElement} target
- * @param {any} elem
- */
-const handleJqueryElem = (target, elem) => {
-  target.textContent = ''
-  if (0 in elem) {
-    for (let i = 0; i in elem; i++) {
-      target.appendChild(elem[i].cloneNode(true))
-    }
-  } else {
-    target.appendChild(elem.cloneNode(true))
-  }
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/utils/dom/renderers/render.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/sweetalert2/src/utils/dom/renderers/render.js ***!
-  \********************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   render: () => (/* binding */ render)
-/* harmony export */ });
-/* harmony import */ var _getters_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../getters.js */ "./node_modules/sweetalert2/src/utils/dom/getters.js");
-/* harmony import */ var _renderActions_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./renderActions.js */ "./node_modules/sweetalert2/src/utils/dom/renderers/renderActions.js");
-/* harmony import */ var _renderCloseButton_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./renderCloseButton.js */ "./node_modules/sweetalert2/src/utils/dom/renderers/renderCloseButton.js");
-/* harmony import */ var _renderContainer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./renderContainer.js */ "./node_modules/sweetalert2/src/utils/dom/renderers/renderContainer.js");
-/* harmony import */ var _renderContent_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./renderContent.js */ "./node_modules/sweetalert2/src/utils/dom/renderers/renderContent.js");
-/* harmony import */ var _renderFooter_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./renderFooter.js */ "./node_modules/sweetalert2/src/utils/dom/renderers/renderFooter.js");
-/* harmony import */ var _renderIcon_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./renderIcon.js */ "./node_modules/sweetalert2/src/utils/dom/renderers/renderIcon.js");
-/* harmony import */ var _renderImage_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./renderImage.js */ "./node_modules/sweetalert2/src/utils/dom/renderers/renderImage.js");
-/* harmony import */ var _renderPopup_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./renderPopup.js */ "./node_modules/sweetalert2/src/utils/dom/renderers/renderPopup.js");
-/* harmony import */ var _renderProgressSteps_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./renderProgressSteps.js */ "./node_modules/sweetalert2/src/utils/dom/renderers/renderProgressSteps.js");
-/* harmony import */ var _renderTitle_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./renderTitle.js */ "./node_modules/sweetalert2/src/utils/dom/renderers/renderTitle.js");
-
-
-
-
-
-
-
-
-
-
-
-
-/**
- * @param {SweetAlert} instance
- * @param {SweetAlertOptions} params
- */
-const render = (instance, params) => {
-  (0,_renderPopup_js__WEBPACK_IMPORTED_MODULE_8__.renderPopup)(instance, params)
-  ;(0,_renderContainer_js__WEBPACK_IMPORTED_MODULE_3__.renderContainer)(instance, params)
-
-  ;(0,_renderProgressSteps_js__WEBPACK_IMPORTED_MODULE_9__.renderProgressSteps)(instance, params)
-  ;(0,_renderIcon_js__WEBPACK_IMPORTED_MODULE_6__.renderIcon)(instance, params)
-  ;(0,_renderImage_js__WEBPACK_IMPORTED_MODULE_7__.renderImage)(instance, params)
-  ;(0,_renderTitle_js__WEBPACK_IMPORTED_MODULE_10__.renderTitle)(instance, params)
-  ;(0,_renderCloseButton_js__WEBPACK_IMPORTED_MODULE_2__.renderCloseButton)(instance, params)
-
-  ;(0,_renderContent_js__WEBPACK_IMPORTED_MODULE_4__.renderContent)(instance, params)
-  ;(0,_renderActions_js__WEBPACK_IMPORTED_MODULE_1__.renderActions)(instance, params)
-  ;(0,_renderFooter_js__WEBPACK_IMPORTED_MODULE_5__.renderFooter)(instance, params)
-
-  const popup = (0,_getters_js__WEBPACK_IMPORTED_MODULE_0__.getPopup)()
-  if (typeof params.didRender === 'function' && popup) {
-    params.didRender(popup)
-  }
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/utils/dom/renderers/renderActions.js":
-/*!***************************************************************************!*\
-  !*** ./node_modules/sweetalert2/src/utils/dom/renderers/renderActions.js ***!
-  \***************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   renderActions: () => (/* binding */ renderActions)
-/* harmony export */ });
-/* harmony import */ var _classes_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../classes.js */ "./node_modules/sweetalert2/src/utils/classes.js");
-/* harmony import */ var _dom_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../dom/index.js */ "./node_modules/sweetalert2/src/utils/dom/index.js");
-/* harmony import */ var _utils_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utils.js */ "./node_modules/sweetalert2/src/utils/utils.js");
-
-
-
-
-/**
- * @param {SweetAlert} instance
- * @param {SweetAlertOptions} params
- */
-const renderActions = (instance, params) => {
-  const actions = _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.getActions()
-  const loader = _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.getLoader()
-  if (!actions || !loader) {
-    return
-  }
-
-  // Actions (buttons) wrapper
-  if (!params.showConfirmButton && !params.showDenyButton && !params.showCancelButton) {
-    _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.hide(actions)
-  } else {
-    _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.show(actions)
-  }
-
-  // Custom class
-  _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.applyCustomClass(actions, params, 'actions')
-
-  // Render all the buttons
-  renderButtons(actions, loader, params)
-
-  // Loader
-  _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.setInnerHtml(loader, params.loaderHtml || '')
-  _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.applyCustomClass(loader, params, 'loader')
-}
-
-/**
- * @param {HTMLElement} actions
- * @param {HTMLElement} loader
- * @param {SweetAlertOptions} params
- */
-function renderButtons(actions, loader, params) {
-  const confirmButton = _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.getConfirmButton()
-  const denyButton = _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.getDenyButton()
-  const cancelButton = _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.getCancelButton()
-  if (!confirmButton || !denyButton || !cancelButton) {
-    return
-  }
-
-  // Render buttons
-  renderButton(confirmButton, 'confirm', params)
-  renderButton(denyButton, 'deny', params)
-  renderButton(cancelButton, 'cancel', params)
-  handleButtonsStyling(confirmButton, denyButton, cancelButton, params)
-
-  if (params.reverseButtons) {
-    if (params.toast) {
-      actions.insertBefore(cancelButton, confirmButton)
-      actions.insertBefore(denyButton, confirmButton)
-    } else {
-      actions.insertBefore(cancelButton, loader)
-      actions.insertBefore(denyButton, loader)
-      actions.insertBefore(confirmButton, loader)
-    }
-  }
-}
-
-/**
- * @param {HTMLElement} confirmButton
- * @param {HTMLElement} denyButton
- * @param {HTMLElement} cancelButton
- * @param {SweetAlertOptions} params
- */
-function handleButtonsStyling(confirmButton, denyButton, cancelButton, params) {
-  if (!params.buttonsStyling) {
-    _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.removeClass([confirmButton, denyButton, cancelButton], _classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses.styled)
-    return
-  }
-
-  _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.addClass([confirmButton, denyButton, cancelButton], _classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses.styled)
-
-  // Buttons background colors
-  if (params.confirmButtonColor) {
-    confirmButton.style.backgroundColor = params.confirmButtonColor
-    _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.addClass(confirmButton, _classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses['default-outline'])
-  }
-  if (params.denyButtonColor) {
-    denyButton.style.backgroundColor = params.denyButtonColor
-    _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.addClass(denyButton, _classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses['default-outline'])
-  }
-  if (params.cancelButtonColor) {
-    cancelButton.style.backgroundColor = params.cancelButtonColor
-    _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.addClass(cancelButton, _classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses['default-outline'])
-  }
-}
-
-/**
- * @param {HTMLElement} button
- * @param {'confirm' | 'deny' | 'cancel'} buttonType
- * @param {SweetAlertOptions} params
- */
-function renderButton(button, buttonType, params) {
-  const buttonName = /** @type {'Confirm' | 'Deny' | 'Cancel'} */ ((0,_utils_js__WEBPACK_IMPORTED_MODULE_2__.capitalizeFirstLetter)(buttonType))
-
-  _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.toggle(button, params[`show${buttonName}Button`], 'inline-block')
-  _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.setInnerHtml(button, params[`${buttonType}ButtonText`] || '') // Set caption text
-  button.setAttribute('aria-label', params[`${buttonType}ButtonAriaLabel`] || '') // ARIA label
-
-  // Add buttons custom classes
-  button.className = _classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses[buttonType]
-  _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.applyCustomClass(button, params, `${buttonType}Button`)
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/utils/dom/renderers/renderCloseButton.js":
-/*!*******************************************************************************!*\
-  !*** ./node_modules/sweetalert2/src/utils/dom/renderers/renderCloseButton.js ***!
-  \*******************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   renderCloseButton: () => (/* binding */ renderCloseButton)
-/* harmony export */ });
-/* harmony import */ var _dom_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../dom/index.js */ "./node_modules/sweetalert2/src/utils/dom/index.js");
-
-
-/**
- * @param {SweetAlert} instance
- * @param {SweetAlertOptions} params
- */
-const renderCloseButton = (instance, params) => {
-  const closeButton = _dom_index_js__WEBPACK_IMPORTED_MODULE_0__.getCloseButton()
-  if (!closeButton) {
-    return
-  }
-
-  _dom_index_js__WEBPACK_IMPORTED_MODULE_0__.setInnerHtml(closeButton, params.closeButtonHtml || '')
-
-  // Custom class
-  _dom_index_js__WEBPACK_IMPORTED_MODULE_0__.applyCustomClass(closeButton, params, 'closeButton')
-
-  _dom_index_js__WEBPACK_IMPORTED_MODULE_0__.toggle(closeButton, params.showCloseButton)
-  closeButton.setAttribute('aria-label', params.closeButtonAriaLabel || '')
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/utils/dom/renderers/renderContainer.js":
-/*!*****************************************************************************!*\
-  !*** ./node_modules/sweetalert2/src/utils/dom/renderers/renderContainer.js ***!
-  \*****************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   renderContainer: () => (/* binding */ renderContainer)
-/* harmony export */ });
-/* harmony import */ var _classes_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../classes.js */ "./node_modules/sweetalert2/src/utils/classes.js");
-/* harmony import */ var _dom_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../dom/index.js */ "./node_modules/sweetalert2/src/utils/dom/index.js");
-/* harmony import */ var _utils_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utils.js */ "./node_modules/sweetalert2/src/utils/utils.js");
-
-
-
-
-/**
- * @param {SweetAlert} instance
- * @param {SweetAlertOptions} params
- */
-const renderContainer = (instance, params) => {
-  const container = _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.getContainer()
-
-  if (!container) {
-    return
-  }
-
-  handleBackdropParam(container, params.backdrop)
-
-  handlePositionParam(container, params.position)
-  handleGrowParam(container, params.grow)
-
-  // Custom class
-  _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.applyCustomClass(container, params, 'container')
-}
-
-/**
- * @param {HTMLElement} container
- * @param {SweetAlertOptions['backdrop']} backdrop
- */
-function handleBackdropParam(container, backdrop) {
-  if (typeof backdrop === 'string') {
-    container.style.background = backdrop
-  } else if (!backdrop) {
-    _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.addClass([document.documentElement, document.body], _classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses['no-backdrop'])
-  }
-}
-
-/**
- * @param {HTMLElement} container
- * @param {SweetAlertOptions['position']} position
- */
-function handlePositionParam(container, position) {
-  if (!position) {
-    return
-  }
-  if (position in _classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses) {
-    _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.addClass(container, _classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses[position])
-  } else {
-    (0,_utils_js__WEBPACK_IMPORTED_MODULE_2__.warn)('The "position" parameter is not valid, defaulting to "center"')
-    _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.addClass(container, _classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses.center)
-  }
-}
-
-/**
- * @param {HTMLElement} container
- * @param {SweetAlertOptions['grow']} grow
- */
-function handleGrowParam(container, grow) {
-  if (!grow) {
-    return
-  }
-  _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.addClass(container, _classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses[`grow-${grow}`])
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/utils/dom/renderers/renderContent.js":
-/*!***************************************************************************!*\
-  !*** ./node_modules/sweetalert2/src/utils/dom/renderers/renderContent.js ***!
-  \***************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   renderContent: () => (/* binding */ renderContent)
-/* harmony export */ });
-/* harmony import */ var _dom_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../dom/index.js */ "./node_modules/sweetalert2/src/utils/dom/index.js");
-/* harmony import */ var _renderInput_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./renderInput.js */ "./node_modules/sweetalert2/src/utils/dom/renderers/renderInput.js");
-
-
-
-/**
- * @param {SweetAlert} instance
- * @param {SweetAlertOptions} params
- */
-const renderContent = (instance, params) => {
-  const htmlContainer = _dom_index_js__WEBPACK_IMPORTED_MODULE_0__.getHtmlContainer()
-  if (!htmlContainer) {
-    return
-  }
-
-  _dom_index_js__WEBPACK_IMPORTED_MODULE_0__.showWhenInnerHtmlPresent(htmlContainer)
-
-  _dom_index_js__WEBPACK_IMPORTED_MODULE_0__.applyCustomClass(htmlContainer, params, 'htmlContainer')
-
-  // Content as HTML
-  if (params.html) {
-    _dom_index_js__WEBPACK_IMPORTED_MODULE_0__.parseHtmlToContainer(params.html, htmlContainer)
-    _dom_index_js__WEBPACK_IMPORTED_MODULE_0__.show(htmlContainer, 'block')
-  }
-
-  // Content as plain text
-  else if (params.text) {
-    htmlContainer.textContent = params.text
-    _dom_index_js__WEBPACK_IMPORTED_MODULE_0__.show(htmlContainer, 'block')
-  }
-
-  // No content
-  else {
-    _dom_index_js__WEBPACK_IMPORTED_MODULE_0__.hide(htmlContainer)
-  }
-
-  (0,_renderInput_js__WEBPACK_IMPORTED_MODULE_1__.renderInput)(instance, params)
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/utils/dom/renderers/renderFooter.js":
-/*!**************************************************************************!*\
-  !*** ./node_modules/sweetalert2/src/utils/dom/renderers/renderFooter.js ***!
-  \**************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   renderFooter: () => (/* binding */ renderFooter)
-/* harmony export */ });
-/* harmony import */ var _dom_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../dom/index.js */ "./node_modules/sweetalert2/src/utils/dom/index.js");
-
-
-/**
- * @param {SweetAlert} instance
- * @param {SweetAlertOptions} params
- */
-const renderFooter = (instance, params) => {
-  const footer = _dom_index_js__WEBPACK_IMPORTED_MODULE_0__.getFooter()
-  if (!footer) {
-    return
-  }
-
-  _dom_index_js__WEBPACK_IMPORTED_MODULE_0__.showWhenInnerHtmlPresent(footer)
-
-  _dom_index_js__WEBPACK_IMPORTED_MODULE_0__.toggle(footer, params.footer, 'block')
-
-  if (params.footer) {
-    _dom_index_js__WEBPACK_IMPORTED_MODULE_0__.parseHtmlToContainer(params.footer, footer)
-  }
-
-  // Custom class
-  _dom_index_js__WEBPACK_IMPORTED_MODULE_0__.applyCustomClass(footer, params, 'footer')
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/utils/dom/renderers/renderIcon.js":
-/*!************************************************************************!*\
-  !*** ./node_modules/sweetalert2/src/utils/dom/renderers/renderIcon.js ***!
-  \************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   renderIcon: () => (/* binding */ renderIcon)
-/* harmony export */ });
-/* harmony import */ var _privateProps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../privateProps.js */ "./node_modules/sweetalert2/src/privateProps.js");
-/* harmony import */ var _classes_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../classes.js */ "./node_modules/sweetalert2/src/utils/classes.js");
-/* harmony import */ var _dom_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../dom/index.js */ "./node_modules/sweetalert2/src/utils/dom/index.js");
-/* harmony import */ var _utils_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utils.js */ "./node_modules/sweetalert2/src/utils/utils.js");
-
-
-
-
-
-/**
- * @param {SweetAlert} instance
- * @param {SweetAlertOptions} params
- */
-const renderIcon = (instance, params) => {
-  const innerParams = _privateProps_js__WEBPACK_IMPORTED_MODULE_0__["default"].innerParams.get(instance)
-  const icon = _dom_index_js__WEBPACK_IMPORTED_MODULE_2__.getIcon()
-  if (!icon) {
-    return
-  }
-
-  // if the given icon already rendered, apply the styling without re-rendering the icon
-  if (innerParams && params.icon === innerParams.icon) {
-    // Custom or default content
-    setContent(icon, params)
-
-    applyStyles(icon, params)
-    return
-  }
-
-  if (!params.icon && !params.iconHtml) {
-    _dom_index_js__WEBPACK_IMPORTED_MODULE_2__.hide(icon)
-    return
-  }
-
-  if (params.icon && Object.keys(_classes_js__WEBPACK_IMPORTED_MODULE_1__.iconTypes).indexOf(params.icon) === -1) {
-    (0,_utils_js__WEBPACK_IMPORTED_MODULE_3__.error)(`Unknown icon! Expected "success", "error", "warning", "info" or "question", got "${params.icon}"`)
-    _dom_index_js__WEBPACK_IMPORTED_MODULE_2__.hide(icon)
-    return
-  }
-
-  _dom_index_js__WEBPACK_IMPORTED_MODULE_2__.show(icon)
-
-  // Custom or default content
-  setContent(icon, params)
-
-  applyStyles(icon, params)
-
-  // Animate icon
-  _dom_index_js__WEBPACK_IMPORTED_MODULE_2__.addClass(icon, params.showClass && params.showClass.icon)
-}
-
-/**
- * @param {HTMLElement} icon
- * @param {SweetAlertOptions} params
- */
-const applyStyles = (icon, params) => {
-  for (const [iconType, iconClassName] of Object.entries(_classes_js__WEBPACK_IMPORTED_MODULE_1__.iconTypes)) {
-    if (params.icon !== iconType) {
-      _dom_index_js__WEBPACK_IMPORTED_MODULE_2__.removeClass(icon, iconClassName)
-    }
-  }
-  _dom_index_js__WEBPACK_IMPORTED_MODULE_2__.addClass(icon, params.icon && _classes_js__WEBPACK_IMPORTED_MODULE_1__.iconTypes[params.icon])
-
-  // Icon color
-  setColor(icon, params)
-
-  // Success icon background color
-  adjustSuccessIconBackgroundColor()
-
-  // Custom class
-  _dom_index_js__WEBPACK_IMPORTED_MODULE_2__.applyCustomClass(icon, params, 'icon')
-}
-
-// Adjust success icon background color to match the popup background color
-const adjustSuccessIconBackgroundColor = () => {
-  const popup = _dom_index_js__WEBPACK_IMPORTED_MODULE_2__.getPopup()
-  if (!popup) {
-    return
-  }
-  const popupBackgroundColor = window.getComputedStyle(popup).getPropertyValue('background-color')
-  /** @type {NodeListOf<HTMLElement>} */
-  const successIconParts = popup.querySelectorAll('[class^=swal2-success-circular-line], .swal2-success-fix')
-  for (let i = 0; i < successIconParts.length; i++) {
-    successIconParts[i].style.backgroundColor = popupBackgroundColor
-  }
-}
-
-const successIconHtml = `
-  <div class="swal2-success-circular-line-left"></div>
-  <span class="swal2-success-line-tip"></span> <span class="swal2-success-line-long"></span>
-  <div class="swal2-success-ring"></div> <div class="swal2-success-fix"></div>
-  <div class="swal2-success-circular-line-right"></div>
-`
-
-const errorIconHtml = `
-  <span class="swal2-x-mark">
-    <span class="swal2-x-mark-line-left"></span>
-    <span class="swal2-x-mark-line-right"></span>
-  </span>
-`
-
-/**
- * @param {HTMLElement} icon
- * @param {SweetAlertOptions} params
- */
-const setContent = (icon, params) => {
-  if (!params.icon && !params.iconHtml) {
-    return
-  }
-  let oldContent = icon.innerHTML
-  let newContent = ''
-  if (params.iconHtml) {
-    newContent = iconContent(params.iconHtml)
-  } else if (params.icon === 'success') {
-    newContent = successIconHtml
-    oldContent = oldContent.replace(/ style=".*?"/g, '') // undo adjustSuccessIconBackgroundColor()
-  } else if (params.icon === 'error') {
-    newContent = errorIconHtml
-  } else if (params.icon) {
-    const defaultIconHtml = {
-      question: '?',
-      warning: '!',
-      info: 'i',
-    }
-    newContent = iconContent(defaultIconHtml[params.icon])
-  }
-
-  if (oldContent.trim() !== newContent.trim()) {
-    _dom_index_js__WEBPACK_IMPORTED_MODULE_2__.setInnerHtml(icon, newContent)
-  }
-}
-
-/**
- * @param {HTMLElement} icon
- * @param {SweetAlertOptions} params
- */
-const setColor = (icon, params) => {
-  if (!params.iconColor) {
-    return
-  }
-  icon.style.color = params.iconColor
-  icon.style.borderColor = params.iconColor
-  for (const sel of [
-    '.swal2-success-line-tip',
-    '.swal2-success-line-long',
-    '.swal2-x-mark-line-left',
-    '.swal2-x-mark-line-right',
-  ]) {
-    _dom_index_js__WEBPACK_IMPORTED_MODULE_2__.setStyle(icon, sel, 'background-color', params.iconColor)
-  }
-  _dom_index_js__WEBPACK_IMPORTED_MODULE_2__.setStyle(icon, '.swal2-success-ring', 'border-color', params.iconColor)
-}
-
-/**
- * @param {string} content
- * @returns {string}
- */
-const iconContent = (content) => `<div class="${_classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses['icon-content']}">${content}</div>`
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/utils/dom/renderers/renderImage.js":
-/*!*************************************************************************!*\
-  !*** ./node_modules/sweetalert2/src/utils/dom/renderers/renderImage.js ***!
-  \*************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   renderImage: () => (/* binding */ renderImage)
-/* harmony export */ });
-/* harmony import */ var _classes_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../classes.js */ "./node_modules/sweetalert2/src/utils/classes.js");
-/* harmony import */ var _dom_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../dom/index.js */ "./node_modules/sweetalert2/src/utils/dom/index.js");
-
-
-
-/**
- * @param {SweetAlert} instance
- * @param {SweetAlertOptions} params
- */
-const renderImage = (instance, params) => {
-  const image = _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.getImage()
-  if (!image) {
-    return
-  }
-
-  if (!params.imageUrl) {
-    _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.hide(image)
-    return
-  }
-
-  _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.show(image, '')
-
-  // Src, alt
-  image.setAttribute('src', params.imageUrl)
-  image.setAttribute('alt', params.imageAlt || '')
-
-  // Width, height
-  _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.applyNumericalStyle(image, 'width', params.imageWidth)
-  _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.applyNumericalStyle(image, 'height', params.imageHeight)
-
-  // Class
-  image.className = _classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses.image
-  _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.applyCustomClass(image, params, 'image')
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/utils/dom/renderers/renderInput.js":
-/*!*************************************************************************!*\
-  !*** ./node_modules/sweetalert2/src/utils/dom/renderers/renderInput.js ***!
-  \*************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   renderInput: () => (/* binding */ renderInput)
-/* harmony export */ });
-/* harmony import */ var _privateProps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../privateProps.js */ "./node_modules/sweetalert2/src/privateProps.js");
-/* harmony import */ var _classes_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../classes.js */ "./node_modules/sweetalert2/src/utils/classes.js");
-/* harmony import */ var _dom_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../dom/index.js */ "./node_modules/sweetalert2/src/utils/dom/index.js");
-/* harmony import */ var _utils_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utils.js */ "./node_modules/sweetalert2/src/utils/utils.js");
-/// <reference path="../../../../sweetalert2.d.ts"/>
-
-/**
- * @typedef { HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement } Input
- * @typedef { 'input' | 'file' | 'range' | 'select' | 'radio' | 'checkbox' | 'textarea' } InputClass
- */
-
-
-
-
-
-/** @type {InputClass[]} */
-const inputClasses = ['input', 'file', 'range', 'select', 'radio', 'checkbox', 'textarea']
-
-/**
- * @param {SweetAlert} instance
- * @param {SweetAlertOptions} params
- */
-const renderInput = (instance, params) => {
-  const popup = _dom_index_js__WEBPACK_IMPORTED_MODULE_2__.getPopup()
-  if (!popup) {
-    return
-  }
-  const innerParams = _privateProps_js__WEBPACK_IMPORTED_MODULE_0__["default"].innerParams.get(instance)
-  const rerender = !innerParams || params.input !== innerParams.input
-
-  inputClasses.forEach((inputClass) => {
-    const inputContainer = _dom_index_js__WEBPACK_IMPORTED_MODULE_2__.getDirectChildByClass(popup, _classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses[inputClass])
-
-    if (!inputContainer) {
-      return
-    }
-
-    // set attributes
-    setAttributes(inputClass, params.inputAttributes)
-
-    // set class
-    inputContainer.className = _classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses[inputClass]
-
-    if (rerender) {
-      _dom_index_js__WEBPACK_IMPORTED_MODULE_2__.hide(inputContainer)
-    }
-  })
-
-  if (params.input) {
-    if (rerender) {
-      showInput(params)
-    }
-    // set custom class
-    setCustomClass(params)
-  }
-}
-
-/**
- * @param {SweetAlertOptions} params
- */
-const showInput = (params) => {
-  if (!params.input) {
-    return
-  }
-
-  if (!renderInputType[params.input]) {
-    (0,_utils_js__WEBPACK_IMPORTED_MODULE_3__.error)(`Unexpected type of input! Expected ${Object.keys(renderInputType).join(' | ')}, got "${params.input}"`)
-    return
-  }
-
-  const inputContainer = getInputContainer(params.input)
-  const input = renderInputType[params.input](inputContainer, params)
-  _dom_index_js__WEBPACK_IMPORTED_MODULE_2__.show(inputContainer)
-
-  // input autofocus
-  if (params.inputAutoFocus) {
-    setTimeout(() => {
-      _dom_index_js__WEBPACK_IMPORTED_MODULE_2__.focusInput(input)
-    })
-  }
-}
-
-/**
- * @param {HTMLInputElement} input
- */
-const removeAttributes = (input) => {
-  for (let i = 0; i < input.attributes.length; i++) {
-    const attrName = input.attributes[i].name
-    if (!['id', 'type', 'value', 'style'].includes(attrName)) {
-      input.removeAttribute(attrName)
-    }
-  }
-}
-
-/**
- * @param {InputClass} inputClass
- * @param {SweetAlertOptions['inputAttributes']} inputAttributes
- */
-const setAttributes = (inputClass, inputAttributes) => {
-  const input = _dom_index_js__WEBPACK_IMPORTED_MODULE_2__.getInput(_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.getPopup(), inputClass)
-  if (!input) {
-    return
-  }
-
-  removeAttributes(input)
-
-  for (const attr in inputAttributes) {
-    input.setAttribute(attr, inputAttributes[attr])
-  }
-}
-
-/**
- * @param {SweetAlertOptions} params
- */
-const setCustomClass = (params) => {
-  const inputContainer = getInputContainer(params.input)
-  if (typeof params.customClass === 'object') {
-    _dom_index_js__WEBPACK_IMPORTED_MODULE_2__.addClass(inputContainer, params.customClass.input)
-  }
-}
-
-/**
- * @param {HTMLInputElement | HTMLTextAreaElement} input
- * @param {SweetAlertOptions} params
- */
-const setInputPlaceholder = (input, params) => {
-  if (!input.placeholder || params.inputPlaceholder) {
-    input.placeholder = params.inputPlaceholder
-  }
-}
-
-/**
- * @param {Input} input
- * @param {Input} prependTo
- * @param {SweetAlertOptions} params
- */
-const setInputLabel = (input, prependTo, params) => {
-  if (params.inputLabel) {
-    const label = document.createElement('label')
-    const labelClass = _classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses['input-label']
-    label.setAttribute('for', input.id)
-    label.className = labelClass
-    if (typeof params.customClass === 'object') {
-      _dom_index_js__WEBPACK_IMPORTED_MODULE_2__.addClass(label, params.customClass.inputLabel)
-    }
-    label.innerText = params.inputLabel
-    prependTo.insertAdjacentElement('beforebegin', label)
-  }
-}
-
-/**
- * @param {SweetAlertOptions['input']} inputType
- * @returns {HTMLElement}
- */
-const getInputContainer = (inputType) => {
-  return _dom_index_js__WEBPACK_IMPORTED_MODULE_2__.getDirectChildByClass(_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.getPopup(), _classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses[inputType] || _classes_js__WEBPACK_IMPORTED_MODULE_1__.swalClasses.input)
-}
-
-/**
- * @param {HTMLInputElement | HTMLOutputElement | HTMLTextAreaElement} input
- * @param {SweetAlertOptions['inputValue']} inputValue
- */
-const checkAndSetInputValue = (input, inputValue) => {
-  if (['string', 'number'].includes(typeof inputValue)) {
-    input.value = `${inputValue}`
-  } else if (!(0,_utils_js__WEBPACK_IMPORTED_MODULE_3__.isPromise)(inputValue)) {
-    (0,_utils_js__WEBPACK_IMPORTED_MODULE_3__.warn)(`Unexpected type of inputValue! Expected "string", "number" or "Promise", got "${typeof inputValue}"`)
-  }
-}
-
-/** @type {Record<SweetAlertInput, (input: Input | HTMLElement, params: SweetAlertOptions) => Input>} */
-const renderInputType = {}
-
-/**
- * @param {HTMLInputElement} input
- * @param {SweetAlertOptions} params
- * @returns {HTMLInputElement}
- */
-renderInputType.text =
-  renderInputType.email =
-  renderInputType.password =
-  renderInputType.number =
-  renderInputType.tel =
-  renderInputType.url =
-  renderInputType.search =
-  renderInputType.date =
-  renderInputType['datetime-local'] =
-  renderInputType.time =
-  renderInputType.week =
-  renderInputType.month =
-    (input, params) => {
-      checkAndSetInputValue(input, params.inputValue)
-      setInputLabel(input, input, params)
-      setInputPlaceholder(input, params)
-      input.type = params.input
-      return input
-    }
-
-/**
- * @param {HTMLInputElement} input
- * @param {SweetAlertOptions} params
- * @returns {HTMLInputElement}
- */
-renderInputType.file = (input, params) => {
-  setInputLabel(input, input, params)
-  setInputPlaceholder(input, params)
-  return input
-}
-
-/**
- * @param {HTMLInputElement} range
- * @param {SweetAlertOptions} params
- * @returns {HTMLInputElement}
- */
-renderInputType.range = (range, params) => {
-  const rangeInput = range.querySelector('input')
-  const rangeOutput = range.querySelector('output')
-  checkAndSetInputValue(rangeInput, params.inputValue)
-  rangeInput.type = params.input
-  checkAndSetInputValue(rangeOutput, params.inputValue)
-  setInputLabel(rangeInput, range, params)
-  return range
-}
-
-/**
- * @param {HTMLSelectElement} select
- * @param {SweetAlertOptions} params
- * @returns {HTMLSelectElement}
- */
-renderInputType.select = (select, params) => {
-  select.textContent = ''
-  if (params.inputPlaceholder) {
-    const placeholder = document.createElement('option')
-    _dom_index_js__WEBPACK_IMPORTED_MODULE_2__.setInnerHtml(placeholder, params.inputPlaceholder)
-    placeholder.value = ''
-    placeholder.disabled = true
-    placeholder.selected = true
-    select.appendChild(placeholder)
-  }
-  setInputLabel(select, select, params)
-  return select
-}
-
-/**
- * @param {HTMLInputElement} radio
- * @returns {HTMLInputElement}
- */
-renderInputType.radio = (radio) => {
-  radio.textContent = ''
-  return radio
-}
-
-/**
- * @param {HTMLLabelElement} checkboxContainer
- * @param {SweetAlertOptions} params
- * @returns {HTMLInputElement}
- */
-renderInputType.checkbox = (checkboxContainer, params) => {
-  const checkbox = _dom_index_js__WEBPACK_IMPORTED_MODULE_2__.getInput(_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.getPopup(), 'checkbox')
-  checkbox.value = '1'
-  checkbox.checked = Boolean(params.inputValue)
-  const label = checkboxContainer.querySelector('span')
-  _dom_index_js__WEBPACK_IMPORTED_MODULE_2__.setInnerHtml(label, params.inputPlaceholder)
-  return checkbox
-}
-
-/**
- * @param {HTMLTextAreaElement} textarea
- * @param {SweetAlertOptions} params
- * @returns {HTMLTextAreaElement}
- */
-renderInputType.textarea = (textarea, params) => {
-  checkAndSetInputValue(textarea, params.inputValue)
-  setInputPlaceholder(textarea, params)
-  setInputLabel(textarea, textarea, params)
-
-  /**
-   * @param {HTMLElement} el
-   * @returns {number}
-   */
-  const getMargin = (el) =>
-    parseInt(window.getComputedStyle(el).marginLeft) + parseInt(window.getComputedStyle(el).marginRight)
-
-  // https://github.com/sweetalert2/sweetalert2/issues/2291
-  setTimeout(() => {
-    // https://github.com/sweetalert2/sweetalert2/issues/1699
-    if ('MutationObserver' in window) {
-      const initialPopupWidth = parseInt(window.getComputedStyle(_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.getPopup()).width)
-      const textareaResizeHandler = () => {
-        // check if texarea is still in document (i.e. popup wasn't closed in the meantime)
-        if (!document.body.contains(textarea)) {
-          return
-        }
-        const textareaWidth = textarea.offsetWidth + getMargin(textarea)
-        if (textareaWidth > initialPopupWidth) {
-          _dom_index_js__WEBPACK_IMPORTED_MODULE_2__.getPopup().style.width = `${textareaWidth}px`
-        } else {
-          _dom_index_js__WEBPACK_IMPORTED_MODULE_2__.applyNumericalStyle(_dom_index_js__WEBPACK_IMPORTED_MODULE_2__.getPopup(), 'width', params.width)
-        }
-      }
-      new MutationObserver(textareaResizeHandler).observe(textarea, {
-        attributes: true,
-        attributeFilter: ['style'],
-      })
-    }
-  })
-
-  return textarea
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/utils/dom/renderers/renderPopup.js":
-/*!*************************************************************************!*\
-  !*** ./node_modules/sweetalert2/src/utils/dom/renderers/renderPopup.js ***!
-  \*************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   renderPopup: () => (/* binding */ renderPopup)
-/* harmony export */ });
-/* harmony import */ var _classes_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../classes.js */ "./node_modules/sweetalert2/src/utils/classes.js");
-/* harmony import */ var _dom_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../dom/index.js */ "./node_modules/sweetalert2/src/utils/dom/index.js");
-
-
-
-/**
- * @param {SweetAlert} instance
- * @param {SweetAlertOptions} params
- */
-const renderPopup = (instance, params) => {
-  const container = _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.getContainer()
-  const popup = _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.getPopup()
-  if (!container || !popup) {
-    return
-  }
-
-  // Width
-  // https://github.com/sweetalert2/sweetalert2/issues/2170
-  if (params.toast) {
-    _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.applyNumericalStyle(container, 'width', params.width)
-    popup.style.width = '100%'
-    const loader = _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.getLoader()
-    loader && popup.insertBefore(loader, _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.getIcon())
-  } else {
-    _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.applyNumericalStyle(popup, 'width', params.width)
-  }
-
-  // Padding
-  _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.applyNumericalStyle(popup, 'padding', params.padding)
-
-  // Color
-  if (params.color) {
-    popup.style.color = params.color
-  }
-
-  // Background
-  if (params.background) {
-    popup.style.background = params.background
-  }
-
-  _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.hide(_dom_index_js__WEBPACK_IMPORTED_MODULE_1__.getValidationMessage())
-
-  // Classes
-  addClasses(popup, params)
-}
-
-/**
- * @param {HTMLElement} popup
- * @param {SweetAlertOptions} params
- */
-const addClasses = (popup, params) => {
-  const showClass = params.showClass || {}
-  // Default Class + showClass when updating Swal.update({})
-  popup.className = `${_classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses.popup} ${_dom_index_js__WEBPACK_IMPORTED_MODULE_1__.isVisible(popup) ? showClass.popup : ''}`
-
-  if (params.toast) {
-    _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.addClass([document.documentElement, document.body], _classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses['toast-shown'])
-    _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.addClass(popup, _classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses.toast)
-  } else {
-    _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.addClass(popup, _classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses.modal)
-  }
-
-  // Custom class
-  _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.applyCustomClass(popup, params, 'popup')
-  if (typeof params.customClass === 'string') {
-    _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.addClass(popup, params.customClass)
-  }
-
-  // Icon class (#1842)
-  if (params.icon) {
-    _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.addClass(popup, _classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses[`icon-${params.icon}`])
-  }
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/utils/dom/renderers/renderProgressSteps.js":
-/*!*********************************************************************************!*\
-  !*** ./node_modules/sweetalert2/src/utils/dom/renderers/renderProgressSteps.js ***!
-  \*********************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   renderProgressSteps: () => (/* binding */ renderProgressSteps)
-/* harmony export */ });
-/* harmony import */ var _classes_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../classes.js */ "./node_modules/sweetalert2/src/utils/classes.js");
-/* harmony import */ var _dom_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../dom/index.js */ "./node_modules/sweetalert2/src/utils/dom/index.js");
-/* harmony import */ var _utils_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utils.js */ "./node_modules/sweetalert2/src/utils/utils.js");
-
-
-
-
-/**
- * @param {SweetAlert} instance
- * @param {SweetAlertOptions} params
- */
-const renderProgressSteps = (instance, params) => {
-  const progressStepsContainer = _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.getProgressSteps()
-  if (!progressStepsContainer) {
-    return
-  }
-
-  const { progressSteps, currentProgressStep } = params
-
-  if (!progressSteps || progressSteps.length === 0 || currentProgressStep === undefined) {
-    _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.hide(progressStepsContainer)
-    return
-  }
-
-  _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.show(progressStepsContainer)
-  progressStepsContainer.textContent = ''
-  if (currentProgressStep >= progressSteps.length) {
-    (0,_utils_js__WEBPACK_IMPORTED_MODULE_2__.warn)(
-      'Invalid currentProgressStep parameter, it should be less than progressSteps.length ' +
-        '(currentProgressStep like JS arrays starts from 0)'
-    )
-  }
-
-  progressSteps.forEach((step, index) => {
-    const stepEl = createStepElement(step)
-    progressStepsContainer.appendChild(stepEl)
-    if (index === currentProgressStep) {
-      _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.addClass(stepEl, _classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses['active-progress-step'])
-    }
-
-    if (index !== progressSteps.length - 1) {
-      const lineEl = createLineElement(params)
-      progressStepsContainer.appendChild(lineEl)
-    }
-  })
-}
-
-/**
- * @param {string} step
- * @returns {HTMLLIElement}
- */
-const createStepElement = (step) => {
-  const stepEl = document.createElement('li')
-  _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.addClass(stepEl, _classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses['progress-step'])
-  _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.setInnerHtml(stepEl, step)
-  return stepEl
-}
-
-/**
- * @param {SweetAlertOptions} params
- * @returns {HTMLLIElement}
- */
-const createLineElement = (params) => {
-  const lineEl = document.createElement('li')
-  _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.addClass(lineEl, _classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses['progress-step-line'])
-  if (params.progressStepsDistance) {
-    _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.applyNumericalStyle(lineEl, 'width', params.progressStepsDistance)
-  }
-  return lineEl
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/utils/dom/renderers/renderTitle.js":
-/*!*************************************************************************!*\
-  !*** ./node_modules/sweetalert2/src/utils/dom/renderers/renderTitle.js ***!
-  \*************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   renderTitle: () => (/* binding */ renderTitle)
-/* harmony export */ });
-/* harmony import */ var _dom_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../dom/index.js */ "./node_modules/sweetalert2/src/utils/dom/index.js");
-
-
-/**
- * @param {SweetAlert} instance
- * @param {SweetAlertOptions} params
- */
-const renderTitle = (instance, params) => {
-  const title = _dom_index_js__WEBPACK_IMPORTED_MODULE_0__.getTitle()
-  if (!title) {
-    return
-  }
-
-  _dom_index_js__WEBPACK_IMPORTED_MODULE_0__.showWhenInnerHtmlPresent(title)
-
-  _dom_index_js__WEBPACK_IMPORTED_MODULE_0__.toggle(title, params.title || params.titleText, 'block')
-
-  if (params.title) {
-    _dom_index_js__WEBPACK_IMPORTED_MODULE_0__.parseHtmlToContainer(params.title, title)
-  }
-
-  if (params.titleText) {
-    title.innerText = params.titleText
-  }
-
-  // Custom class
-  _dom_index_js__WEBPACK_IMPORTED_MODULE_0__.applyCustomClass(title, params, 'title')
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/utils/getTemplateParams.js":
-/*!*****************************************************************!*\
-  !*** ./node_modules/sweetalert2/src/utils/getTemplateParams.js ***!
-  \*****************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   getTemplateParams: () => (/* binding */ getTemplateParams)
-/* harmony export */ });
-/* harmony import */ var _params_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./params.js */ "./node_modules/sweetalert2/src/utils/params.js");
-/* harmony import */ var _utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils.js */ "./node_modules/sweetalert2/src/utils/utils.js");
-
-
-
-const swalStringParams = ['swal-title', 'swal-html', 'swal-footer']
-
-/**
- * @param {SweetAlertOptions} params
- * @returns {SweetAlertOptions}
- */
-const getTemplateParams = (params) => {
-  /** @type {HTMLTemplateElement} */
-  const template = typeof params.template === 'string' ? document.querySelector(params.template) : params.template
-  if (!template) {
-    return {}
-  }
-  /** @type {DocumentFragment} */
-  const templateContent = template.content
-
-  showWarningsForElements(templateContent)
-
-  const result = Object.assign(
-    getSwalParams(templateContent),
-    getSwalFunctionParams(templateContent),
-    getSwalButtons(templateContent),
-    getSwalImage(templateContent),
-    getSwalIcon(templateContent),
-    getSwalInput(templateContent),
-    getSwalStringParams(templateContent, swalStringParams)
-  )
-  return result
-}
-
-/**
- * @param {DocumentFragment} templateContent
- * @returns {SweetAlertOptions}
- */
-const getSwalParams = (templateContent) => {
-  const result = {}
-  /** @type {HTMLElement[]} */
-  const swalParams = Array.from(templateContent.querySelectorAll('swal-param'))
-  swalParams.forEach((param) => {
-    showWarningsForAttributes(param, ['name', 'value'])
-    const paramName = param.getAttribute('name')
-    const value = param.getAttribute('value')
-    if (typeof _params_js__WEBPACK_IMPORTED_MODULE_0__["default"][paramName] === 'boolean') {
-      result[paramName] = value !== 'false'
-    } else if (typeof _params_js__WEBPACK_IMPORTED_MODULE_0__["default"][paramName] === 'object') {
-      result[paramName] = JSON.parse(value)
-    } else {
-      result[paramName] = value
-    }
-  })
-  return result
-}
-
-/**
- * @param {DocumentFragment} templateContent
- * @returns {SweetAlertOptions}
- */
-const getSwalFunctionParams = (templateContent) => {
-  const result = {}
-  /** @type {HTMLElement[]} */
-  const swalFunctions = Array.from(templateContent.querySelectorAll('swal-function-param'))
-  swalFunctions.forEach((param) => {
-    const paramName = param.getAttribute('name')
-    const value = param.getAttribute('value')
-    result[paramName] = new Function(`return ${value}`)()
-  })
-  return result
-}
-
-/**
- * @param {DocumentFragment} templateContent
- * @returns {SweetAlertOptions}
- */
-const getSwalButtons = (templateContent) => {
-  const result = {}
-  /** @type {HTMLElement[]} */
-  const swalButtons = Array.from(templateContent.querySelectorAll('swal-button'))
-  swalButtons.forEach((button) => {
-    showWarningsForAttributes(button, ['type', 'color', 'aria-label'])
-    const type = button.getAttribute('type')
-    result[`${type}ButtonText`] = button.innerHTML
-    result[`show${(0,_utils_js__WEBPACK_IMPORTED_MODULE_1__.capitalizeFirstLetter)(type)}Button`] = true
-    if (button.hasAttribute('color')) {
-      result[`${type}ButtonColor`] = button.getAttribute('color')
-    }
-    if (button.hasAttribute('aria-label')) {
-      result[`${type}ButtonAriaLabel`] = button.getAttribute('aria-label')
-    }
-  })
-  return result
-}
-
-/**
- * @param {DocumentFragment} templateContent
- * @returns {SweetAlertOptions}
- */
-const getSwalImage = (templateContent) => {
-  const result = {}
-  /** @type {HTMLElement} */
-  const image = templateContent.querySelector('swal-image')
-  if (image) {
-    showWarningsForAttributes(image, ['src', 'width', 'height', 'alt'])
-    if (image.hasAttribute('src')) {
-      result.imageUrl = image.getAttribute('src')
-    }
-    if (image.hasAttribute('width')) {
-      result.imageWidth = image.getAttribute('width')
-    }
-    if (image.hasAttribute('height')) {
-      result.imageHeight = image.getAttribute('height')
-    }
-    if (image.hasAttribute('alt')) {
-      result.imageAlt = image.getAttribute('alt')
-    }
-  }
-  return result
-}
-
-/**
- * @param {DocumentFragment} templateContent
- * @returns {SweetAlertOptions}
- */
-const getSwalIcon = (templateContent) => {
-  const result = {}
-  /** @type {HTMLElement} */
-  const icon = templateContent.querySelector('swal-icon')
-  if (icon) {
-    showWarningsForAttributes(icon, ['type', 'color'])
-    if (icon.hasAttribute('type')) {
-      /** @type {SweetAlertIcon} */
-      // @ts-ignore
-      result.icon = icon.getAttribute('type')
-    }
-    if (icon.hasAttribute('color')) {
-      result.iconColor = icon.getAttribute('color')
-    }
-    result.iconHtml = icon.innerHTML
-  }
-  return result
-}
-
-/**
- * @param {DocumentFragment} templateContent
- * @returns {SweetAlertOptions}
- */
-const getSwalInput = (templateContent) => {
-  const result = {}
-  /** @type {HTMLElement} */
-  const input = templateContent.querySelector('swal-input')
-  if (input) {
-    showWarningsForAttributes(input, ['type', 'label', 'placeholder', 'value'])
-    /** @type {SweetAlertInput} */
-    // @ts-ignore
-    result.input = input.getAttribute('type') || 'text'
-    if (input.hasAttribute('label')) {
-      result.inputLabel = input.getAttribute('label')
-    }
-    if (input.hasAttribute('placeholder')) {
-      result.inputPlaceholder = input.getAttribute('placeholder')
-    }
-    if (input.hasAttribute('value')) {
-      result.inputValue = input.getAttribute('value')
-    }
-  }
-  /** @type {HTMLElement[]} */
-  const inputOptions = Array.from(templateContent.querySelectorAll('swal-input-option'))
-  if (inputOptions.length) {
-    result.inputOptions = {}
-    inputOptions.forEach((option) => {
-      showWarningsForAttributes(option, ['value'])
-      const optionValue = option.getAttribute('value')
-      const optionName = option.innerHTML
-      result.inputOptions[optionValue] = optionName
-    })
-  }
-  return result
-}
-
-/**
- * @param {DocumentFragment} templateContent
- * @param {string[]} paramNames
- * @returns {SweetAlertOptions}
- */
-const getSwalStringParams = (templateContent, paramNames) => {
-  const result = {}
-  for (const i in paramNames) {
-    const paramName = paramNames[i]
-    /** @type {HTMLElement} */
-    const tag = templateContent.querySelector(paramName)
-    if (tag) {
-      showWarningsForAttributes(tag, [])
-      result[paramName.replace(/^swal-/, '')] = tag.innerHTML.trim()
-    }
-  }
-  return result
-}
-
-/**
- * @param {DocumentFragment} templateContent
- */
-const showWarningsForElements = (templateContent) => {
-  const allowedElements = swalStringParams.concat([
-    'swal-param',
-    'swal-function-param',
-    'swal-button',
-    'swal-image',
-    'swal-icon',
-    'swal-input',
-    'swal-input-option',
-  ])
-  Array.from(templateContent.children).forEach((el) => {
-    const tagName = el.tagName.toLowerCase()
-    if (!allowedElements.includes(tagName)) {
-      (0,_utils_js__WEBPACK_IMPORTED_MODULE_1__.warn)(`Unrecognized element <${tagName}>`)
-    }
-  })
-}
-
-/**
- * @param {HTMLElement} el
- * @param {string[]} allowedAttributes
- */
-const showWarningsForAttributes = (el, allowedAttributes) => {
-  Array.from(el.attributes).forEach((attribute) => {
-    if (allowedAttributes.indexOf(attribute.name) === -1) {
-      (0,_utils_js__WEBPACK_IMPORTED_MODULE_1__.warn)([
-        `Unrecognized attribute "${attribute.name}" on <${el.tagName.toLowerCase()}>.`,
-        `${
-          allowedAttributes.length
-            ? `Allowed attributes are: ${allowedAttributes.join(', ')}`
-            : 'To set the value, use HTML within the element.'
-        }`,
-      ])
-    }
-  })
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/utils/iosFix.js":
-/*!******************************************************!*\
-  !*** ./node_modules/sweetalert2/src/utils/iosFix.js ***!
-  \******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   iOSfix: () => (/* binding */ iOSfix),
-/* harmony export */   isSafariOrIOS: () => (/* binding */ isSafariOrIOS),
-/* harmony export */   undoIOSfix: () => (/* binding */ undoIOSfix)
-/* harmony export */ });
-/* harmony import */ var _utils_classes_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/classes.js */ "./node_modules/sweetalert2/src/utils/classes.js");
-/* harmony import */ var _dom_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dom/index.js */ "./node_modules/sweetalert2/src/utils/dom/index.js");
-
-
-
-// @ts-ignore
-const isSafariOrIOS = typeof window !== 'undefined' && !!window.GestureEvent // true for Safari desktop + all iOS browsers https://stackoverflow.com/a/70585394
-
-/**
- * Fix iOS scrolling
- * http://stackoverflow.com/q/39626302
- */
-const iOSfix = () => {
-  if (isSafariOrIOS && !_dom_index_js__WEBPACK_IMPORTED_MODULE_1__.hasClass(document.body, _utils_classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses.iosfix)) {
-    const offset = document.body.scrollTop
-    document.body.style.top = `${offset * -1}px`
-    _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.addClass(document.body, _utils_classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses.iosfix)
-    lockBodyScroll()
-  }
-}
-
-/**
- * https://github.com/sweetalert2/sweetalert2/issues/1246
- */
-const lockBodyScroll = () => {
-  const container = _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.getContainer()
-  if (!container) {
-    return
-  }
-  /** @type {boolean} */
-  let preventTouchMove
-  /**
-   * @param {TouchEvent} event
-   */
-  container.ontouchstart = (event) => {
-    preventTouchMove = shouldPreventTouchMove(event)
-  }
-  /**
-   * @param {TouchEvent} event
-   */
-  container.ontouchmove = (event) => {
-    if (preventTouchMove) {
-      event.preventDefault()
-      event.stopPropagation()
-    }
-  }
-}
-
-/**
- * @param {TouchEvent} event
- * @returns {boolean}
- */
-const shouldPreventTouchMove = (event) => {
-  const target = event.target
-  const container = _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.getContainer()
-  const htmlContainer = _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.getHtmlContainer()
-  if (!container || !htmlContainer) {
-    return false
-  }
-  if (isStylus(event) || isZoom(event)) {
-    return false
-  }
-  if (target === container) {
-    return true
-  }
-  if (
-    !_dom_index_js__WEBPACK_IMPORTED_MODULE_1__.isScrollable(container) &&
-    target instanceof HTMLElement &&
-    target.tagName !== 'INPUT' && // #1603
-    target.tagName !== 'TEXTAREA' && // #2266
-    !(
-      _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.isScrollable(htmlContainer) && // #1944
-      htmlContainer.contains(target)
-    )
-  ) {
-    return true
-  }
-  return false
-}
-
-/**
- * https://github.com/sweetalert2/sweetalert2/issues/1786
- *
- * @param {*} event
- * @returns {boolean}
- */
-const isStylus = (event) => {
-  return event.touches && event.touches.length && event.touches[0].touchType === 'stylus'
-}
-
-/**
- * https://github.com/sweetalert2/sweetalert2/issues/1891
- *
- * @param {TouchEvent} event
- * @returns {boolean}
- */
-const isZoom = (event) => {
-  return event.touches && event.touches.length > 1
-}
-
-const undoIOSfix = () => {
-  if (_dom_index_js__WEBPACK_IMPORTED_MODULE_1__.hasClass(document.body, _utils_classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses.iosfix)) {
-    const offset = parseInt(document.body.style.top, 10)
-    _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.removeClass(document.body, _utils_classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses.iosfix)
-    document.body.style.top = ''
-    document.body.scrollTop = offset * -1
-  }
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/utils/isNodeEnv.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/sweetalert2/src/utils/isNodeEnv.js ***!
-  \*********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   isNodeEnv: () => (/* binding */ isNodeEnv)
-/* harmony export */ });
-/**
- * Detect Node env
- *
- * @returns {boolean}
- */
-const isNodeEnv = () => typeof window === 'undefined' || typeof document === 'undefined'
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/utils/openPopup.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/sweetalert2/src/utils/openPopup.js ***!
-  \*********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   SHOW_CLASS_TIMEOUT: () => (/* binding */ SHOW_CLASS_TIMEOUT),
-/* harmony export */   openPopup: () => (/* binding */ openPopup)
-/* harmony export */ });
-/* harmony import */ var _globalState_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../globalState.js */ "./node_modules/sweetalert2/src/globalState.js");
-/* harmony import */ var _aria_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./aria.js */ "./node_modules/sweetalert2/src/utils/aria.js");
-/* harmony import */ var _classes_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./classes.js */ "./node_modules/sweetalert2/src/utils/classes.js");
-/* harmony import */ var _dom_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./dom/index.js */ "./node_modules/sweetalert2/src/utils/dom/index.js");
-/* harmony import */ var _iosFix_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./iosFix.js */ "./node_modules/sweetalert2/src/utils/iosFix.js");
-/* harmony import */ var _scrollbar_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./scrollbar.js */ "./node_modules/sweetalert2/src/utils/scrollbar.js");
-
-
-
-
-
-
-
-const SHOW_CLASS_TIMEOUT = 10
-
-/**
- * Open popup, add necessary classes and styles, fix scrollbar
- *
- * @param {SweetAlertOptions} params
- */
-const openPopup = (params) => {
-  const container = _dom_index_js__WEBPACK_IMPORTED_MODULE_3__.getContainer()
-  const popup = _dom_index_js__WEBPACK_IMPORTED_MODULE_3__.getPopup()
-
-  if (typeof params.willOpen === 'function') {
-    params.willOpen(popup)
-  }
-
-  const bodyStyles = window.getComputedStyle(document.body)
-  const initialBodyOverflow = bodyStyles.overflowY
-  addClasses(container, popup, params)
-
-  // scrolling is 'hidden' until animation is done, after that 'auto'
-  setTimeout(() => {
-    setScrollingVisibility(container, popup)
-  }, SHOW_CLASS_TIMEOUT)
-
-  if (_dom_index_js__WEBPACK_IMPORTED_MODULE_3__.isModal()) {
-    fixScrollContainer(container, params.scrollbarPadding, initialBodyOverflow)
-    ;(0,_aria_js__WEBPACK_IMPORTED_MODULE_1__.setAriaHidden)()
-  }
-
-  if (!_dom_index_js__WEBPACK_IMPORTED_MODULE_3__.isToast() && !_globalState_js__WEBPACK_IMPORTED_MODULE_0__["default"].previousActiveElement) {
-    _globalState_js__WEBPACK_IMPORTED_MODULE_0__["default"].previousActiveElement = document.activeElement
-  }
-
-  if (typeof params.didOpen === 'function') {
-    setTimeout(() => params.didOpen(popup))
-  }
-
-  _dom_index_js__WEBPACK_IMPORTED_MODULE_3__.removeClass(container, _classes_js__WEBPACK_IMPORTED_MODULE_2__.swalClasses['no-transition'])
-}
-
-/**
- * @param {AnimationEvent} event
- */
-const swalOpenAnimationFinished = (event) => {
-  const popup = _dom_index_js__WEBPACK_IMPORTED_MODULE_3__.getPopup()
-  if (event.target !== popup || !_dom_index_js__WEBPACK_IMPORTED_MODULE_3__.animationEndEvent) {
-    return
-  }
-  const container = _dom_index_js__WEBPACK_IMPORTED_MODULE_3__.getContainer()
-  popup.removeEventListener(_dom_index_js__WEBPACK_IMPORTED_MODULE_3__.animationEndEvent, swalOpenAnimationFinished)
-  container.style.overflowY = 'auto'
-}
-
-/**
- * @param {HTMLElement} container
- * @param {HTMLElement} popup
- */
-const setScrollingVisibility = (container, popup) => {
-  if (_dom_index_js__WEBPACK_IMPORTED_MODULE_3__.animationEndEvent && _dom_index_js__WEBPACK_IMPORTED_MODULE_3__.hasCssAnimation(popup)) {
-    container.style.overflowY = 'hidden'
-    popup.addEventListener(_dom_index_js__WEBPACK_IMPORTED_MODULE_3__.animationEndEvent, swalOpenAnimationFinished)
-  } else {
-    container.style.overflowY = 'auto'
-  }
-}
-
-/**
- * @param {HTMLElement} container
- * @param {boolean} scrollbarPadding
- * @param {string} initialBodyOverflow
- */
-const fixScrollContainer = (container, scrollbarPadding, initialBodyOverflow) => {
-  ;(0,_iosFix_js__WEBPACK_IMPORTED_MODULE_4__.iOSfix)()
-
-  if (scrollbarPadding && initialBodyOverflow !== 'hidden') {
-    (0,_scrollbar_js__WEBPACK_IMPORTED_MODULE_5__.replaceScrollbarWithPadding)(initialBodyOverflow)
-  }
-
-  // sweetalert2/issues/1247
-  setTimeout(() => {
-    container.scrollTop = 0
-  })
-}
-
-/**
- * @param {HTMLElement} container
- * @param {HTMLElement} popup
- * @param {SweetAlertOptions} params
- */
-const addClasses = (container, popup, params) => {
-  _dom_index_js__WEBPACK_IMPORTED_MODULE_3__.addClass(container, params.showClass.backdrop)
-  if (params.animation) {
-    // this workaround with opacity is needed for https://github.com/sweetalert2/sweetalert2/issues/2059
-    popup.style.setProperty('opacity', '0', 'important')
-    _dom_index_js__WEBPACK_IMPORTED_MODULE_3__.show(popup, 'grid')
-    setTimeout(() => {
-      // Animate popup right after showing it
-      _dom_index_js__WEBPACK_IMPORTED_MODULE_3__.addClass(popup, params.showClass.popup)
-      // and remove the opacity workaround
-      popup.style.removeProperty('opacity')
-    }, SHOW_CLASS_TIMEOUT) // 10ms in order to fix #2062
-  } else {
-    _dom_index_js__WEBPACK_IMPORTED_MODULE_3__.show(popup, 'grid')
-  }
-
-  _dom_index_js__WEBPACK_IMPORTED_MODULE_3__.addClass([document.documentElement, document.body], _classes_js__WEBPACK_IMPORTED_MODULE_2__.swalClasses.shown)
-  if (params.heightAuto && params.backdrop && !params.toast) {
-    _dom_index_js__WEBPACK_IMPORTED_MODULE_3__.addClass([document.documentElement, document.body], _classes_js__WEBPACK_IMPORTED_MODULE_2__.swalClasses['height-auto'])
-  }
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/utils/params.js":
-/*!******************************************************!*\
-  !*** ./node_modules/sweetalert2/src/utils/params.js ***!
-  \******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
-/* harmony export */   defaultParams: () => (/* binding */ defaultParams),
-/* harmony export */   deprecatedParams: () => (/* binding */ deprecatedParams),
-/* harmony export */   isDeprecatedParameter: () => (/* binding */ isDeprecatedParameter),
-/* harmony export */   isUpdatableParameter: () => (/* binding */ isUpdatableParameter),
-/* harmony export */   isValidParameter: () => (/* binding */ isValidParameter),
-/* harmony export */   showWarningsForParams: () => (/* binding */ showWarningsForParams),
-/* harmony export */   updatableParams: () => (/* binding */ updatableParams)
-/* harmony export */ });
-/* harmony import */ var _utils_utils_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/utils.js */ "./node_modules/sweetalert2/src/utils/utils.js");
-
-
-const defaultParams = {
-  title: '',
-  titleText: '',
-  text: '',
-  html: '',
-  footer: '',
-  icon: undefined,
-  iconColor: undefined,
-  iconHtml: undefined,
-  template: undefined,
-  toast: false,
-  animation: true,
-  showClass: {
-    popup: 'swal2-show',
-    backdrop: 'swal2-backdrop-show',
-    icon: 'swal2-icon-show',
-  },
-  hideClass: {
-    popup: 'swal2-hide',
-    backdrop: 'swal2-backdrop-hide',
-    icon: 'swal2-icon-hide',
-  },
-  customClass: {},
-  target: 'body',
-  color: undefined,
-  backdrop: true,
-  heightAuto: true,
-  allowOutsideClick: true,
-  allowEscapeKey: true,
-  allowEnterKey: true,
-  stopKeydownPropagation: true,
-  keydownListenerCapture: false,
-  showConfirmButton: true,
-  showDenyButton: false,
-  showCancelButton: false,
-  preConfirm: undefined,
-  preDeny: undefined,
-  confirmButtonText: 'OK',
-  confirmButtonAriaLabel: '',
-  confirmButtonColor: undefined,
-  denyButtonText: 'No',
-  denyButtonAriaLabel: '',
-  denyButtonColor: undefined,
-  cancelButtonText: 'Cancel',
-  cancelButtonAriaLabel: '',
-  cancelButtonColor: undefined,
-  buttonsStyling: true,
-  reverseButtons: false,
-  focusConfirm: true,
-  focusDeny: false,
-  focusCancel: false,
-  returnFocus: true,
-  showCloseButton: false,
-  closeButtonHtml: '&times;',
-  closeButtonAriaLabel: 'Close this dialog',
-  loaderHtml: '',
-  showLoaderOnConfirm: false,
-  showLoaderOnDeny: false,
-  imageUrl: undefined,
-  imageWidth: undefined,
-  imageHeight: undefined,
-  imageAlt: '',
-  timer: undefined,
-  timerProgressBar: false,
-  width: undefined,
-  padding: undefined,
-  background: undefined,
-  input: undefined,
-  inputPlaceholder: '',
-  inputLabel: '',
-  inputValue: '',
-  inputOptions: {},
-  inputAutoFocus: true,
-  inputAutoTrim: true,
-  inputAttributes: {},
-  inputValidator: undefined,
-  returnInputValueOnDeny: false,
-  validationMessage: undefined,
-  grow: false,
-  position: 'center',
-  progressSteps: [],
-  currentProgressStep: undefined,
-  progressStepsDistance: undefined,
-  willOpen: undefined,
-  didOpen: undefined,
-  didRender: undefined,
-  willClose: undefined,
-  didClose: undefined,
-  didDestroy: undefined,
-  scrollbarPadding: true,
-}
-
-const updatableParams = [
-  'allowEscapeKey',
-  'allowOutsideClick',
-  'background',
-  'buttonsStyling',
-  'cancelButtonAriaLabel',
-  'cancelButtonColor',
-  'cancelButtonText',
-  'closeButtonAriaLabel',
-  'closeButtonHtml',
-  'color',
-  'confirmButtonAriaLabel',
-  'confirmButtonColor',
-  'confirmButtonText',
-  'currentProgressStep',
-  'customClass',
-  'denyButtonAriaLabel',
-  'denyButtonColor',
-  'denyButtonText',
-  'didClose',
-  'didDestroy',
-  'footer',
-  'hideClass',
-  'html',
-  'icon',
-  'iconColor',
-  'iconHtml',
-  'imageAlt',
-  'imageHeight',
-  'imageUrl',
-  'imageWidth',
-  'preConfirm',
-  'preDeny',
-  'progressSteps',
-  'returnFocus',
-  'reverseButtons',
-  'showCancelButton',
-  'showCloseButton',
-  'showConfirmButton',
-  'showDenyButton',
-  'text',
-  'title',
-  'titleText',
-  'willClose',
-]
-
-/** @type {Record<string, string>} */
-const deprecatedParams = {}
-
-const toastIncompatibleParams = [
-  'allowOutsideClick',
-  'allowEnterKey',
-  'backdrop',
-  'focusConfirm',
-  'focusDeny',
-  'focusCancel',
-  'returnFocus',
-  'heightAuto',
-  'keydownListenerCapture',
-]
-
-/**
- * Is valid parameter
- *
- * @param {string} paramName
- * @returns {boolean}
- */
-const isValidParameter = (paramName) => {
-  return Object.prototype.hasOwnProperty.call(defaultParams, paramName)
-}
-
-/**
- * Is valid parameter for Swal.update() method
- *
- * @param {string} paramName
- * @returns {boolean}
- */
-const isUpdatableParameter = (paramName) => {
-  return updatableParams.indexOf(paramName) !== -1
-}
-
-/**
- * Is deprecated parameter
- *
- * @param {string} paramName
- * @returns {string | undefined}
- */
-const isDeprecatedParameter = (paramName) => {
-  return deprecatedParams[paramName]
-}
-
-/**
- * @param {string} param
- */
-const checkIfParamIsValid = (param) => {
-  if (!isValidParameter(param)) {
-    (0,_utils_utils_js__WEBPACK_IMPORTED_MODULE_0__.warn)(`Unknown parameter "${param}"`)
-  }
-}
-
-/**
- * @param {string} param
- */
-const checkIfToastParamIsValid = (param) => {
-  if (toastIncompatibleParams.includes(param)) {
-    (0,_utils_utils_js__WEBPACK_IMPORTED_MODULE_0__.warn)(`The parameter "${param}" is incompatible with toasts`)
-  }
-}
-
-/**
- * @param {string} param
- */
-const checkIfParamIsDeprecated = (param) => {
-  const isDeprecated = isDeprecatedParameter(param)
-  if (isDeprecated) {
-    (0,_utils_utils_js__WEBPACK_IMPORTED_MODULE_0__.warnAboutDeprecation)(param, isDeprecated)
-  }
-}
-
-/**
- * Show relevant warnings for given params
- *
- * @param {SweetAlertOptions} params
- */
-const showWarningsForParams = (params) => {
-  if (params.backdrop === false && params.allowOutsideClick) {
-    (0,_utils_utils_js__WEBPACK_IMPORTED_MODULE_0__.warn)('"allowOutsideClick" parameter requires `backdrop` parameter to be set to `true`')
-  }
-
-  for (const param in params) {
-    checkIfParamIsValid(param)
-
-    if (params.toast) {
-      checkIfToastParamIsValid(param)
-    }
-
-    checkIfParamIsDeprecated(param)
-  }
-}
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (defaultParams);
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/utils/scrollbar.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/sweetalert2/src/utils/scrollbar.js ***!
-  \*********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   measureScrollbar: () => (/* binding */ measureScrollbar),
-/* harmony export */   replaceScrollbarWithPadding: () => (/* binding */ replaceScrollbarWithPadding),
-/* harmony export */   undoReplaceScrollbarWithPadding: () => (/* binding */ undoReplaceScrollbarWithPadding)
-/* harmony export */ });
-/* harmony import */ var _classes_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./classes.js */ "./node_modules/sweetalert2/src/utils/classes.js");
-
-
-/**
- * Measure scrollbar width for padding body during modal show/hide
- * https://github.com/twbs/bootstrap/blob/master/js/src/modal.js
- *
- * @returns {number}
- */
-const measureScrollbar = () => {
-  const scrollDiv = document.createElement('div')
-  scrollDiv.className = _classes_js__WEBPACK_IMPORTED_MODULE_0__.swalClasses['scrollbar-measure']
-  document.body.appendChild(scrollDiv)
-  const scrollbarWidth = scrollDiv.getBoundingClientRect().width - scrollDiv.clientWidth
-  document.body.removeChild(scrollDiv)
-  return scrollbarWidth
-}
-
-/**
- * Remember state in cases where opening and handling a modal will fiddle with it.
- * @type {number | null}
- */
-let previousBodyPadding = null
-
-/**
- * @param {string} initialBodyOverflow
- */
-const replaceScrollbarWithPadding = (initialBodyOverflow) => {
-  // for queues, do not do this more than once
-  if (previousBodyPadding !== null) {
-    return
-  }
-  // if the body has overflow
-  if (
-    document.body.scrollHeight > window.innerHeight ||
-    initialBodyOverflow === 'scroll' // https://github.com/sweetalert2/sweetalert2/issues/2663
-  ) {
-    // add padding so the content doesn't shift after removal of scrollbar
-    previousBodyPadding = parseInt(window.getComputedStyle(document.body).getPropertyValue('padding-right'))
-    document.body.style.paddingRight = `${previousBodyPadding + measureScrollbar()}px`
-  }
-}
-
-const undoReplaceScrollbarWithPadding = () => {
-  if (previousBodyPadding !== null) {
-    document.body.style.paddingRight = `${previousBodyPadding}px`
-    previousBodyPadding = null
-  }
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/utils/setParameters.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/sweetalert2/src/utils/setParameters.js ***!
-  \*************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ setParameters)
-/* harmony export */ });
-/* harmony import */ var _defaultInputValidators_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./defaultInputValidators.js */ "./node_modules/sweetalert2/src/utils/defaultInputValidators.js");
-/* harmony import */ var _dom_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dom/index.js */ "./node_modules/sweetalert2/src/utils/dom/index.js");
-/* harmony import */ var _utils_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./utils.js */ "./node_modules/sweetalert2/src/utils/utils.js");
-
-
-
-
-/**
- * @param {SweetAlertOptions} params
- */
-function setDefaultInputValidators(params) {
-  // Use default `inputValidator` for supported input types if not provided
-  if (params.inputValidator) {
-    return
-  }
-  if (params.input === 'email') {
-    params.inputValidator = _defaultInputValidators_js__WEBPACK_IMPORTED_MODULE_0__["default"]['email']
-  }
-  if (params.input === 'url') {
-    params.inputValidator = _defaultInputValidators_js__WEBPACK_IMPORTED_MODULE_0__["default"]['url']
-  }
-}
-
-/**
- * @param {SweetAlertOptions} params
- */
-function validateCustomTargetElement(params) {
-  // Determine if the custom target element is valid
-  if (
-    !params.target ||
-    (typeof params.target === 'string' && !document.querySelector(params.target)) ||
-    (typeof params.target !== 'string' && !params.target.appendChild)
-  ) {
-    (0,_utils_js__WEBPACK_IMPORTED_MODULE_2__.warn)('Target parameter is not valid, defaulting to "body"')
-    params.target = 'body'
-  }
-}
-
-/**
- * Set type, text and actions on popup
- *
- * @param {SweetAlertOptions} params
- */
-function setParameters(params) {
-  setDefaultInputValidators(params)
-
-  // showLoaderOnConfirm && preConfirm
-  if (params.showLoaderOnConfirm && !params.preConfirm) {
-    (0,_utils_js__WEBPACK_IMPORTED_MODULE_2__.warn)(
-      'showLoaderOnConfirm is set to true, but preConfirm is not defined.\n' +
-        'showLoaderOnConfirm should be used together with preConfirm, see usage example:\n' +
-        'https://sweetalert2.github.io/#ajax-request'
-    )
-  }
-
-  validateCustomTargetElement(params)
-
-  // Replace newlines with <br> in title
-  if (typeof params.title === 'string') {
-    params.title = params.title.split('\n').join('<br />')
-  }
-
-  _dom_index_js__WEBPACK_IMPORTED_MODULE_1__.init(params)
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/sweetalert2/src/utils/utils.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/sweetalert2/src/utils/utils.js ***!
-  \*****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   asPromise: () => (/* binding */ asPromise),
-/* harmony export */   callIfFunction: () => (/* binding */ callIfFunction),
-/* harmony export */   capitalizeFirstLetter: () => (/* binding */ capitalizeFirstLetter),
-/* harmony export */   consolePrefix: () => (/* binding */ consolePrefix),
-/* harmony export */   error: () => (/* binding */ error),
-/* harmony export */   hasToPromiseFn: () => (/* binding */ hasToPromiseFn),
-/* harmony export */   isPromise: () => (/* binding */ isPromise),
-/* harmony export */   warn: () => (/* binding */ warn),
-/* harmony export */   warnAboutDeprecation: () => (/* binding */ warnAboutDeprecation),
-/* harmony export */   warnOnce: () => (/* binding */ warnOnce)
-/* harmony export */ });
-const consolePrefix = 'SweetAlert2:'
-
-/**
- * Capitalize the first letter of a string
- *
- * @param {string} str
- * @returns {string}
- */
-const capitalizeFirstLetter = (str) => str.charAt(0).toUpperCase() + str.slice(1)
-
-/**
- * Standardize console warnings
- *
- * @param {string | string[]} message
- */
-const warn = (message) => {
-  console.warn(`${consolePrefix} ${typeof message === 'object' ? message.join(' ') : message}`)
-}
-
-/**
- * Standardize console errors
- *
- * @param {string} message
- */
-const error = (message) => {
-  console.error(`${consolePrefix} ${message}`)
-}
-
-/**
- * Private global state for `warnOnce`
- *
- * @type {string[]}
- * @private
- */
-const previousWarnOnceMessages = []
-
-/**
- * Show a console warning, but only if it hasn't already been shown
- *
- * @param {string} message
- */
-const warnOnce = (message) => {
-  if (!previousWarnOnceMessages.includes(message)) {
-    previousWarnOnceMessages.push(message)
-    warn(message)
-  }
-}
-
-/**
- * Show a one-time console warning about deprecated params/methods
- *
- * @param {string} deprecatedParam
- * @param {string} useInstead
- */
-const warnAboutDeprecation = (deprecatedParam, useInstead) => {
-  warnOnce(
-    `"${deprecatedParam}" is deprecated and will be removed in the next major release. Please use "${useInstead}" instead.`
-  )
-}
-
-/**
- * If `arg` is a function, call it (with no arguments or context) and return the result.
- * Otherwise, just pass the value through
- *
- * @param {Function | any} arg
- * @returns {any}
- */
-const callIfFunction = (arg) => (typeof arg === 'function' ? arg() : arg)
-
-/**
- * @param {any} arg
- * @returns {boolean}
- */
-const hasToPromiseFn = (arg) => arg && typeof arg.toPromise === 'function'
-
-/**
- * @param {any} arg
- * @returns {Promise<any>}
- */
-const asPromise = (arg) => (hasToPromiseFn(arg) ? arg.toPromise() : Promise.resolve(arg))
-
-/**
- * @param {any} arg
- * @returns {boolean}
- */
-const isPromise = (arg) => arg && Promise.resolve(arg) === arg
-
-
 /***/ })
 
 /******/ 	});
@@ -9268,17 +3004,46 @@ var __webpack_exports__ = {};
   !*** ./public/js/vendor/index.js ***!
   \***********************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var sweetalert2_src_sweetalert2_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! sweetalert2/src/sweetalert2.js */ "./node_modules/sweetalert2/src/sweetalert2.js");
-/* harmony import */ var isomorphic_dompurify__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! isomorphic-dompurify */ "./node_modules/isomorphic-dompurify/browser.js");
-/* harmony import */ var isomorphic_dompurify__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(isomorphic_dompurify__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _css_sweetalert2_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../css/sweetalert2.scss */ "./public/css/sweetalert2.scss");
+/* harmony import */ var isomorphic_dompurify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! isomorphic-dompurify */ "./node_modules/isomorphic-dompurify/browser.js");
+/* harmony import */ var isomorphic_dompurify__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(isomorphic_dompurify__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var notyf__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! notyf */ "./node_modules/notyf/notyf.es.js");
+/* harmony import */ var notyf_notyf_min_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! notyf/notyf.min.css */ "./node_modules/notyf/notyf.min.css");
+/* harmony import */ var _css_custom_notyf_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../css/custom-notyf.css */ "./public/css/custom-notyf.css");
 
 
 
 
-window.Swal = sweetalert2_src_sweetalert2_js__WEBPACK_IMPORTED_MODULE_0__["default"];
+
 window.htmx = __webpack_require__(/*! htmx.org */ "./node_modules/htmx.org/dist/htmx.min.js");
-window.DOMPurify = (isomorphic_dompurify__WEBPACK_IMPORTED_MODULE_1___default());
+window.DOMPurify = (isomorphic_dompurify__WEBPACK_IMPORTED_MODULE_0___default());
+window.notyf = new notyf__WEBPACK_IMPORTED_MODULE_1__.Notyf({
+    duration: 1000,
+    position: {
+        x: 'center',
+        y: 'bottom',
+    },
+    ripple: true,
+    types: [
+        {
+            type: 'error',
+            background: 'indianred',
+            duration: 2500,
+            dismissible: true
+        },
+        {
+            type: 'success',
+            background: 'seagreen',
+            duration: 2500,
+            dismissible: true
+        },
+        {
+            type: 'info',
+            background: 'royalblue',
+            duration: 2500,
+            dismissible: true
+        }
+    ]
+});
 })();
 
 /******/ })()
